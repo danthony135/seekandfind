@@ -368,12 +368,10 @@ function AnalysisTab({ conversations }) {
         return `[${formatDate(c.createdAt)}] Categories: ${categories} | ${stats.messageCount} msgs | First msg: "${firstUser.slice(0, 200)}" | Decision triggered: ${stats.hasConnect ? "YES" : "no"}`;
       }).join("\n");
 
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1500,
           messages: [{
             role: "user",
             content: `You are an analytics assistant for a Christian gospel conversation platform. Analyze these ${conversations.length} conversations and provide insights. Be specific and actionable. Format with clear sections.
