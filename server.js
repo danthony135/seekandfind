@@ -15,6 +15,7 @@ if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR);
 
 const CONNECTS_FILE = join(DATA_DIR, "connects.json");
 const ANALYTICS_FILE = join(DATA_DIR, "analytics.json");
+const SUGGESTIONS_FILE = join(DATA_DIR, "suggestions.json");
 
 function loadJSON(file, fallback) {
   try {
@@ -256,6 +257,64 @@ app.post("/api/analyze", async (req, res) => {
     console.error("Anthropic API error:", err.message);
     res.status(500).json({ error: "Failed to reach AI service" });
   }
+});
+
+// --- Admin: get system prompt for review ---
+app.get("/api/admin/prompt", (req, res) => {
+  res.json({ prompt: SYSTEM_PROMPT });
+});
+
+// --- Admin: get all suggestions ---
+app.get("/api/admin/suggestions", (req, res) => {
+  const suggestions = loadJSON(SUGGESTIONS_FILE, []);
+  res.json({ suggestions });
+});
+
+// --- Admin: submit a new suggestion ---
+app.post("/api/admin/suggestions", (req, res) => {
+  const { selectedText, replacement, reason, category, priority, reviewer } = req.body;
+
+  if (!selectedText?.trim() || !replacement?.trim()) {
+    return res.status(400).json({ error: "Selected text and replacement are required" });
+  }
+
+  const suggestion = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+    selectedText: selectedText.trim(),
+    replacement: replacement.trim(),
+    reason: reason?.trim() || "",
+    category: category || "Theological Accuracy",
+    priority: priority || "Suggestion",
+    reviewer: reviewer?.trim() || "Anonymous",
+    status: "pending",
+    ts: Date.now(),
+  };
+
+  const suggestions = loadJSON(SUGGESTIONS_FILE, []);
+  suggestions.push(suggestion);
+  saveJSON(SUGGESTIONS_FILE, suggestions);
+
+  console.log(`[SUGGESTION] New ${category} suggestion from ${suggestion.reviewer}`);
+
+  res.json({ ok: true, suggestion });
+});
+
+// --- Admin: accept/reject a suggestion ---
+app.post("/api/admin/suggestions/:id/review", (req, res) => {
+  const { status } = req.body;
+  if (!["accepted", "rejected"].includes(status)) {
+    return res.status(400).json({ error: "Status must be 'accepted' or 'rejected'" });
+  }
+
+  const suggestions = loadJSON(SUGGESTIONS_FILE, []);
+  const entry = suggestions.find((s) => s.id === req.params.id);
+  if (!entry) return res.status(404).json({ error: "Not found" });
+
+  entry.status = status;
+  entry.reviewedAt = Date.now();
+  saveJSON(SUGGESTIONS_FILE, suggestions);
+
+  res.json({ ok: true });
 });
 
 // SPA fallback — serve index.html for all non-API routes (Express 5 syntax)

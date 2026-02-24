@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 
 // ============================================================
-// TOPIC CATEGORIES
+// TOPIC CATEGORIES (kept for ConversationsTab local analysis)
 // ============================================================
 const CATEGORIES = [
   { id: "existence", label: "God's Existence", color: "#f59e0b", keywords: ["is god real", "does god exist", "proof", "evidence", "atheist", "agnostic", "believe"] },
@@ -26,7 +26,7 @@ const CATEGORIES = [
 function categorizeConversation(messages) {
   const text = messages.map(m => m.content).join(" ").toLowerCase();
   const scores = {};
-  
+
   for (const cat of CATEGORIES) {
     if (cat.id === "general") continue;
     let score = 0;
@@ -40,8 +40,7 @@ function categorizeConversation(messages) {
 
   const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
   if (sorted.length === 0) return ["general"];
-  
-  // Return top 1-3 categories
+
   const top = sorted.filter(([_, s]) => s >= sorted[0][1] * 0.4).slice(0, 3);
   return top.map(([id]) => id);
 }
@@ -52,7 +51,7 @@ function getConversationStats(convo) {
   const aiMsgs = msgs.filter(m => m.role === "assistant");
   const hasConnect = msgs.some(m => m.showConnect);
   const categories = categorizeConversation(msgs);
-  
+
   return {
     messageCount: msgs.length,
     userMessages: userMsgs.length,
@@ -62,41 +61,6 @@ function getConversationStats(convo) {
     duration: convo.updatedAt - convo.createdAt,
     avgUserLength: userMsgs.length ? Math.round(userMsgs.reduce((s, m) => s + m.content.length, 0) / userMsgs.length) : 0,
   };
-}
-
-// ============================================================
-// STORAGE - reads from persistent storage shared with main app
-// ============================================================
-const ADMIN_KEY = "seekme_admin_data";
-
-async function loadAllData() {
-  const data = { conversations: [], connects: [] };
-  
-  try {
-    // Try persistent storage first
-    const stored = await window.storage.get("seekme_all_conversations");
-    if (stored?.value) data.conversations = JSON.parse(stored.value);
-  } catch {}
-  
-  try {
-    const stored = await window.storage.get("seekme_all_connects");
-    if (stored?.value) data.connects = JSON.parse(stored.value);
-  } catch {}
-
-  // Also try localStorage as fallback (for prototype where user is also admin)
-  try {
-    const localConvos = JSON.parse(localStorage.getItem("seekme_conversations")) || [];
-    const localConnects = JSON.parse(localStorage.getItem("seekme_connects")) || [];
-    
-    // Merge, deduplicating by id
-    const existingIds = new Set(data.conversations.map(c => c.id));
-    for (const c of localConvos) {
-      if (!existingIds.has(c.id)) data.conversations.push(c);
-    }
-    data.connects = [...data.connects, ...localConnects];
-  } catch {}
-  
-  return data;
 }
 
 // ============================================================
@@ -124,62 +88,52 @@ function StatCard({ label, value, sub, color }) {
 }
 
 // ============================================================
-// OVERVIEW TAB
+// OVERVIEW TAB — now uses server-side aggregate stats
 // ============================================================
-function OverviewTab({ conversations, connects }) {
-  const allStats = conversations.map(c => getConversationStats(c));
-  const totalMessages = allStats.reduce((s, st) => s + st.messageCount, 0);
-  const totalUserMsgs = allStats.reduce((s, st) => s + st.userMessages, 0);
-  const decisionsTriggered = allStats.filter(st => st.hasConnect).length;
-  const avgMessages = conversations.length ? (totalMessages / conversations.length).toFixed(1) : 0;
-  
-  // Category distribution
-  const catCounts = {};
-  for (const st of allStats) {
-    for (const cat of st.categories) {
-      catCounts[cat] = (catCounts[cat] || 0) + 1;
-    }
-  }
-  const sortedCats = Object.entries(catCounts).sort((a, b) => b[1] - a[1]);
-  const maxCatCount = sortedCats[0]?.[1] || 1;
+function OverviewTab({ stats, connects }) {
+  const { totalMessages, totalChats, decisionsTriggered, languages, dailyMessages } = stats;
 
-  // Conversations over time (last 30 days)
-  const now = Date.now();
-  const dayMs = 86400000;
+  // Language distribution
+  const sortedLangs = Object.entries(languages || {}).sort((a, b) => b[1] - a[1]);
+  const maxLangCount = sortedLangs[0]?.[1] || 1;
+
+  // Daily messages chart (last 30 days)
+  const now = new Date();
   const last30 = Array.from({ length: 30 }, (_, i) => {
-    const dayStart = now - (29 - i) * dayMs;
-    const dayEnd = dayStart + dayMs;
-    return conversations.filter(c => c.createdAt >= dayStart && c.createdAt < dayEnd).length;
+    const d = new Date(now);
+    d.setDate(d.getDate() - (29 - i));
+    const key = d.toISOString().slice(0, 10);
+    return { date: key, count: (dailyMessages || {})[key] || 0 };
   });
+  const maxDaily = Math.max(...last30.map(d => d.count), 1);
 
   return (
     <div className="space-y-8">
       {/* Stat cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <StatCard label="Total Conversations" value={conversations.length} color="#f59e0b" />
-        <StatCard label="Total Messages" value={totalMessages} sub={`${totalUserMsgs} from users`} />
-        <StatCard label="Avg Messages / Convo" value={avgMessages} />
-        <StatCard label="Decisions Triggered" value={decisionsTriggered} sub={conversations.length ? `${((decisionsTriggered / conversations.length) * 100).toFixed(1)}% rate` : ""} color="#22c55e" />
+        <StatCard label="Total Chats" value={totalChats || 0} color="#f59e0b" />
+        <StatCard label="Total Messages" value={totalMessages || 0} />
+        <StatCard label="Decisions Triggered" value={decisionsTriggered || 0} sub={totalChats ? `${(((decisionsTriggered || 0) / totalChats) * 100).toFixed(1)}% rate` : ""} color="#22c55e" />
+        <StatCard label="Connect Requests" value={connects.length} color="#3b82f6" />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <StatCard label="Connect Requests" value={connects.length} color="#3b82f6" />
-        <StatCard label="Unique Topics" value={Object.keys(catCounts).length} />
-        <StatCard label="Convos Today" value={conversations.filter(c => c.createdAt > now - dayMs).length} />
-        <StatCard label="Convos This Week" value={conversations.filter(c => c.createdAt > now - 7 * dayMs).length} />
+        <StatCard label="Languages Used" value={Object.keys(languages || {}).length} />
+        <StatCard label="Need Follow-up" value={connects.filter(c => !c.followedUp).length} color="#f59e0b" />
+        <StatCard label="New Believers" value={connects.filter(c => c.need === "just-decided").length} color="#22c55e" />
+        <StatCard label="Top Language" value={sortedLangs[0]?.[0]?.toUpperCase() || "—"} sub={sortedLangs[0] ? `${sortedLangs[0][1]} messages` : ""} />
       </div>
 
-      {/* Activity chart */}
+      {/* Daily messages chart */}
       <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
-        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Conversations — Last 30 Days</p>
+        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Messages — Last 30 Days</p>
         <div className="flex items-end gap-1 h-32">
-          {last30.map((count, i) => {
-            const height = maxCatCount > 0 ? Math.max(2, (count / Math.max(...last30, 1)) * 100) : 2;
-            const date = new Date(now - (29 - i) * dayMs);
+          {last30.map((d, i) => {
+            const height = Math.max(2, (d.count / maxDaily) * 100);
             return (
               <div key={i} className="flex-1 flex flex-col items-center gap-1 group relative">
                 <div className="w-full bg-amber-400/30 hover:bg-amber-400/50 rounded-sm transition-colors cursor-default" style={{ height: `${height}%` }} />
                 <div className="absolute -top-8 bg-stone-800 text-stone-300 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
-                  {date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}: {count}
+                  {new Date(d.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}: {d.count}
                 </div>
               </div>
             );
@@ -187,25 +141,20 @@ function OverviewTab({ conversations, connects }) {
         </div>
       </div>
 
-      {/* Category breakdown */}
+      {/* Language breakdown */}
       <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
-        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Topic Categories</p>
-        {sortedCats.length === 0 && <p className="text-stone-600 text-sm">No conversations yet.</p>}
+        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Language Distribution</p>
+        {sortedLangs.length === 0 && <p className="text-stone-600 text-sm">No messages yet.</p>}
         <div className="space-y-3">
-          {sortedCats.map(([catId, count]) => {
-            const cat = CATEGORIES.find(c => c.id === catId);
-            if (!cat) return null;
-            return (
-              <div key={catId} className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: cat.color }} />
-                <span className="text-stone-400 text-sm flex-shrink-0 w-40">{cat.label}</span>
-                <div className="flex-1 bg-stone-800 rounded-full h-2 overflow-hidden">
-                  <div className="h-full rounded-full transition-all duration-500" style={{ width: `${(count / maxCatCount) * 100}%`, backgroundColor: cat.color, opacity: 0.6 }} />
-                </div>
-                <span className="text-stone-500 text-xs w-12 text-right">{count}</span>
+          {sortedLangs.map(([lang, count]) => (
+            <div key={lang} className="flex items-center gap-3">
+              <span className="text-stone-400 text-sm flex-shrink-0 w-16 uppercase">{lang}</span>
+              <div className="flex-1 bg-stone-800 rounded-full h-2 overflow-hidden">
+                <div className="h-full rounded-full bg-amber-400/60 transition-all duration-500" style={{ width: `${(count / maxLangCount) * 100}%` }} />
               </div>
-            );
-          })}
+              <span className="text-stone-500 text-xs w-12 text-right">{count}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -213,12 +162,20 @@ function OverviewTab({ conversations, connects }) {
 }
 
 // ============================================================
-// CONVERSATIONS TAB
+// CONVERSATIONS TAB — keeps localStorage (private by design)
 // ============================================================
-function ConversationsTab({ conversations }) {
+function ConversationsTab() {
+  const [conversations, setConversations] = useState([]);
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem("seekme_conversations")) || [];
+      setConversations(stored);
+    } catch {}
+  }, []);
 
   const enriched = conversations.map(c => ({ ...c, stats: getConversationStats(c) }))
     .sort((a, b) => b.updatedAt - a.updatedAt);
@@ -238,11 +195,11 @@ function ConversationsTab({ conversations }) {
     const stats = getConversationStats(convo);
     return (
       <div>
-        <button onClick={() => setSelected(null)} className="text-stone-500 hover:text-stone-300 text-xs mb-6 block transition-colors">← Back to conversations</button>
+        <button onClick={() => setSelected(null)} className="text-stone-500 hover:text-stone-300 text-xs mb-6 block transition-colors">&larr; Back to conversations</button>
         <div className="flex items-start justify-between mb-6">
           <div>
             <h3 className="text-stone-200 text-lg mb-1" style={{ fontFamily: "'Georgia', serif" }}>{convo.title}</h3>
-            <p className="text-stone-500 text-xs">{formatDate(convo.createdAt)} · {stats.messageCount} messages · {formatDuration(stats.duration)}</p>
+            <p className="text-stone-500 text-xs">{formatDate(convo.createdAt)} &middot; {stats.messageCount} messages &middot; {formatDuration(stats.duration)}</p>
           </div>
           <div className="flex gap-1.5">
             {stats.categories.map(catId => {
@@ -251,7 +208,7 @@ function ConversationsTab({ conversations }) {
             })}
           </div>
         </div>
-        {stats.hasConnect && <div className="bg-green-900/20 border border-green-700/30 rounded-lg px-4 py-2 mb-6 text-green-400 text-xs">✦ Decision moment triggered — connect form was shown</div>}
+        {stats.hasConnect && <div className="bg-green-900/20 border border-green-700/30 rounded-lg px-4 py-2 mb-6 text-green-400 text-xs">&#10022; Decision moment triggered — connect form was shown</div>}
         <div className="space-y-4 max-w-2xl">
           {convo.messages.map((m, i) => (
             <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
@@ -268,6 +225,7 @@ function ConversationsTab({ conversations }) {
 
   return (
     <div>
+      <p className="text-stone-600 text-xs mb-4">Showing conversations from this browser's localStorage (conversations are private by design).</p>
       <div className="flex flex-col md:flex-row gap-3 mb-6">
         <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search conversations..."
           className="flex-1 bg-stone-900 border border-stone-800 rounded-lg px-4 py-2 text-sm text-stone-200 placeholder-stone-600 outline-none focus:border-amber-400/30" />
@@ -285,10 +243,10 @@ function ConversationsTab({ conversations }) {
             <div className="flex items-start justify-between">
               <div className="flex-1 min-w-0">
                 <p className="text-stone-300 text-sm truncate group-hover:text-stone-100 transition-colors">{c.title}</p>
-                <p className="text-stone-600 text-xs mt-1">{formatDate(c.createdAt)} · {c.stats.messageCount} msgs · {formatDuration(c.stats.duration)}</p>
+                <p className="text-stone-600 text-xs mt-1">{formatDate(c.createdAt)} &middot; {c.stats.messageCount} msgs &middot; {formatDuration(c.stats.duration)}</p>
               </div>
               <div className="flex items-center gap-2 ml-3 flex-shrink-0">
-                {c.stats.hasConnect && <span className="text-green-500 text-xs">✦ Decision</span>}
+                {c.stats.hasConnect && <span className="text-green-500 text-xs">&#10022; Decision</span>}
                 {c.stats.categories.slice(0, 2).map(catId => {
                   const cat = CATEGORIES.find(x => x.id === catId);
                   return cat ? <span key={catId} className="w-2 h-2 rounded-full" style={{ backgroundColor: cat.color }} title={cat.label} /> : null;
@@ -306,9 +264,9 @@ function ConversationsTab({ conversations }) {
 }
 
 // ============================================================
-// CONNECTS TAB
+// CONNECTS TAB — uses server-side data + followup button
 // ============================================================
-function ConnectsTab({ connects }) {
+function ConnectsTab({ connects, onFollowUp }) {
   if (connects.length === 0) return <p className="text-stone-600">No connect requests yet.</p>;
 
   const needLabels = {
@@ -328,19 +286,28 @@ function ConnectsTab({ connects }) {
         <StatCard label="Need Follow-up" value={connects.filter(c => !c.followedUp).length} color="#f59e0b" />
       </div>
       <div className="space-y-3">
-        {connects.sort((a, b) => (b.ts || 0) - (a.ts || 0)).map((c, i) => (
-          <div key={i} className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+        {[...connects].sort((a, b) => (b.ts || 0) - (a.ts || 0)).map((c) => (
+          <div key={c.id || c.ts} className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-stone-200 text-sm font-medium">{c.name || "Anonymous"}</p>
                 <p className="text-stone-500 text-xs mt-0.5">{c.contactType}: {c.contact}</p>
                 {c.country && <p className="text-stone-600 text-xs">{c.country}</p>}
               </div>
-              <div className="text-right">
+              <div className="text-right flex flex-col items-end gap-2">
                 <span className={`text-xs px-2 py-1 rounded-full ${c.need === "just-decided" ? "bg-green-900/30 text-green-400 border border-green-700/30" : "bg-stone-800 text-stone-400 border border-stone-700"}`}>
                   {needLabels[c.need] || c.need}
                 </span>
-                {c.ts && <p className="text-stone-700 text-xs mt-1">{formatDate(c.ts)}</p>}
+                {c.ts && <p className="text-stone-700 text-xs">{formatDate(c.ts)}</p>}
+                {c.id && !c.followedUp && (
+                  <button onClick={() => onFollowUp(c.id)}
+                    className="text-xs bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 text-amber-200 px-3 py-1 rounded-lg transition-colors">
+                    Mark Followed Up
+                  </button>
+                )}
+                {c.followedUp && (
+                  <span className="text-xs text-green-500">Followed up</span>
+                )}
               </div>
             </div>
           </div>
@@ -353,14 +320,17 @@ function ConnectsTab({ connects }) {
 // ============================================================
 // AI ANALYSIS TAB
 // ============================================================
-function AnalysisTab({ conversations }) {
+function AnalysisTab() {
   const [analysis, setAnalysis] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const runAnalysis = async () => {
     setLoading(true);
     try {
-      // Build a summary of conversations for AI analysis
+      // Use local conversations for analysis content
+      let conversations = [];
+      try { conversations = JSON.parse(localStorage.getItem("seekme_conversations")) || []; } catch {}
+
       const summaries = conversations.slice(0, 30).map(c => {
         const stats = getConversationStats(c);
         const firstUser = c.messages.find(m => m.role === "user")?.content || "";
@@ -407,16 +377,345 @@ Keep it concise and practical. This is for the platform builder, not a report fo
           <p className="text-stone-300 text-sm" style={{ fontFamily: "'Georgia', serif" }}>AI-Powered Insights</p>
           <p className="text-stone-600 text-xs mt-1">Uses Claude to analyze conversation patterns, topics, and opportunities.</p>
         </div>
-        <button onClick={runAnalysis} disabled={loading || conversations.length === 0}
+        <button onClick={runAnalysis} disabled={loading}
           className="bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 text-amber-200 text-sm px-4 py-2 rounded-lg transition-colors disabled:opacity-30">
           {loading ? "Analyzing..." : "Run Analysis"}
         </button>
       </div>
-      {conversations.length === 0 && <p className="text-stone-600 text-sm">No conversations to analyze yet.</p>}
       {analysis && (
         <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-6">
           <div className="text-stone-400 text-sm leading-relaxed whitespace-pre-wrap" style={{ fontFamily: "'Georgia', serif" }}>
             {analysis}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ============================================================
+// INLINE MARKDOWN RENDERER (no dependencies)
+// ============================================================
+function renderMarkdown(text) {
+  const lines = text.split("\n");
+  const elements = [];
+  let inList = false;
+  let listItems = [];
+  let listType = "ul";
+  let key = 0;
+
+  const flushList = () => {
+    if (listItems.length > 0) {
+      if (listType === "ol") {
+        elements.push(<ol key={key++} className="list-decimal list-inside space-y-1 text-stone-400 text-sm mb-4 ml-4">{listItems}</ol>);
+      } else {
+        elements.push(<ul key={key++} className="list-disc list-inside space-y-1 text-stone-400 text-sm mb-4 ml-4">{listItems}</ul>);
+      }
+      listItems = [];
+      inList = false;
+    }
+  };
+
+  const inlineFormat = (str) => {
+    // Bold
+    str = str.replace(/\*\*(.+?)\*\*/g, '<strong class="text-stone-200 font-semibold">$1</strong>');
+    // Italic
+    str = str.replace(/\*(.+?)\*/g, '<em>$1</em>');
+    // Inline code
+    str = str.replace(/`([^`]+)`/g, '<code class="bg-stone-800 text-amber-300 px-1.5 py-0.5 rounded text-xs">$1</code>');
+    return str;
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (!trimmed) {
+      flushList();
+      continue;
+    }
+
+    // Headings
+    const h1 = trimmed.match(/^# (.+)/);
+    if (h1) { flushList(); elements.push(<h1 key={key++} className="text-stone-100 text-2xl font-light mt-8 mb-4 pb-2 border-b border-stone-800/50" style={{ fontFamily: "'Georgia', serif" }} dangerouslySetInnerHTML={{ __html: inlineFormat(h1[1]) }} />); continue; }
+
+    const h2 = trimmed.match(/^## (.+)/);
+    if (h2) { flushList(); elements.push(<h2 key={key++} className="text-stone-200 text-xl font-light mt-6 mb-3" style={{ fontFamily: "'Georgia', serif" }} dangerouslySetInnerHTML={{ __html: inlineFormat(h2[1]) }} />); continue; }
+
+    const h3 = trimmed.match(/^### (.+)/);
+    if (h3) { flushList(); elements.push(<h3 key={key++} className="text-stone-300 text-lg font-medium mt-5 mb-2" style={{ fontFamily: "'Georgia', serif" }} dangerouslySetInnerHTML={{ __html: inlineFormat(h3[1]) }} />); continue; }
+
+    const h4 = trimmed.match(/^#### (.+)/);
+    if (h4) { flushList(); elements.push(<h4 key={key++} className="text-stone-300 text-base font-medium mt-4 mb-2" dangerouslySetInnerHTML={{ __html: inlineFormat(h4[1]) }} />); continue; }
+
+    // Horizontal rule
+    if (/^---+$/.test(trimmed)) { flushList(); elements.push(<hr key={key++} className="border-stone-800 my-6" />); continue; }
+
+    // Blockquote
+    const bq = trimmed.match(/^> (.+)/);
+    if (bq) { flushList(); elements.push(<blockquote key={key++} className="border-l-2 border-amber-400/40 pl-4 text-stone-400 text-sm italic my-3" dangerouslySetInnerHTML={{ __html: inlineFormat(bq[1]) }} />); continue; }
+
+    // Ordered list
+    const ol = trimmed.match(/^\d+\.\s+(.+)/);
+    if (ol) { if (!inList || listType !== "ol") { flushList(); inList = true; listType = "ol"; } listItems.push(<li key={key++} dangerouslySetInnerHTML={{ __html: inlineFormat(ol[1]) }} />); continue; }
+
+    // Unordered list
+    const ul = trimmed.match(/^[-*]\s+(.+)/);
+    if (ul) { if (!inList || listType !== "ul") { flushList(); inList = true; listType = "ul"; } listItems.push(<li key={key++} dangerouslySetInnerHTML={{ __html: inlineFormat(ul[1]) }} />); continue; }
+
+    // Regular paragraph
+    flushList();
+    elements.push(<p key={key++} className="text-stone-400 text-sm leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: inlineFormat(trimmed) }} />);
+  }
+
+  flushList();
+  return elements;
+}
+
+// ============================================================
+// PROMPT REVIEW TAB
+// ============================================================
+const SUGGESTION_CATEGORIES = [
+  "Theological Accuracy",
+  "Scriptural Support",
+  "Pastoral Sensitivity",
+  "Cultural Sensitivity",
+  "Missing Content",
+  "Edge Case Handling",
+  "Tone",
+];
+
+const SUGGESTION_PRIORITIES = ["Critical", "Important", "Suggestion"];
+
+function PromptReviewTab({ suggestionCount }) {
+  const [view, setView] = useState("document"); // "document" | "manage"
+  const [prompt, setPrompt] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [loadingPrompt, setLoadingPrompt] = useState(true);
+  const [showForm, setShowForm] = useState(false);
+  const [selectedText, setSelectedText] = useState("");
+  const [form, setForm] = useState({ replacement: "", reason: "", category: SUGGESTION_CATEGORIES[0], priority: "Suggestion", reviewer: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const promptRef = useRef(null);
+
+  useEffect(() => {
+    fetchPrompt();
+    fetchSuggestions();
+  }, []);
+
+  const fetchPrompt = async () => {
+    setLoadingPrompt(true);
+    try {
+      const res = await fetch("/api/admin/prompt");
+      const data = await res.json();
+      setPrompt(data.prompt || "");
+    } catch { setPrompt("Failed to load system prompt."); }
+    setLoadingPrompt(false);
+  };
+
+  const fetchSuggestions = async () => {
+    try {
+      const res = await fetch("/api/admin/suggestions");
+      const data = await res.json();
+      setSuggestions(data.suggestions || []);
+    } catch {}
+  };
+
+  const handleTextSelection = () => {
+    const sel = window.getSelection();
+    const text = sel?.toString()?.trim();
+    if (text && text.length > 2 && promptRef.current?.contains(sel.anchorNode)) {
+      setSelectedText(text);
+      setForm({ replacement: "", reason: "", category: SUGGESTION_CATEGORIES[0], priority: "Suggestion", reviewer: "" });
+      setShowForm(true);
+    }
+  };
+
+  const submitSuggestion = async () => {
+    if (!selectedText || !form.replacement.trim()) return;
+    setSubmitting(true);
+    try {
+      await fetch("/api/admin/suggestions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ selectedText, ...form }),
+      });
+      setShowForm(false);
+      setSelectedText("");
+      fetchSuggestions();
+    } catch {}
+    setSubmitting(false);
+  };
+
+  const reviewSuggestion = async (id, status) => {
+    try {
+      await fetch(`/api/admin/suggestions/${id}/review`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status }),
+      });
+      fetchSuggestions();
+    } catch {}
+  };
+
+  const pendingCount = suggestions.filter(s => s.status === "pending").length;
+
+  const inp = "w-full bg-stone-900 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 placeholder-stone-600 outline-none focus:border-amber-400/30 transition-colors";
+
+  return (
+    <div>
+      {/* View toggle */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex gap-2">
+          <button onClick={() => setView("document")}
+            className={`text-sm px-4 py-2 rounded-lg transition-colors ${view === "document" ? "bg-amber-400/10 border border-amber-400/30 text-amber-200" : "text-stone-500 hover:text-stone-300 border border-stone-800"}`}>
+            Document View
+          </button>
+          <button onClick={() => setView("manage")}
+            className={`text-sm px-4 py-2 rounded-lg transition-colors ${view === "manage" ? "bg-amber-400/10 border border-amber-400/30 text-amber-200" : "text-stone-500 hover:text-stone-300 border border-stone-800"}`}>
+            Manage Suggestions
+            {pendingCount > 0 && <span className="ml-2 bg-amber-400/20 text-amber-300 text-xs px-1.5 py-0.5 rounded-full">{pendingCount}</span>}
+          </button>
+        </div>
+        <p className="text-stone-600 text-xs">{suggestions.length} total suggestion{suggestions.length !== 1 ? "s" : ""}</p>
+      </div>
+
+      {/* Document View */}
+      {view === "document" && (
+        <div className="relative">
+          <div className="bg-stone-900/30 border border-stone-800/30 rounded-xl p-4 mb-4">
+            <p className="text-stone-500 text-xs">Select text in the document below to suggest an edit. Your suggestions will be reviewed by the team.</p>
+          </div>
+
+          {loadingPrompt ? (
+            <div className="text-center py-20 text-stone-600">Loading system prompt...</div>
+          ) : (
+            <div ref={promptRef} onMouseUp={handleTextSelection}
+              className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-8 max-w-4xl cursor-text selection:bg-amber-400/20">
+              {renderMarkdown(prompt)}
+            </div>
+          )}
+
+          {/* Suggestion form modal */}
+          {showForm && (
+            <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4" onClick={() => setShowForm(false)}>
+              <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 max-w-lg w-full shadow-2xl" onClick={e => e.stopPropagation()}>
+                <h3 className="text-stone-200 text-lg mb-4" style={{ fontFamily: "'Georgia', serif" }}>Suggest an Edit</h3>
+
+                <div className="mb-4">
+                  <p className="text-stone-500 text-xs mb-1">Selected text:</p>
+                  <div className="bg-stone-800/50 border border-stone-700 rounded-lg px-3 py-2 text-sm text-amber-300/80 italic max-h-24 overflow-y-auto">
+                    "{selectedText}"
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div>
+                    <label className="text-stone-500 text-xs mb-1 block">Suggested replacement *</label>
+                    <textarea value={form.replacement} onChange={e => setForm({...form, replacement: e.target.value})}
+                      placeholder="What should this text say instead?"
+                      rows={3} className={inp} style={{ resize: "vertical" }} />
+                  </div>
+                  <div>
+                    <label className="text-stone-500 text-xs mb-1 block">Reason for change</label>
+                    <textarea value={form.reason} onChange={e => setForm({...form, reason: e.target.value})}
+                      placeholder="Why should this be changed? (scripture refs, theological concerns, etc.)"
+                      rows={2} className={inp} style={{ resize: "vertical" }} />
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="text-stone-500 text-xs mb-1 block">Category</label>
+                      <select value={form.category} onChange={e => setForm({...form, category: e.target.value})} className={inp}>
+                        {SUGGESTION_CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-stone-500 text-xs mb-1 block">Priority</label>
+                      <select value={form.priority} onChange={e => setForm({...form, priority: e.target.value})} className={inp}>
+                        {SUGGESTION_PRIORITIES.map(p => <option key={p} value={p}>{p}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-stone-500 text-xs mb-1 block">Your name</label>
+                    <input type="text" value={form.reviewer} onChange={e => setForm({...form, reviewer: e.target.value})}
+                      placeholder="Pastor John, Dr. Smith, etc." className={inp} />
+                  </div>
+                  <div className="flex gap-2 pt-2">
+                    <button onClick={submitSuggestion} disabled={submitting || !form.replacement.trim()}
+                      className="flex-1 bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 text-amber-200 text-sm py-2.5 rounded-lg transition-colors disabled:opacity-30">
+                      {submitting ? "Submitting..." : "Submit Suggestion"}
+                    </button>
+                    <button onClick={() => setShowForm(false)} className="text-stone-500 hover:text-stone-300 text-sm px-4 transition-colors">
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Manage Suggestions View */}
+      {view === "manage" && (
+        <div>
+          {suggestions.length === 0 && <p className="text-stone-600 text-sm">No suggestions yet. Go to Document View and select text to submit one.</p>}
+          <div className="space-y-4">
+            {[...suggestions].sort((a, b) => (b.ts || 0) - (a.ts || 0)).map(s => {
+              const priorityColors = { Critical: "text-red-400 bg-red-900/20 border-red-700/30", Important: "text-amber-400 bg-amber-900/20 border-amber-700/30", Suggestion: "text-blue-400 bg-blue-900/20 border-blue-700/30" };
+              const statusColors = { pending: "text-amber-300 bg-amber-400/10", accepted: "text-green-400 bg-green-900/20", rejected: "text-red-400 bg-red-900/20" };
+
+              return (
+                <div key={s.id} className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <span className={`text-xs px-2 py-0.5 rounded-full border ${priorityColors[s.priority] || priorityColors.Suggestion}`}>{s.priority}</span>
+                      <span className="text-xs text-stone-500 bg-stone-800 px-2 py-0.5 rounded-full">{s.category}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full ${statusColors[s.status] || ""}`}>{s.status}</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-stone-500 text-xs">{s.reviewer || "Anonymous"}</p>
+                      {s.ts && <p className="text-stone-700 text-xs">{formatDate(s.ts)}</p>}
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <p className="text-stone-500 text-xs mb-1">Original text:</p>
+                    <div className="bg-stone-800/50 border border-stone-700/50 rounded-lg px-3 py-2 text-sm text-red-300/60 line-through">
+                      "{s.selectedText}"
+                    </div>
+                  </div>
+
+                  <div className="mb-3">
+                    <p className="text-stone-500 text-xs mb-1">Suggested replacement:</p>
+                    <div className="bg-stone-800/50 border border-green-700/20 rounded-lg px-3 py-2 text-sm text-green-300/80">
+                      "{s.replacement}"
+                    </div>
+                  </div>
+
+                  {s.reason && (
+                    <div className="mb-3">
+                      <p className="text-stone-500 text-xs mb-1">Reason:</p>
+                      <p className="text-stone-400 text-sm">{s.reason}</p>
+                    </div>
+                  )}
+
+                  {s.status === "pending" && (
+                    <div className="flex gap-2 pt-2 border-t border-stone-800/30">
+                      <button onClick={() => reviewSuggestion(s.id, "accepted")}
+                        className="text-xs bg-green-900/20 hover:bg-green-900/40 border border-green-700/30 text-green-400 px-4 py-1.5 rounded-lg transition-colors">
+                        Accept
+                      </button>
+                      <button onClick={() => reviewSuggestion(s.id, "rejected")}
+                        className="text-xs bg-red-900/20 hover:bg-red-900/40 border border-red-700/30 text-red-400 px-4 py-1.5 rounded-lg transition-colors">
+                        Reject
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}
@@ -431,22 +730,42 @@ export default function AdminDashboard() {
   const [authed, setAuthed] = useState(false);
   const [pass, setPass] = useState("");
   const [tab, setTab] = useState("overview");
-  const [data, setData] = useState({ conversations: [], connects: [] });
+  const [stats, setStats] = useState({ totalChats: 0, totalMessages: 0, decisionsTriggered: 0, connects: 0, languages: {}, dailyMessages: {} });
+  const [connects, setConnects] = useState([]);
+  const [suggestionCount, setSuggestionCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  // Simple password - in production this would be real auth
   const ADMIN_PASS = "seekme2026";
 
-  useEffect(() => {
-    if (authed) {
-      setLoading(true);
-      loadAllData().then(d => { setData(d); setLoading(false); });
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const [statsRes, sugRes] = await Promise.all([
+        fetch("/api/admin/stats"),
+        fetch("/api/admin/suggestions"),
+      ]);
+      const statsData = await statsRes.json();
+      const sugData = await sugRes.json();
+
+      const { connectsList, ...serverStats } = statsData;
+      setStats(serverStats);
+      setConnects(connectsList || []);
+      setSuggestionCount((sugData.suggestions || []).filter(s => s.status === "pending").length);
+    } catch (e) {
+      console.error("Failed to load admin data:", e);
     }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    if (authed) fetchData();
   }, [authed]);
 
-  const refresh = () => {
-    setLoading(true);
-    loadAllData().then(d => { setData(d); setLoading(false); });
+  const handleFollowUp = async (id) => {
+    try {
+      await fetch(`/api/admin/connect/${id}/followup`, { method: "POST", headers: { "Content-Type": "application/json" } });
+      setConnects(prev => prev.map(c => c.id === id ? { ...c, followedUp: true } : c));
+    } catch {}
   };
 
   if (!authed) {
@@ -471,8 +790,9 @@ export default function AdminDashboard() {
   const tabs = [
     { id: "overview", label: "Overview" },
     { id: "conversations", label: "Conversations" },
-    { id: "connects", label: "Connects" },
+    { id: "connects", label: "Connects", badge: connects.filter(c => !c.followedUp).length },
     { id: "analysis", label: "AI Analysis" },
+    { id: "prompt-review", label: "Prompt Review", badge: suggestionCount },
   ];
 
   return (
@@ -481,24 +801,24 @@ export default function AdminDashboard() {
       <div className="border-b border-stone-800/50 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <h1 className="text-stone-200 font-medium" style={{ fontFamily: "'Georgia', serif" }}>✦ Seek & Find — Admin</h1>
+            <h1 className="text-stone-200 font-medium" style={{ fontFamily: "'Georgia', serif" }}>&#10022; Seek & Find — Admin</h1>
             <span className="text-stone-700 text-xs">Dashboard</span>
           </div>
-          <button onClick={refresh} className="text-stone-500 hover:text-stone-300 text-xs transition-colors">
-            {loading ? "Loading..." : "↻ Refresh"}
+          <button onClick={fetchData} className="text-stone-500 hover:text-stone-300 text-xs transition-colors">
+            {loading ? "Loading..." : "&#8635; Refresh"}
           </button>
         </div>
       </div>
 
       {/* Tabs */}
       <div className="border-b border-stone-800/30 px-6">
-        <div className="max-w-6xl mx-auto flex gap-0">
+        <div className="max-w-6xl mx-auto flex gap-0 overflow-x-auto">
           {tabs.map(t => (
             <button key={t.id} onClick={() => setTab(t.id)}
-              className={`px-5 py-3 text-sm transition-colors border-b-2 ${tab === t.id ? "text-amber-300 border-amber-400/50" : "text-stone-500 hover:text-stone-300 border-transparent"}`}>
+              className={`px-5 py-3 text-sm transition-colors border-b-2 whitespace-nowrap ${tab === t.id ? "text-amber-300 border-amber-400/50" : "text-stone-500 hover:text-stone-300 border-transparent"}`}>
               {t.label}
-              {t.id === "connects" && data.connects.length > 0 && (
-                <span className="ml-2 bg-amber-400/20 text-amber-300 text-xs px-1.5 py-0.5 rounded-full">{data.connects.length}</span>
+              {t.badge > 0 && (
+                <span className="ml-2 bg-amber-400/20 text-amber-300 text-xs px-1.5 py-0.5 rounded-full">{t.badge}</span>
               )}
             </button>
           ))}
@@ -508,14 +828,15 @@ export default function AdminDashboard() {
       {/* Content */}
       <div className="px-6 py-8">
         <div className="max-w-6xl mx-auto">
-          {loading ? (
+          {loading && tab !== "conversations" && tab !== "prompt-review" ? (
             <div className="text-center py-20 text-stone-600">Loading data...</div>
           ) : (
             <>
-              {tab === "overview" && <OverviewTab conversations={data.conversations} connects={data.connects} />}
-              {tab === "conversations" && <ConversationsTab conversations={data.conversations} />}
-              {tab === "connects" && <ConnectsTab connects={data.connects} />}
-              {tab === "analysis" && <AnalysisTab conversations={data.conversations} />}
+              {tab === "overview" && <OverviewTab stats={stats} connects={connects} />}
+              {tab === "conversations" && <ConversationsTab />}
+              {tab === "connects" && <ConnectsTab connects={connects} onFollowUp={handleFollowUp} />}
+              {tab === "analysis" && <AnalysisTab />}
+              {tab === "prompt-review" && <PromptReviewTab suggestionCount={suggestionCount} />}
             </>
           )}
         </div>

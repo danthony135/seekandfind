@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import LANGS from "./translations.json";
+import AdminDashboard from "./Admin.jsx";
 
 // ============================================================
 // i18n HELPERS
@@ -430,6 +431,7 @@ export default function App() {
   const navigate=p=>{window.location.hash=p;window.scrollTo(0,0);};
   const startChat=(msg=null)=>{const c={id:generateId(),title:msg?msg.slice(0,60):t.chat.new,messages:[],createdAt:Date.now(),updatedAt:Date.now()};const l=[c,...conversations];setConversations(l);save(STORAGE_KEY,l);setActiveId(c.id);saveId(c.id);if(msg)setPending(msg);navigate("/chat");};
 
+  if(route==="/admin")return <AdminDashboard />;
   if(route==="/chat")return <ChatInterface conversations={conversations} setConversations={setConversations} activeId={activeId} setActiveId={setActiveId} navigate={navigate} pendingMessage={pending} clearPending={()=>setPending(null)} t={t} lang={lang}/>;
 
   const p={navigate,startChat,t};
