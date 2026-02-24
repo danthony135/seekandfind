@@ -1,19 +1,3504 @@
 {
-  "en":{"name":"English","dir":"ltr","nav":{"home":"Home","questions":"Questions","how":"How It Works","about":"About","start":"Start a conversation"},"hero":{"tag":"Ask anything. Seek truth. Find hope.","title":"You have\nquestions.","sub":"Is God real? Why does God allow suffering? What is the meaning of life? What happens when we die?","sub2":"A safe place to explore them. No judgment. No pressure. No cost.","free":"Completely free. No account needed. Your conversations stay on your device.","scroll":"Scroll to explore"},"prompt":{"ask":"Ask anything...","mind":"What's on your mind?","tryit":"Try it now...","type":"Type your thoughts, or press send to start...","haveQ":"Have a question? Start here..."},"chat":{"new":"New conversation","none":"No conversations yet.","saved":"Saved locally on your device","newBtn":"+ New","homeBtn":"← Home","about":"Ask about God, life, faith, purpose — anything.","footer":"Free forever · AI-powered · ","privacy":"Privacy","s1":"Is God real?","s2":"Why does God allow suffering?","s3":"What is my purpose?","s4":"Does God love me?","s5":"I just need someone to talk to"},"cn":{"title":"Want us to reach out?","sub":"We're building a network of mentors and churches. Leave your info and we'll connect you when we can. No spam, ever.","name":"Your name (optional)","email":"your@email.com","number":"Your number","country":"Country or city","btn":"Connect me","notNow":"Not now","disc":"Your info is only used to connect you.","ok":"We've got your info.","okSub":"We'll reach out when we can.","wa":"WhatsApp","em":"Email","ph":"Phone","tg":"Telegram","n1":"I just decided to follow Jesus","n2":"Help me find a church","n3":"I need a Bible","n4":"I want to talk to a real person","n5":"I'm going through something difficult","n6":"Something else"},"ft":{"desc":"A free, private space to explore questions about God, Jesus, faith, and the meaning of life.","pages":"Pages","promise":"Promise","promiseT":"Free forever. No ads. No data sold.","verse":"\"Freely you have received; freely give.\" — Matthew 10:8"},"home":{"qTitle":"Questions people bring here","qSub":"You're not alone in what you're wondering.","seeAll":"See all questions →","place":"A place to talk about what matters most","p1":"Everyone has questions about God, faith, and the purpose of life.","p2":"Maybe you grew up in church and walked away. Maybe you've never set foot in one.","p3":"This is a free, private space to explore those questions.","noCatch":"Completely free. No catch.","noCatchSub":"No subscriptions. No hidden fees. No ads. No data sold.","seekQ":"\"Seek and you will find.\""},"q":{"title":"Questions people ask","sub":"Click to learn more or start a conversation.","talk":"Talk about this →","back":"← All questions","explore":"Want to explore this?","fpn":"Free. Private. No account needed.","notFound":"Not found.","browse":"Browse all"},"hw":{"t":"How it works","s1t":"Ask","s1b":"Type any question. No wrong questions.","s2t":"Converse","s2b":"A real conversation, not a sermon.","s3t":"Return","s3b":"Come back anytime."},"ab":{"hero":"We believe every person on earth deserves the chance to hear the gospel — in their language, on their terms, at any hour."},"pv":{"title":"Privacy","hero":"Your conversations are private. Period."}},
-  "es":{"name":"Español","dir":"ltr","nav":{"home":"Inicio","questions":"Preguntas","how":"Cómo funciona","about":"Acerca de","start":"Iniciar conversación"},"hero":{"tag":"Pregunta lo que quieras. Busca la verdad. Encuentra esperanza.","title":"Tienes\npreguntas.","sub":"¿Dios es real? ¿Por qué el sufrimiento? ¿Cuál es el sentido de la vida?","sub2":"Un lugar seguro. Sin juicio. Sin presión. Sin costo.","free":"Completamente gratis. Sin cuenta.","scroll":"Desplázate"},"prompt":{"ask":"Pregunta lo que quieras...","mind":"¿Qué tienes en mente?","tryit":"Pruébalo...","type":"Escribe lo que piensas...","haveQ":"¿Pregunta?"},"chat":{"new":"Nueva conversación","none":"Sin conversaciones.","saved":"Guardado localmente","newBtn":"+ Nuevo","homeBtn":"← Inicio","about":"Pregunta sobre Dios, la vida, la fe.","footer":"Gratis siempre · IA · ","privacy":"Privacidad","s1":"¿Dios es real?","s2":"¿Por qué el sufrimiento?","s3":"¿Cuál es mi propósito?","s4":"¿Dios me ama?","s5":"Solo necesito hablar"},"cn":{"title":"¿Quieres que nos comuniquemos?","sub":"Red de mentores e iglesias.","name":"Tu nombre (opcional)","email":"tu@correo.com","number":"Tu número","country":"País o ciudad","btn":"Conéctame","notNow":"Ahora no","disc":"Solo para conectarte.","ok":"Tenemos tu info.","okSub":"Nos comunicaremos.","wa":"WhatsApp","em":"Correo","ph":"Teléfono","tg":"Telegram","n1":"Decidí seguir a Jesús","n2":"Encontrar iglesia","n3":"Necesito Biblia","n4":"Hablar con alguien","n5":"Momento difícil","n6":"Otra cosa"},"ft":{"desc":"Espacio gratuito para preguntas sobre Dios y la fe.","pages":"Páginas","promise":"Promesa","promiseT":"Gratis siempre. Sin anuncios.","verse":"\"De gracia recibisteis, dad de gracia.\" — Mateo 10:8"},"home":{"qTitle":"Preguntas frecuentes","qSub":"No estás solo.","seeAll":"Ver todas →","place":"Un lugar para lo que importa","p1":"Todos tienen preguntas sobre Dios.","p2":"Quizás creciste en la iglesia y te fuiste.","p3":"Un espacio gratuito y privado.","noCatch":"Gratis. Sin truco.","noCatchSub":"Sin anuncios.","seekQ":"\"Busca y encontrarás.\""},"q":{"title":"Preguntas","sub":"Haz clic para más.","talk":"Hablar →","back":"← Todas","explore":"¿Explorar?","fpn":"Gratis. Privado.","notFound":"No encontrado.","browse":"Ver todo"},"hw":{"t":"Cómo funciona","s1t":"Pregunta","s1b":"Cualquier pregunta.","s2t":"Conversa","s2b":"Conversación real.","s3t":"Regresa","s3b":"Cuando quieras."},"ab":{"hero":"Toda persona merece escuchar el evangelio."},"pv":{"title":"Privacidad","hero":"Tus conversaciones son privadas."}},
-  "pt":{"name":"Português","dir":"ltr","nav":{"home":"Início","questions":"Perguntas","how":"Como funciona","about":"Sobre","start":"Iniciar conversa"},"hero":{"tag":"Pergunte. Busque a verdade. Encontre esperança.","title":"Você tem\nperguntas.","sub":"Deus é real? Por que o sofrimento? Qual o sentido da vida?","sub2":"Um lugar seguro. Sem julgamento. Sem custo.","free":"Completamente grátis.","scroll":"Role"},"prompt":{"ask":"Pergunte...","mind":"O que pensa?","tryit":"Experimente...","type":"Escreva...","haveQ":"Pergunta?"},"chat":{"new":"Nova conversa","none":"Nenhuma.","saved":"Salvo localmente","newBtn":"+ Nova","homeBtn":"← Início","about":"Sobre Deus, vida, fé.","footer":"Grátis · IA · ","privacy":"Privacidade","s1":"Deus é real?","s2":"Por que o sofrimento?","s3":"Meu propósito?","s4":"Deus me ama?","s5":"Preciso conversar"},"cn":{"title":"Entrar em contato?","sub":"Rede de mentores.","name":"Nome (opcional)","email":"email","number":"Número","country":"País","btn":"Conecte-me","notNow":"Agora não","disc":"Só para conectar.","ok":"Recebemos.","okSub":"Entraremos em contato.","wa":"WhatsApp","em":"Email","ph":"Telefone","tg":"Telegram","n1":"Seguir Jesus","n2":"Encontrar igreja","n3":"Preciso de Bíblia","n4":"Falar com alguém","n5":"Momento difícil","n6":"Outra coisa"},"ft":{"desc":"Espaço gratuito.","pages":"Páginas","promise":"Promessa","promiseT":"Grátis sempre.","verse":"\"De graça recebestes.\" — Mateus 10:8"},"home":{"qTitle":"Perguntas frequentes","qSub":"Não está sozinho.","seeAll":"Todas →","place":"Para o que importa","p1":"Todos têm perguntas sobre Deus.","p2":"Talvez se afastou da igreja.","p3":"Espaço gratuito.","noCatch":"Grátis.","noCatchSub":"Sem anúncios.","seekQ":"\"Busquem e encontrarão.\""},"q":{"title":"Perguntas","sub":"Clique.","talk":"Conversar →","back":"← Todas","explore":"Explorar?","fpn":"Grátis.","notFound":"Não encontrado.","browse":"Tudo"},"hw":{"t":"Como funciona","s1t":"Pergunte","s1b":"Qualquer pergunta.","s2t":"Converse","s2b":"Conversa real.","s3t":"Volte","s3b":"Quando quiser."},"ab":{"hero":"Toda pessoa merece ouvir o evangelho."},"pv":{"title":"Privacidade","hero":"Suas conversas são privadas."}},
-  "fr":{"name":"Français","dir":"ltr","nav":{"home":"Accueil","questions":"Questions","how":"Comment ça marche","about":"À propos","start":"Démarrer"},"hero":{"tag":"Posez vos questions. Cherchez la vérité. Trouvez l'espérance.","title":"Vous avez\ndes questions.","sub":"Dieu existe-t-il ? Pourquoi la souffrance ? Quel est le sens de la vie ?","sub2":"Un espace sûr. Sans jugement. Gratuit.","free":"Entièrement gratuit.","scroll":"Défiler"},"prompt":{"ask":"Posez une question...","mind":"En tête ?","tryit":"Essayez...","type":"Écrivez...","haveQ":"Question ?"},"chat":{"new":"Nouvelle conversation","none":"Aucune.","saved":"Sauvegardé","newBtn":"+ Nouveau","homeBtn":"← Accueil","about":"Sur Dieu, la vie, la foi.","footer":"Gratuit · IA · ","privacy":"Confidentialité","s1":"Dieu existe-t-il ?","s2":"Pourquoi la souffrance ?","s3":"Mon but ?","s4":"Dieu m'aime ?","s5":"Besoin de parler"},"cn":{"title":"Être contacté ?","sub":"Réseau de mentors.","name":"Nom (facultatif)","email":"email","number":"Numéro","country":"Pays","btn":"Connectez-moi","notNow":"Pas maintenant","disc":"Pour vous connecter.","ok":"Reçu.","okSub":"Nous contacterons.","wa":"WhatsApp","em":"Email","ph":"Téléphone","tg":"Telegram","n1":"Suivre Jésus","n2":"Trouver église","n3":"Bible","n4":"Parler à quelqu'un","n5":"Moment difficile","n6":"Autre"},"ft":{"desc":"Espace gratuit.","pages":"Pages","promise":"Promesse","promiseT":"Gratuit.","verse":"\"Gratuitement, donnez.\" — Matthieu 10:8"},"home":{"qTitle":"Questions posées","qSub":"Pas seul.","seeAll":"Toutes →","place":"Pour ce qui compte","p1":"Questions sur Dieu et la foi.","p2":"Peut-être quitté l'église.","p3":"Espace gratuit.","noCatch":"Gratuit.","noCatchSub":"Sans pub.","seekQ":"\"Cherchez, trouverez.\""},"q":{"title":"Questions","sub":"Cliquez.","talk":"Parler →","back":"← Toutes","explore":"Explorer ?","fpn":"Gratuit.","notFound":"Non trouvé.","browse":"Tout"},"hw":{"t":"Comment ça marche","s1t":"Demandez","s1b":"N'importe quelle question.","s2t":"Conversez","s2b":"Vraie conversation.","s3t":"Revenez","s3b":"Quand vous voulez."},"ab":{"hero":"Chaque personne mérite l'Évangile."},"pv":{"title":"Confidentialité","hero":"Vos conversations sont privées."}},
-  "ar":{"name":"العربية","dir":"rtl","nav":{"home":"الرئيسية","questions":"أسئلة","how":"كيف يعمل","about":"عن الموقع","start":"ابدأ محادثة"},"hero":{"tag":"اسأل أي شيء. ابحث عن الحقيقة. اعثر على الرجاء.","title":"لديك\nأسئلة.","sub":"هل الله موجود؟ لماذا المعاناة؟ ما معنى الحياة؟","sub2":"مكان آمن. بدون حكم. مجاني.","free":"مجاني تماماً.","scroll":"انزل"},"prompt":{"ask":"اسأل...","mind":"ما يشغلك؟","tryit":"جرّب...","type":"اكتب...","haveQ":"سؤال؟"},"chat":{"new":"محادثة جديدة","none":"لا محادثات.","saved":"محفوظ","newBtn":"+ جديد","homeBtn":"الرئيسية →","about":"اسأل عن الله.","footer":"مجاني · ذكاء اصطناعي · ","privacy":"الخصوصية","s1":"هل الله موجود؟","s2":"لماذا المعاناة؟","s3":"هدفي؟","s4":"هل الله يحبني؟","s5":"أحتاج شخصاً"},"cn":{"title":"نتواصل؟","sub":"شبكة مرشدين.","name":"اسمك","email":"بريدك","number":"رقمك","country":"البلد","btn":"تواصل","notNow":"ليس الآن","disc":"للتواصل فقط.","ok":"استلمنا.","okSub":"سنتواصل.","wa":"واتساب","em":"بريد","ph":"هاتف","tg":"تلغرام","n1":"اتباع عيسى","n2":"إيجاد كنيسة","n3":"كتاب مقدس","n4":"شخص حقيقي","n5":"وقت صعب","n6":"آخر"},"ft":{"desc":"مكان مجاني.","pages":"صفحات","promise":"وعد","promiseT":"مجاني.","verse":"\"مجاناً أخذتم.\" — متى ١٠:٨"},"home":{"qTitle":"أسئلة الناس","qSub":"لست وحدك.","seeAll":"الكل ←","place":"للأهم","p1":"الجميع لديهم أسئلة.","p2":"ربما ابتعدت.","p3":"مكان مجاني.","noCatch":"مجاني.","noCatchSub":"بدون إعلانات.","seekQ":"\"اطلبوا تجدوا.\""},"q":{"title":"أسئلة","sub":"اضغط.","talk":"تحدث ←","back":"الكل →","explore":"استكشف؟","fpn":"مجاني.","notFound":"غير موجود.","browse":"تصفح"},"hw":{"t":"كيف يعمل","s1t":"اسأل","s1b":"أي سؤال.","s2t":"تحاور","s2b":"محادثة حقيقية.","s3t":"عُد","s3b":"أي وقت."},"ab":{"hero":"كل إنسان يستحق سماع الإنجيل."},"pv":{"title":"الخصوصية","hero":"محادثاتك خاصة."}},
-  "hi":{"name":"हिन्दी","dir":"ltr","nav":{"home":"होम","questions":"सवाल","how":"कैसे काम करता है","about":"बारे में","start":"बातचीत शुरू करें"},"hero":{"tag":"कुछ भी पूछें। सत्य खोजें। आशा पाएं।","title":"आपके\nसवाल हैं।","sub":"क्या परमेश्वर सच में हैं? दुख क्यों? जीवन का अर्थ?","sub2":"सुरक्षित जगह। मुफ्त।","free":"पूरी तरह मुफ्त।","scroll":"स्क्रॉल करें"},"prompt":{"ask":"कुछ भी पूछें...","mind":"मन में क्या?","tryit":"आज़माएं...","type":"लिखें...","haveQ":"सवाल?"},"chat":{"new":"नई बातचीत","none":"कोई नहीं।","saved":"सेव","newBtn":"+ नया","homeBtn":"← होम","about":"परमेश्वर के बारे में पूछें।","footer":"मुफ्त · AI · ","privacy":"गोपनीयता","s1":"क्या परमेश्वर सच में हैं?","s2":"दुख क्यों?","s3":"मेरा उद्देश्य?","s4":"क्या परमेश्वर प्रेम करते हैं?","s5":"बस बात करनी है"},"cn":{"title":"संपर्क करें?","sub":"संरक्षकों का नेटवर्क।","name":"नाम","email":"ईमेल","number":"नंबर","country":"देश","btn":"जोड़ें","notNow":"अभी नहीं","disc":"जोड़ने के लिए।","ok":"मिली।","okSub":"संपर्क करेंगे।","wa":"WhatsApp","em":"ईमेल","ph":"फ़ोन","tg":"Telegram","n1":"यीशु का अनुसरण","n2":"चर्च खोजें","n3":"बाइबल","n4":"किसी से बात","n5":"मुश्किल","n6":"और"},"ft":{"desc":"मुफ्त जगह।","pages":"पेज","promise":"वादा","promiseT":"मुफ्त।","verse":"\"सेंतमेंत पाया।\" — मत्ती 10:8"},"home":{"qTitle":"सवाल","qSub":"अकेले नहीं।","seeAll":"सब →","place":"महत्वपूर्ण बातें","p1":"सबके सवाल हैं।","p2":"शायद चर्च छोड़ा।","p3":"मुफ्त जगह।","noCatch":"मुफ्त।","noCatchSub":"विज्ञापन नहीं।","seekQ":"\"खोजो तो पाओगे।\""},"q":{"title":"सवाल","sub":"क्लिक करें।","talk":"बात →","back":"← सब","explore":"जानना?","fpn":"मुफ्त।","notFound":"नहीं मिला।","browse":"सब"},"hw":{"t":"कैसे","s1t":"पूछें","s1b":"कोई भी।","s2t":"बातचीत","s2b":"सच्ची।","s3t":"वापस","s3b":"कभी भी।"},"ab":{"hero":"हर व्यक्ति सुसमाचार सुनने का हकदार है।"},"pv":{"title":"गोपनीयता","hero":"बातचीत निजी है।"}},
-  "zh":{"name":"中文","dir":"ltr","nav":{"home":"首页","questions":"问题","how":"如何使用","about":"关于","start":"开始对话"},"hero":{"tag":"提出任何问题。寻求真理。找到希望。","title":"你有\n疑问。","sub":"上帝真实吗？为什么苦难？生命的意义？","sub2":"安全空间。免费。","free":"完全免费。","scroll":"滚动"},"prompt":{"ask":"问任何问题...","mind":"在想什么？","tryit":"试试...","type":"写下想法...","haveQ":"有问题？"},"chat":{"new":"新对话","none":"还没有。","saved":"已保存","newBtn":"+ 新","homeBtn":"← 首页","about":"关于上帝。","footer":"免费 · AI · ","privacy":"隐私","s1":"上帝真实吗？","s2":"为什么苦难？","s3":"我的目的？","s4":"上帝爱我？","s5":"需要聊聊"},"cn":{"title":"联系你？","sub":"导师网络。","name":"名字","email":"邮箱","number":"号码","country":"国家","btn":"联系我","notNow":"暂不","disc":"仅用联系。","ok":"收到。","okSub":"会联系。","wa":"WhatsApp","em":"邮箱","ph":"电话","tg":"Telegram","n1":"跟随耶稣","n2":"找教会","n3":"需要圣经","n4":"和人交谈","n5":"困难时期","n6":"其他"},"ft":{"desc":"免费空间。","pages":"页面","promise":"承诺","promiseT":"免费。","verse":"\"白白得来。\" — 马太10:8"},"home":{"qTitle":"人们的问题","qSub":"不孤单。","seeAll":"全部 →","place":"重要的事","p1":"都有问题。","p2":"也许离开教会。","p3":"免费空间。","noCatch":"免费。","noCatchSub":"无广告。","seekQ":"\"寻找就寻见。\""},"q":{"title":"问题","sub":"点击。","talk":"聊 →","back":"← 全部","explore":"探索？","fpn":"免费。","notFound":"未找到。","browse":"全部"},"hw":{"t":"如何使用","s1t":"问","s1b":"任何问题。","s2t":"对话","s2b":"真正对话。","s3t":"回来","s3b":"随时。"},"ab":{"hero":"每个人都应听到福音。"},"pv":{"title":"隐私","hero":"对话私密。"}},
-  "id":{"name":"Bahasa Indonesia","dir":"ltr","nav":{"home":"Beranda","questions":"Pertanyaan","how":"Cara kerja","about":"Tentang","start":"Mulai"},"hero":{"tag":"Tanyakan apa saja. Cari kebenaran. Temukan harapan.","title":"Kamu punya\npertanyaan.","sub":"Apakah Tuhan nyata? Mengapa penderitaan? Apa arti hidup?","sub2":"Tempat aman. Gratis.","free":"Gratis.","scroll":"Gulir"},"prompt":{"ask":"Tanyakan...","mind":"Pikiranmu?","tryit":"Coba...","type":"Tulis...","haveQ":"Pertanyaan?"},"chat":{"new":"Baru","none":"Belum ada.","saved":"Tersimpan","newBtn":"+ Baru","homeBtn":"← Beranda","about":"Tentang Tuhan.","footer":"Gratis · AI · ","privacy":"Privasi","s1":"Apakah Tuhan nyata?","s2":"Mengapa penderitaan?","s3":"Tujuan hidupku?","s4":"Tuhan mengasihi aku?","s5":"Butuh seseorang"},"cn":{"title":"Hubungi?","sub":"Jaringan mentor.","name":"Nama","email":"email","number":"nomor","country":"Negara","btn":"Hubungkan","notNow":"Nanti","disc":"Untuk menghubungkan.","ok":"Terima.","okSub":"Akan hubungi.","wa":"WhatsApp","em":"Email","ph":"Telepon","tg":"Telegram","n1":"Mengikut Yesus","n2":"Cari gereja","n3":"Alkitab","n4":"Bicara","n5":"Masa sulit","n6":"Lain"},"ft":{"desc":"Ruang gratis.","pages":"Halaman","promise":"Janji","promiseT":"Gratis.","verse":"\"Cuma-cuma.\" — Matius 10:8"},"home":{"qTitle":"Pertanyaan","qSub":"Tidak sendiri.","seeAll":"Semua →","place":"Hal terpenting","p1":"Semua punya pertanyaan.","p2":"Mungkin pernah ke gereja.","p3":"Ruang gratis.","noCatch":"Gratis.","noCatchSub":"Tanpa iklan.","seekQ":"\"Carilah, mendapat.\""},"q":{"title":"Pertanyaan","sub":"Klik.","talk":"Bicara →","back":"← Semua","explore":"Eksplor?","fpn":"Gratis.","notFound":"Tidak ada.","browse":"Semua"},"hw":{"t":"Cara kerja","s1t":"Tanya","s1b":"Apa saja.","s2t":"Bicara","s2b":"Nyata.","s3t":"Kembali","s3b":"Kapan saja."},"ab":{"hero":"Setiap orang berhak mendengar Injil."},"pv":{"title":"Privasi","hero":"Percakapanmu privat."}},
-  "fa":{"name":"فارسی","dir":"rtl","nav":{"home":"خانه","questions":"سؤالات","how":"چگونه","about":"درباره","start":"شروع"},"hero":{"tag":"بپرس. حقیقت بجوی. امید بیاب.","title":"تو\nسؤال داری.","sub":"خدا واقعی است؟ چرا رنج؟ معنای زندگی؟","sub2":"جای امن. رایگان.","free":"رایگان.","scroll":"اسکرول"},"prompt":{"ask":"بپرس...","mind":"در ذهنت؟","tryit":"امتحان...","type":"بنویس...","haveQ":"سؤال؟"},"chat":{"new":"گفتگوی جدید","none":"نیست.","saved":"ذخیره","newBtn":"+ جدید","homeBtn":"خانه →","about":"درباره خدا.","footer":"رایگان · هوش مصنوعی · ","privacy":"حریم خصوصی","s1":"خدا واقعی است؟","s2":"چرا رنج؟","s3":"هدف من؟","s4":"خدا دوستم دارد؟","s5":"به کسی نیاز دارم"},"cn":{"title":"تماس؟","sub":"شبکه راهنماها.","name":"نام","email":"ایمیل","number":"شماره","country":"کشور","btn":"وصل","notNow":"نه","disc":"برای اتصال.","ok":"رسید.","okSub":"تماس.","wa":"واتس‌اپ","em":"ایمیل","ph":"تلفن","tg":"تلگرام","n1":"عیسی را دنبال","n2":"کلیسا","n3":"کتاب مقدس","n4":"صحبت","n5":"سخت","n6":"دیگر"},"ft":{"desc":"فضای رایگان.","pages":"صفحات","promise":"قول","promiseT":"رایگان.","verse":"\"رایگان.\" — متی ۱۰:۸"},"home":{"qTitle":"سؤالات","qSub":"تنها نیستی.","seeAll":"همه ←","place":"مهم‌ترین","p1":"همه سؤال دارند.","p2":"شاید رفتی.","p3":"رایگان.","noCatch":"رایگان.","noCatchSub":"بدون تبلیغ.","seekQ":"\"بجویید.\""},"q":{"title":"سؤالات","sub":"کلیک.","talk":"صحبت ←","back":"همه →","explore":"بررسی؟","fpn":"رایگان.","notFound":"نیست.","browse":"همه"},"hw":{"t":"چگونه","s1t":"بپرس","s1b":"هر سؤالی.","s2t":"گفتگو","s2b":"واقعی.","s3t":"برگرد","s3b":"هر وقت."},"ab":{"hero":"هر انسان حق شنیدن دارد."},"pv":{"title":"حریم خصوصی","hero":"خصوصی."}},
-  "tg":{"name":"Тоҷикӣ","dir":"ltr","nav":{"home":"Асосӣ","questions":"Саволҳо","how":"Чӣ тавр кор мекунад","about":"Дар бора","start":"Сӯҳбат оғоз кунед"},"hero":{"tag":"Ҳар чизе пурсед. Ҳақиқатро ҷӯед. Умедро ёбед.","title":"Шумо\nсаволҳо доред.","sub":"Оё Худо воқеист? Чаро ранҷ? Маънои зиндагӣ?","sub2":"Ҷои амн. Ройгон.","free":"Комилан ройгон.","scroll":"Скрол кунед"},"prompt":{"ask":"Ҳар чизе пурсед...","mind":"Дар фикратон?","tryit":"Санҷед...","type":"Нависед...","haveQ":"Савол?"},"chat":{"new":"Сӯҳбати нав","none":"Нест.","saved":"Захира","newBtn":"+ Нав","homeBtn":"← Асосӣ","about":"Дар бораи Худо пурсед.","footer":"Ройгон · Зеҳни сунъӣ · ","privacy":"Ҳифзи маълумот","s1":"Оё Худо воқеист?","s2":"Чаро ранҷ?","s3":"Ҳадафи ман?","s4":"Оё Худо дӯст медорад?","s5":"Ба касе ниёз дорам"},"cn":{"title":"Тамос гирем?","sub":"Шабакаи роҳнамоён.","name":"Ном","email":"имейл","number":"рақам","country":"Кишвар","btn":"Пайваст","notNow":"Ҳоло не","disc":"Барои пайваст.","ok":"Расид.","okSub":"Тамос.","wa":"WhatsApp","em":"Имейл","ph":"Телефон","tg":"Telegram","n1":"Исоро пайравӣ","n2":"Калисо","n3":"Китоби Муқаддас","n4":"Бо касе гап","n5":"Вақти душвор","n6":"Дигар"},"ft":{"desc":"Фазои ройгон.","pages":"Саҳифаҳо","promise":"Ваъда","promiseT":"Ройгон.","verse":"\"Ройгон гирифтед.\" — Матто 10:8"},"home":{"qTitle":"Саволҳо","qSub":"Танҳо нестед.","seeAll":"Ҳама →","place":"Муҳимтарин","p1":"Ҳама савол доранд.","p2":"Шояд аз калисо рафтед.","p3":"Ройгон.","noCatch":"Ройгон.","noCatchSub":"Бе таблиғот.","seekQ":"\"Ҷӯед, ёбед.\""},"q":{"title":"Саволҳо","sub":"Зер кунед.","talk":"Сӯҳбат →","back":"← Ҳама","explore":"Баррасӣ?","fpn":"Ройгон.","notFound":"Нест.","browse":"Ҳама"},"hw":{"t":"Чӣ тавр","s1t":"Пурсед","s1b":"Ҳар савол.","s2t":"Сӯҳбат","s2b":"Воқеӣ.","s3t":"Баргардед","s3b":"Ҳар вақт."},"ab":{"hero":"Ҳар инсон ҳаққи шунидани Инҷилро дорад."},"pv":{"title":"Ҳифзи маълумот","hero":"Хусусист."}},
-  "tr":{"name":"Türkçe","dir":"ltr","nav":{"home":"Ana Sayfa","questions":"Sorular","how":"Nasıl çalışır","about":"Hakkında","start":"Sohbet başlat"},"hero":{"tag":"Sor. Gerçeği ara. Umudu bul.","title":"Soruların\nvar.","sub":"Tanrı gerçek mi? Neden acı? Hayatın anlamı?","sub2":"Güvenli yer. Ücretsiz.","free":"Ücretsiz.","scroll":"Kaydır"},"prompt":{"ask":"Sor...","mind":"Aklında ne?","tryit":"Dene...","type":"Yaz...","haveQ":"Sorun?"},"chat":{"new":"Yeni","none":"Yok.","saved":"Kayıtlı","newBtn":"+ Yeni","homeBtn":"← Ana Sayfa","about":"Tanrı hakkında.","footer":"Ücretsiz · YZ · ","privacy":"Gizlilik","s1":"Tanrı gerçek mi?","s2":"Neden acı?","s3":"Amacım?","s4":"Tanrı seviyor mu?","s5":"Biriyle konuşmalıyım"},"cn":{"title":"İletişim?","sub":"Mentor ağı.","name":"Ad","email":"e-posta","number":"numara","country":"Ülke","btn":"Bağla","notNow":"Değil","disc":"Bağlantı için.","ok":"Aldık.","okSub":"İletişim.","wa":"WhatsApp","em":"E-posta","ph":"Telefon","tg":"Telegram","n1":"İsa'yı takip","n2":"Kilise bul","n3":"Kutsal Kitap","n4":"Biriyle konuş","n5":"Zor dönem","n6":"Başka"},"ft":{"desc":"Ücretsiz alan.","pages":"Sayfalar","promise":"Söz","promiseT":"Ücretsiz.","verse":"\"Karşılıksız aldınız.\" — Matta 10:8"},"home":{"qTitle":"Sorular","qSub":"Yalnız değilsin.","seeAll":"Tümü →","place":"Önemli","p1":"Herkesin soruları var.","p2":"Kiliseden ayrıldın belki.","p3":"Ücretsiz alan.","noCatch":"Ücretsiz.","noCatchSub":"Reklamsız.","seekQ":"\"Arayın, bulacaksınız.\""},"q":{"title":"Sorular","sub":"Tıkla.","talk":"Konuş →","back":"← Tümü","explore":"Keşfet?","fpn":"Ücretsiz.","notFound":"Yok.","browse":"Tümü"},"hw":{"t":"Nasıl çalışır","s1t":"Sor","s1b":"Ne olursa.","s2t":"Konuş","s2b":"Gerçek.","s3t":"Gel","s3b":"İstediğin zaman."},"ab":{"hero":"Herkes İncil'i duymayı hak eder."},"pv":{"title":"Gizlilik","hero":"Sohbetlerin özel."}},
-  "sw":{"name":"Kiswahili","dir":"ltr","nav":{"home":"Nyumbani","questions":"Maswali","how":"Jinsi","about":"Kuhusu","start":"Anza"},"hero":{"tag":"Uliza. Tafuta ukweli. Pata tumaini.","title":"Una\nmaswali.","sub":"Mungu yupo? Kwa nini mateso? Maana ya maisha?","sub2":"Salama. Bure.","free":"Bure.","scroll":"Sogeza"},"prompt":{"ask":"Uliza...","mind":"Nini akilini?","tryit":"Jaribu...","type":"Andika...","haveQ":"Swali?"},"chat":{"new":"Mapya","none":"Hakuna.","saved":"Imehifadhiwa","newBtn":"+ Mpya","homeBtn":"← Nyumbani","about":"Kuhusu Mungu.","footer":"Bure · AI · ","privacy":"Faragha","s1":"Mungu yupo?","s2":"Kwa nini mateso?","s3":"Kusudi langu?","s4":"Mungu ananipenda?","s5":"Nahitaji mtu"},"cn":{"title":"Tuwasiliane?","sub":"Mtandao wa washauri.","name":"Jina","email":"barua pepe","number":"nambari","country":"Nchi","btn":"Niunganishe","notNow":"Hapana","disc":"Kwa kuunganisha.","ok":"Tumepata.","okSub":"Tutawasiliana.","wa":"WhatsApp","em":"Barua pepe","ph":"Simu","tg":"Telegram","n1":"Kumfuata Yesu","n2":"Kanisa","n3":"Biblia","n4":"Kuzungumza","n5":"Wakati mgumu","n6":"Kingine"},"ft":{"desc":"Nafasi ya bure.","pages":"Kurasa","promise":"Ahadi","promiseT":"Bure.","verse":"\"Bure mlipata.\" — Mathayo 10:8"},"home":{"qTitle":"Maswali","qSub":"Si peke yako.","seeAll":"Yote →","place":"Muhimu","p1":"Kila mtu ana maswali.","p2":"Labda uliondoka.","p3":"Bure.","noCatch":"Bure.","noCatchSub":"Bila matangazo.","seekQ":"\"Tafuteni, mtapata.\""},"q":{"title":"Maswali","sub":"Bofya.","talk":"Zungumza →","back":"← Yote","explore":"Chunguza?","fpn":"Bure.","notFound":"Hakuna.","browse":"Yote"},"hw":{"t":"Jinsi","s1t":"Uliza","s1b":"Swali lolote.","s2t":"Zungumza","s2b":"Halisi.","s3t":"Rudi","s3b":"Wakati wowote."},"ab":{"hero":"Kila mtu anastahili Injili."},"pv":{"title":"Faragha","hero":"Mazungumzo yako ni faragha."}},
-  "ru":{"name":"Русский","dir":"ltr","nav":{"home":"Главная","questions":"Вопросы","how":"Как работает","about":"О нас","start":"Начать"},"hero":{"tag":"Спрашивай. Ищи истину. Найди надежду.","title":"У тебя\nвопросы.","sub":"Бог реален? Почему страдания? Смысл жизни?","sub2":"Безопасно. Бесплатно.","free":"Бесплатно.","scroll":"Прокрутите"},"prompt":{"ask":"Спрашивай...","mind":"Что на уме?","tryit":"Попробуй...","type":"Напиши...","haveQ":"Вопрос?"},"chat":{"new":"Новый","none":"Пока нет.","saved":"Сохранено","newBtn":"+ Новый","homeBtn":"← Главная","about":"О Боге.","footer":"Бесплатно · ИИ · ","privacy":"Конфиденциальность","s1":"Бог реален?","s2":"Почему страдания?","s3":"Мой смысл?","s4":"Бог любит?","s5":"Нужно поговорить"},"cn":{"title":"Связаться?","sub":"Сеть наставников.","name":"Имя","email":"email","number":"номер","country":"Страна","btn":"Свяжитесь","notNow":"Не сейчас","disc":"Для связи.","ok":"Получили.","okSub":"Свяжемся.","wa":"WhatsApp","em":"Email","ph":"Телефон","tg":"Telegram","n1":"Следовать за Иисусом","n2":"Найти церковь","n3":"Библия","n4":"Поговорить","n5":"Трудно","n6":"Другое"},"ft":{"desc":"Бесплатно.","pages":"Страницы","promise":"Обещание","promiseT":"Бесплатно.","verse":"\"Даром получили.\" — Матфея 10:8"},"home":{"qTitle":"Вопросы","qSub":"Не одинок.","seeAll":"Все →","place":"Важное","p1":"У каждого вопросы.","p2":"Может ушёл.","p3":"Бесплатно.","noCatch":"Бесплатно.","noCatchSub":"Без рекламы.","seekQ":"\"Ищите, найдёте.\""},"q":{"title":"Вопросы","sub":"Нажми.","talk":"Обсудить →","back":"← Все","explore":"Узнать?","fpn":"Бесплатно.","notFound":"Нет.","browse":"Все"},"hw":{"t":"Как работает","s1t":"Спроси","s1b":"Любой.","s2t":"Поговори","s2b":"Настоящий.","s3t":"Вернись","s3b":"Когда угодно."},"ab":{"hero":"Каждый заслуживает Евангелие."},"pv":{"title":"Конфиденциальность","hero":"Приватно."}},
-  "ur":{"name":"اردو","dir":"rtl","nav":{"home":"ہوم","questions":"سوالات","how":"کیسے","about":"بارے میں","start":"شروع"},"hero":{"tag":"پوچھیں۔ سچائی تلاش کریں۔ امید پائیں۔","title":"آپ کے\nسوالات ہیں۔","sub":"خدا حقیقی ہے؟ تکلیف کیوں؟ زندگی کا مقصد؟","sub2":"محفوظ۔ مفت۔","free":"مفت۔","scroll":"نیچے"},"prompt":{"ask":"پوچھیں...","mind":"ذہن میں؟","tryit":"آزمائیں...","type":"لکھیں...","haveQ":"سوال؟"},"chat":{"new":"نئی","none":"نہیں۔","saved":"محفوظ","newBtn":"+ نیا","homeBtn":"ہوم →","about":"خدا کے بارے میں۔","footer":"مفت · AI · ","privacy":"رازداری","s1":"خدا حقیقی؟","s2":"تکلیف کیوں؟","s3":"مقصد؟","s4":"خدا محبت؟","s5":"بات کرنی ہے"},"cn":{"title":"رابطہ؟","sub":"رہنماؤں کا نیٹ ورک۔","name":"نام","email":"ای میل","number":"نمبر","country":"ملک","btn":"جوڑیں","notNow":"نہیں","disc":"جوڑنے کے لیے۔","ok":"مل گئی۔","okSub":"رابطہ۔","wa":"WhatsApp","em":"ای میل","ph":"فون","tg":"Telegram","n1":"یسوع کی پیروی","n2":"کلیسا","n3":"بائبل","n4":"بات","n5":"مشکل","n6":"اور"},"ft":{"desc":"مفت۔","pages":"صفحات","promise":"وعدہ","promiseT":"مفت۔","verse":"\"مفت پایا۔\" — متی 10:8"},"home":{"qTitle":"سوالات","qSub":"اکیلے نہیں۔","seeAll":"تمام ←","place":"اہم","p1":"سب کے سوالات۔","p2":"شاید چھوڑا۔","p3":"مفت۔","noCatch":"مفت۔","noCatchSub":"اشتہار نہیں۔","seekQ":"\"ڈھونڈو، پاؤ۔\""},"q":{"title":"سوالات","sub":"کلک۔","talk":"بات ←","back":"سوالات →","explore":"جانیں؟","fpn":"مفت۔","notFound":"نہیں۔","browse":"سب"},"hw":{"t":"کیسے","s1t":"پوچھیں","s1b":"کوئی بھی۔","s2t":"بات","s2b":"حقیقی۔","s3t":"واپس","s3b":"کبھی۔"},"ab":{"hero":"ہر شخص انجیل کا حقدار۔"},"pv":{"title":"رازداری","hero":"نجی۔"}},
-  "bn":{"name":"বাংলা","dir":"ltr","nav":{"home":"হোম","questions":"প্রশ্ন","how":"কিভাবে","about":"সম্পর্কে","start":"শুরু"},"hero":{"tag":"জিজ্ঞাসা করুন। সত্য খুঁজুন। আশা পান।","title":"আপনার\nপ্রশ্ন আছে।","sub":"ঈশ্বর সত্যি? কেন কষ্ট? জীবনের অর্থ?","sub2":"নিরাপদ। বিনামূল্যে।","free":"বিনামূল্যে।","scroll":"স্ক্রল"},"prompt":{"ask":"জিজ্ঞাসা...","mind":"মনে কী?","tryit":"চেষ্টা...","type":"লিখুন...","haveQ":"প্রশ্ন?"},"chat":{"new":"নতুন","none":"নেই।","saved":"সংরক্ষিত","newBtn":"+ নতুন","homeBtn":"← হোম","about":"ঈশ্বর সম্পর্কে।","footer":"বিনামূল্যে · AI · ","privacy":"গোপনীয়তা","s1":"ঈশ্বর সত্যি?","s2":"কেন কষ্ট?","s3":"উদ্দেশ্য?","s4":"ঈশ্বর ভালোবাসেন?","s5":"কথা বলতে চাই"},"cn":{"title":"যোগাযোগ?","sub":"পরামর্শদাতা নেটওয়ার্ক।","name":"নাম","email":"ইমেল","number":"নম্বর","country":"দেশ","btn":"সংযুক্ত","notNow":"না","disc":"সংযোগের জন্য।","ok":"পেয়েছি।","okSub":"যোগাযোগ।","wa":"WhatsApp","em":"ইমেল","ph":"ফোন","tg":"Telegram","n1":"যীশুকে অনুসরণ","n2":"গির্জা","n3":"বাইবেল","n4":"কথা বলা","n5":"কঠিন","n6":"অন্য"},"ft":{"desc":"বিনামূল্যে।","pages":"পৃষ্ঠা","promise":"প্রতিশ্রুতি","promiseT":"বিনামূল্যে।","verse":"\"বিনামূল্যে পেয়েছ।\" — মথি ১০:৮"},"home":{"qTitle":"প্রশ্ন","qSub":"একা নন।","seeAll":"সব →","place":"গুরুত্বপূর্ণ","p1":"সবার প্রশ্ন।","p2":"হয়তো ছেড়ে গেছেন।","p3":"বিনামূল্যে।","noCatch":"বিনামূল্যে।","noCatchSub":"বিজ্ঞাপন নেই।","seekQ":"\"খোঁজো, পাবে।\""},"q":{"title":"প্রশ্ন","sub":"ক্লিক।","talk":"কথা →","back":"← সব","explore":"জানতে?","fpn":"বিনামূল্যে।","notFound":"নেই।","browse":"সব"},"hw":{"t":"কিভাবে","s1t":"জিজ্ঞাসা","s1b":"যেকোনো।","s2t":"কথোপকথন","s2b":"সত্যিকারের।","s3t":"ফিরুন","s3b":"যখন খুশি।"},"ab":{"hero":"প্রত্যেকে সুসমাচার শোনার যোগ্য।"},"pv":{"title":"গোপনীয়তা","hero":"ব্যক্তিগত।"}},
-  "ko":{"name":"한국어","dir":"ltr","nav":{"home":"홈","questions":"질문","how":"사용법","about":"소개","start":"시작"},"hero":{"tag":"물어보세요. 진리를 찾으세요. 희망을 발견하세요.","title":"당신에게\n질문이 있습니다.","sub":"하나님은? 왜 고통? 삶의 의미?","sub2":"안전. 무료.","free":"무료.","scroll":"스크롤"},"prompt":{"ask":"물어보세요...","mind":"무슨 생각?","tryit":"시도...","type":"적어보세요...","haveQ":"질문?"},"chat":{"new":"새 대화","none":"없음.","saved":"저장됨","newBtn":"+ 새로","homeBtn":"← 홈","about":"하나님에 대해.","footer":"무료 · AI · ","privacy":"개인정보","s1":"하나님은?","s2":"왜 고통?","s3":"나의 목적?","s4":"사랑하시나?","s5":"이야기하고 싶어요"},"cn":{"title":"연락?","sub":"멘토 네트워크.","name":"이름","email":"이메일","number":"번호","country":"국가","btn":"연결","notNow":"아니요","disc":"연결에만.","ok":"받았습니다.","okSub":"연락.","wa":"WhatsApp","em":"이메일","ph":"전화","tg":"Telegram","n1":"예수님 따르기","n2":"교회","n3":"성경","n4":"대화","n5":"힘든","n6":"기타"},"ft":{"desc":"무료 공간.","pages":"페이지","promise":"약속","promiseT":"무료.","verse":"\"거저 받았으니.\" — 마태 10:8"},"home":{"qTitle":"질문","qSub":"혼자가 아닙니다.","seeAll":"모두 →","place":"중요한","p1":"모두 질문이.","p2":"교회를 떠났을 수도.","p3":"무료.","noCatch":"무료.","noCatchSub":"광고 없음.","seekQ":"\"구하라 얻으리니.\""},"q":{"title":"질문","sub":"클릭.","talk":"이야기 →","back":"← 모두","explore":"탐구?","fpn":"무료.","notFound":"없음.","browse":"전체"},"hw":{"t":"사용법","s1t":"물어보세요","s1b":"아무거나.","s2t":"대화","s2b":"진짜.","s3t":"돌아오세요","s3b":"언제든."},"ab":{"hero":"모두 복음을 들을 자격이."},"pv":{"title":"개인정보","hero":"비공개."}},
-  "ja":{"name":"日本語","dir":"ltr","nav":{"home":"ホーム","questions":"質問","how":"使い方","about":"について","start":"始める"},"hero":{"tag":"何でも聞いてください。真理を。希望を。","title":"あなたには\n疑問があります。","sub":"神は？なぜ苦しみ？人生の意味？","sub2":"安全。無料。","free":"無料。","scroll":"スクロール"},"prompt":{"ask":"何でも...","mind":"何を?","tryit":"試す...","type":"書いて...","haveQ":"質問?"},"chat":{"new":"新しい","none":"まだ。","saved":"保存済","newBtn":"+ 新規","homeBtn":"← ホーム","about":"神について。","footer":"無料 · AI · ","privacy":"プライバシー","s1":"神は?","s2":"なぜ苦しみ?","s3":"目的?","s4":"愛して?","s5":"話したい"},"cn":{"title":"連絡?","sub":"メンター.","name":"名前","email":"メール","number":"番号","country":"国","btn":"つないで","notNow":"今はいい","disc":"連絡に.","ok":"受取.","okSub":"連絡.","wa":"WhatsApp","em":"メール","ph":"電話","tg":"Telegram","n1":"イエスに従う","n2":"教会","n3":"聖書","n4":"話したい","n5":"困難","n6":"他"},"ft":{"desc":"無料.","pages":"ページ","promise":"約束","promiseT":"無料.","verse":"\"ただで受けた。\" — マタイ10:8"},"home":{"qTitle":"質問","qSub":"一人じゃない.","seeAll":"全て →","place":"大切なこと","p1":"誰もが疑問.","p2":"教会から離れたかも.","p3":"無料.","noCatch":"無料.","noCatchSub":"広告なし.","seekQ":"\"求めなさい。\""},"q":{"title":"質問","sub":"クリック.","talk":"話す →","back":"← 全て","explore":"探求?","fpn":"無料.","notFound":"なし.","browse":"全て"},"hw":{"t":"使い方","s1t":"聞く","s1b":"何でも.","s2t":"対話","s2b":"本当の.","s3t":"戻る","s3b":"いつでも."},"ab":{"hero":"全ての人に福音を。"},"pv":{"title":"プライバシー","hero":"非公開。"}}
+  "en": {
+    "name": "English",
+    "dir": "ltr",
+    "nav": {
+      "home": "Home",
+      "questions": "Questions",
+      "how": "How It Works",
+      "about": "About",
+      "start": "Start a conversation"
+    },
+    "hero": {
+      "tag": "Ask anything. Seek truth. Find hope.",
+      "title": "You have\nquestions.",
+      "sub": "Is God real? Why does God allow suffering? What is the meaning of life? What happens when we die?",
+      "sub2": "A safe place to explore them. No judgment. No pressure. No cost.",
+      "free": "Completely free. No account needed. Your conversations stay on your device.",
+      "scroll": "Scroll to explore"
+    },
+    "prompt": {
+      "ask": "Ask anything...",
+      "mind": "What's on your mind?",
+      "tryit": "Try it now...",
+      "type": "Type your thoughts, or press send to start...",
+      "haveQ": "Have a question? Start here..."
+    },
+    "chat": {
+      "new": "New conversation",
+      "none": "No conversations yet.",
+      "saved": "Saved locally on your device",
+      "newBtn": "+ New",
+      "homeBtn": "← Home",
+      "about": "Ask about God, life, faith, purpose — anything.",
+      "footer": "Free forever · AI-powered · ",
+      "privacy": "Privacy",
+      "s1": "Is God real?",
+      "s2": "Why does God allow suffering?",
+      "s3": "What is my purpose?",
+      "s4": "Does God love me?",
+      "s5": "I just need someone to talk to"
+    },
+    "cn": {
+      "title": "Want us to reach out?",
+      "sub": "We're building a network of mentors and churches. Leave your info and we'll connect you when we can. No spam, ever.",
+      "name": "Your name (optional)",
+      "email": "your@email.com",
+      "number": "Your number",
+      "country": "Country or city",
+      "btn": "Connect me",
+      "notNow": "Not now",
+      "disc": "Your info is only used to connect you.",
+      "ok": "We've got your info.",
+      "okSub": "We'll reach out when we can.",
+      "wa": "WhatsApp",
+      "em": "Email",
+      "ph": "Phone",
+      "tg": "Telegram",
+      "n1": "I just decided to follow Jesus",
+      "n2": "Help me find a church",
+      "n3": "I need a Bible",
+      "n4": "I want to talk to a real person",
+      "n5": "I'm going through something difficult",
+      "n6": "Something else"
+    },
+    "ft": {
+      "desc": "A free, private space to explore questions about God, Jesus, faith, and the meaning of life.",
+      "pages": "Pages",
+      "promise": "Promise",
+      "promiseT": "Free forever. No ads. No data sold.",
+      "verse": "\"Freely you have received; freely give.\" — Matthew 10:8"
+    },
+    "home": {
+      "qTitle": "Questions people bring here",
+      "qSub": "You're not alone in what you're wondering.",
+      "seeAll": "See all questions →",
+      "place": "A place to talk about what matters most",
+      "p1": "Everyone has questions about God, faith, and the purpose of life.",
+      "p2": "Maybe you grew up in church and walked away. Maybe you've never set foot in one.",
+      "p3": "This is a free, private space to explore those questions.",
+      "noCatch": "Completely free. No catch.",
+      "noCatchSub": "No subscriptions. No hidden fees. No ads. No data sold.",
+      "seekQ": "\"Seek and you will find.\""
+    },
+    "q": {
+      "title": "Questions people ask",
+      "sub": "Click to learn more or start a conversation.",
+      "talk": "Talk about this →",
+      "back": "← All questions",
+      "explore": "Want to explore this?",
+      "fpn": "Free. Private. No account needed.",
+      "notFound": "Not found.",
+      "browse": "Browse all",
+      "also": "People also ask"
+    },
+    "hw": {
+      "t": "How it works",
+      "s1t": "Ask",
+      "s1b": "Type any question. No wrong questions.",
+      "s2t": "Converse",
+      "s2b": "A real conversation, not a sermon.",
+      "s3t": "Return",
+      "s3b": "Come back anytime."
+    },
+    "ab": {
+      "hero": "We believe every person on earth deserves the chance to hear the gospel — in their language, on their terms, at any hour.",
+      "p1": "This platform exists because of a simple conviction: the best news in the history of the world shouldn't be locked behind church doors, cultural barriers, or language walls. It should meet people where they already are — on their phones, in their homes, at 3am when they can't sleep and the questions won't stop.",
+      "p2": "We use AI to create personal, patient, culturally sensitive conversations about Jesus. Not sermons. Not tracts. Conversations — the way Jesus did it. One person at a time. At the well. On the road. Over dinner. Meeting people exactly where they are.",
+      "p3": "And when someone is ready to take a next step — whether that's following Jesus, finding a church, or just talking to a real person — we connect them. Because technology starts the conversation, but people continue it.",
+      "b1t": "It's built on scripture and reviewed by real pastors.",
+      "b1b": "The AI doesn't improvise theology. Its framework is grounded in the Bible and regularly reviewed by pastors, missionaries, and theologians from diverse backgrounds.",
+      "b2t": "It's modeled after Jesus' own approach.",
+      "b2b": "Jesus asked questions. He told stories. He listened. He never lectured. This AI is designed to do the same.",
+      "b3t": "It doesn't dodge hard questions.",
+      "b3b": "Suffering, sexuality, other religions, the reliability of the Bible — everything is addressed honestly, always leading with love.",
+      "b4t": "This is a starting point, not a destination.",
+      "b4b": "AI can start a conversation, but it can't replace real community. We encourage everyone to find a local church, a Bible, and people who can walk with them."
+    },
+    "pv": {
+      "title": "Privacy",
+      "hero": "Your conversations are private. Period.",
+      "p1": "Stored locally in your browser. Never leaves your device. We don't have access to it.",
+      "p2": "No account required. No tracking cookies. No ads. No data sold.",
+      "p3": "If you choose to connect with a real person, only the information you provide is shared — only for that purpose."
+    },
+    "qs": [
+      {
+        "question": "Is God real?",
+        "intro": "It's one of the oldest and most honest questions a person can ask. Not \"is there some vague higher power\" — but is there a God who is real, personal, and actually involved in your life? Billions throughout history have said yes. But you don't have to take their word for it."
+      },
+      {
+        "question": "Who is Jesus?",
+        "intro": "A carpenter from Nazareth who split history in half. Billions call him God. Others say he was just a good teacher. But almost no serious historian denies he existed. So who was he, really? And why does it matter 2,000 years later?"
+      },
+      {
+        "question": "Why does God allow suffering?",
+        "intro": "If God is good and powerful, why is there so much pain? It's not an abstract question when you're the one hurting. This question deserves more than a quick answer — it deserves a conversation."
+      },
+      {
+        "question": "What is the meaning of life?",
+        "intro": "You're not the first person to lie awake at 3am wondering if any of this matters. The job, the routine, the scrolling — is there something more? Something you were actually made for?"
+      },
+      {
+        "question": "What happens when you die?",
+        "intro": "It's the question we avoid until we can't anymore. Someone close dies, or we have a close call, or it's 3am and the thought won't leave. What actually happens?"
+      },
+      {
+        "question": "Does God love me?",
+        "intro": "Maybe you've been told God is angry. Maybe you feel too broken, too far gone. Maybe you did something you can't take back. Here's the short answer: yes. But the longer answer is better."
+      },
+      {
+        "question": "How do I pray?",
+        "intro": "If you've never prayed — or you used to and stopped — it can feel strange. Prayer is simpler than you think. Just talking to God the way you'd talk to someone who loves you."
+      },
+      {
+        "question": "Is the Bible true?",
+        "intro": "The most printed, most translated, most debated book in history. Written across 1,500 years by dozens of authors. Some call it God's word. Others call it mythology. It's worth looking at the evidence."
+      },
+      {
+        "question": "Why is there evil in the world?",
+        "intro": "You see it in the news. Sometimes in the mirror. If God made everything, where did evil come from? And if he's powerful enough to stop it, why doesn't he?"
+      },
+      {
+        "question": "Can I know God personally?",
+        "intro": "Not just know about God — actually know him. Talk to him. Have a relationship that's real, not religious. Most people assume God is distant. The Bible says the opposite."
+      },
+      {
+        "question": "Does God forgive everyone?",
+        "intro": "Maybe you carry something every day. Maybe you wonder if you've gone too far. The truth starts with a man dying on a cross for people who didn't deserve it."
+      },
+      {
+        "question": "What is heaven like?",
+        "intro": "Clouds and harps? Not exactly. The Bible paints something more surprising and more beautiful. A new earth. No more tears. Everything made right."
+      },
+      {
+        "question": "Is hell real?",
+        "intro": "Jesus talked about it more than anyone else in the Bible. Not as a threat — as a warning, from love. You deserve to hear what the Bible actually says."
+      },
+      {
+        "question": "Why did God let this happen to me?",
+        "intro": "This isn't a theological exercise. Something happened — painful, unfair, devastating — and you need to know why. Or maybe you just need to know you're not alone."
+      },
+      {
+        "question": "How do I find my purpose?",
+        "intro": "Wake up, work, home, repeat. Somewhere in the routine: is this it? Was I made for more? That feeling isn't a glitch in your wiring. It's a clue."
+      },
+      {
+        "question": "What does the Bible say about anxiety and depression?",
+        "intro": "The Bible doesn't pretend everything is fine. David cried out in anguish. Elijah wanted to die. Jesus wept. If you're struggling, you're in good company."
+      },
+      {
+        "question": "I had a dream about Jesus",
+        "intro": "You saw someone — a man in white, a figure of light, radiating peace. You can't shake it. Across the world, millions describe dreams strikingly similar. They deserve to be taken seriously."
+      },
+      {
+        "question": "Is it too late for me?",
+        "intro": "A criminal dying on a cross next to Jesus. His final moments, he asked to be remembered. Jesus said yes. It's never too late."
+      },
+      {
+        "question": "Is Christianity too narrow?",
+        "intro": "\"One way? That sounds arrogant.\" Fair. But is a doctor narrow for saying only one treatment will cure you? Let's talk about it honestly."
+      },
+      {
+        "question": "The church hurt me",
+        "intro": "It was supposed to be safe. And it wasn't. Your pain is real. But there's a difference between the church and Jesus. He never hurt anyone."
+      }
+    ]
+  },
+  "es": {
+    "name": "Español",
+    "dir": "ltr",
+    "nav": {
+      "home": "Inicio",
+      "questions": "Preguntas",
+      "how": "Cómo funciona",
+      "about": "Acerca de",
+      "start": "Iniciar conversación"
+    },
+    "hero": {
+      "tag": "Pregunta lo que quieras. Busca la verdad. Encuentra esperanza.",
+      "title": "Tienes\npreguntas.",
+      "sub": "¿Dios es real? ¿Por qué el sufrimiento? ¿Cuál es el sentido de la vida?",
+      "sub2": "Un lugar seguro. Sin juicio. Sin presión. Sin costo.",
+      "free": "Completamente gratis. Sin cuenta.",
+      "scroll": "Desplázate"
+    },
+    "prompt": {
+      "ask": "Pregunta lo que quieras...",
+      "mind": "¿Qué tienes en mente?",
+      "tryit": "Pruébalo...",
+      "type": "Escribe lo que piensas...",
+      "haveQ": "¿Pregunta?"
+    },
+    "chat": {
+      "new": "Nueva conversación",
+      "none": "Sin conversaciones.",
+      "saved": "Guardado localmente",
+      "newBtn": "+ Nuevo",
+      "homeBtn": "← Inicio",
+      "about": "Pregunta sobre Dios, la vida, la fe.",
+      "footer": "Gratis siempre · IA · ",
+      "privacy": "Privacidad",
+      "s1": "¿Dios es real?",
+      "s2": "¿Por qué el sufrimiento?",
+      "s3": "¿Cuál es mi propósito?",
+      "s4": "¿Dios me ama?",
+      "s5": "Solo necesito hablar"
+    },
+    "cn": {
+      "title": "¿Quieres que nos comuniquemos?",
+      "sub": "Red de mentores e iglesias.",
+      "name": "Tu nombre (opcional)",
+      "email": "tu@correo.com",
+      "number": "Tu número",
+      "country": "País o ciudad",
+      "btn": "Conéctame",
+      "notNow": "Ahora no",
+      "disc": "Solo para conectarte.",
+      "ok": "Tenemos tu info.",
+      "okSub": "Nos comunicaremos.",
+      "wa": "WhatsApp",
+      "em": "Correo",
+      "ph": "Teléfono",
+      "tg": "Telegram",
+      "n1": "Decidí seguir a Jesús",
+      "n2": "Encontrar iglesia",
+      "n3": "Necesito Biblia",
+      "n4": "Hablar con alguien",
+      "n5": "Momento difícil",
+      "n6": "Otra cosa"
+    },
+    "ft": {
+      "desc": "Espacio gratuito para preguntas sobre Dios y la fe.",
+      "pages": "Páginas",
+      "promise": "Promesa",
+      "promiseT": "Gratis siempre. Sin anuncios.",
+      "verse": "\"De gracia recibisteis, dad de gracia.\" — Mateo 10:8"
+    },
+    "home": {
+      "qTitle": "Preguntas frecuentes",
+      "qSub": "No estás solo.",
+      "seeAll": "Ver todas →",
+      "place": "Un lugar para lo que importa",
+      "p1": "Todos tienen preguntas sobre Dios.",
+      "p2": "Quizás creciste en la iglesia y te fuiste.",
+      "p3": "Un espacio gratuito y privado.",
+      "noCatch": "Gratis. Sin truco.",
+      "noCatchSub": "Sin anuncios.",
+      "seekQ": "\"Busca y encontrarás.\""
+    },
+    "q": {
+      "title": "Preguntas",
+      "sub": "Haz clic para más.",
+      "talk": "Hablar →",
+      "back": "← Todas",
+      "explore": "¿Explorar?",
+      "fpn": "Gratis. Privado.",
+      "notFound": "No encontrado.",
+      "browse": "Ver todo",
+      "also": "La gente también pregunta"
+    },
+    "hw": {
+      "t": "Cómo funciona",
+      "s1t": "Pregunta",
+      "s1b": "Cualquier pregunta.",
+      "s2t": "Conversa",
+      "s2b": "Conversación real.",
+      "s3t": "Regresa",
+      "s3b": "Cuando quieras."
+    },
+    "ab": {
+      "hero": "Toda persona merece escuchar el evangelio.",
+      "p1": "Esta plataforma existe por una convicción simple: la mejor noticia de la historia no debería estar encerrada detrás de puertas de iglesias, barreras culturales o muros lingüísticos. Debería llegar a las personas donde están — en sus teléfonos, en sus hogares, a las 3am cuando no pueden dormir.",
+      "p2": "Usamos IA para crear conversaciones personales, pacientes y culturalmente sensibles sobre Jesús. No sermones. No tratados. Conversaciones — como Jesús lo hacía. Una persona a la vez.",
+      "p3": "Y cuando alguien está listo para dar el siguiente paso — ya sea seguir a Jesús, encontrar una iglesia, o hablar con una persona real — los conectamos. Porque la tecnología inicia la conversación, pero las personas la continúan.",
+      "b1t": "Basado en las Escrituras y revisado por pastores reales.",
+      "b1b": "La IA no improvisa teología. Su marco está fundamentado en la Biblia y revisado regularmente por pastores, misioneros y teólogos.",
+      "b2t": "Modelado según el enfoque de Jesús.",
+      "b2b": "Jesús hacía preguntas. Contaba historias. Escuchaba. Nunca daba sermones. Esta IA está diseñada para hacer lo mismo.",
+      "b3t": "No evita preguntas difíciles.",
+      "b3b": "Sufrimiento, sexualidad, otras religiones, la confiabilidad de la Biblia — todo se aborda honestamente, siempre con amor.",
+      "b4t": "Es un punto de partida, no un destino.",
+      "b4b": "La IA puede iniciar una conversación, pero no reemplaza la comunidad real. Animamos a todos a encontrar una iglesia local, una Biblia y personas que caminen con ellos."
+    },
+    "pv": {
+      "title": "Privacidad",
+      "hero": "Tus conversaciones son privadas.",
+      "p1": "Guardadas localmente en tu navegador. Nunca salen de tu dispositivo. No tenemos acceso.",
+      "p2": "Sin cuenta requerida. Sin cookies de rastreo. Sin anuncios. Sin datos vendidos.",
+      "p3": "Si eliges conectarte con una persona real, solo la información que proporcionas se comparte — solo para ese propósito."
+    },
+    "qs": [
+      {
+        "question": "¿Dios es real?",
+        "intro": "Es una de las preguntas más antiguas y honestas. ¿Existe un Dios real, personal, involucrado en tu vida? Miles de millones han dicho que sí. Pero no tienes que creerles — puedes descubrirlo tú mismo."
+      },
+      {
+        "question": "¿Quién es Jesús?",
+        "intro": "Un carpintero de Nazaret que dividió la historia en dos. Miles de millones lo llaman Dios. Otros dicen que fue solo un buen maestro. ¿Quién fue realmente?"
+      },
+      {
+        "question": "¿Por qué Dios permite el sufrimiento?",
+        "intro": "Si Dios es bueno y poderoso, ¿por qué hay tanto dolor? No es una pregunta abstracta cuando eres tú quien sufre. Merece más que una respuesta rápida."
+      },
+      {
+        "question": "¿Cuál es el sentido de la vida?",
+        "intro": "No eres la primera persona que se queda despierta a las 3am preguntándose si todo esto importa. El trabajo, la rutina — ¿hay algo más? ¿Algo para lo que fuiste creado?"
+      },
+      {
+        "question": "¿Qué pasa cuando mueres?",
+        "intro": "Es la pregunta que evitamos hasta que ya no podemos. Alguien cercano muere, o tenemos un susto, y el pensamiento no se va. ¿Qué pasa realmente?"
+      },
+      {
+        "question": "¿Dios me ama?",
+        "intro": "Quizás te han dicho que Dios está enojado. Quizás te sientes demasiado roto. La respuesta corta es: sí. Pero la respuesta larga es mejor."
+      },
+      {
+        "question": "¿Cómo orar?",
+        "intro": "Si nunca has orado — o lo hacías y dejaste de hacerlo — puede parecer extraño. La oración es más simple de lo que piensas. Solo hablar con Dios como hablarías con alguien que te ama."
+      },
+      {
+        "question": "¿Es verdad la Biblia?",
+        "intro": "El libro más impreso, más traducido y más debatido de la historia. Escrito en 1.500 años por decenas de autores. Vale la pena ver la evidencia."
+      },
+      {
+        "question": "¿Por qué existe el mal?",
+        "intro": "Lo ves en las noticias. A veces en el espejo. Si Dios hizo todo, ¿de dónde vino el mal? Son preguntas justas."
+      },
+      {
+        "question": "¿Puedo conocer a Dios personalmente?",
+        "intro": "No solo saber de Dios — conocerlo de verdad. Hablar con él. Tener una relación real, no religiosa. La Biblia dice que es posible."
+      },
+      {
+        "question": "¿Dios perdona a todos?",
+        "intro": "Quizás cargas algo cada día. Quizás te preguntas si has ido demasiado lejos. La verdad empieza con un hombre muriendo en una cruz por gente que no lo merecía."
+      },
+      {
+        "question": "¿Cómo es el cielo?",
+        "intro": "¿Nubes y arpas? No exactamente. La Biblia pinta algo más sorprendente y hermoso. Una tierra nueva. Sin más lágrimas. Todo restaurado."
+      },
+      {
+        "question": "¿El infierno es real?",
+        "intro": "Jesús habló de ello más que nadie en la Biblia. No como amenaza — como advertencia, desde el amor. Mereces escuchar lo que la Biblia realmente dice."
+      },
+      {
+        "question": "¿Por qué Dios permitió que me pasara esto?",
+        "intro": "Esto no es un ejercicio teológico. Algo pasó — doloroso, injusto, devastador — y necesitas saber por qué. O quizás solo necesitas saber que no estás solo."
+      },
+      {
+        "question": "¿Cómo encuentro mi propósito?",
+        "intro": "Despertar, trabajar, casa, repetir. En algún lugar de la rutina: ¿esto es todo? ¿Fui hecho para más? Esa sensación no es un error. Es una pista."
+      },
+      {
+        "question": "¿Qué dice la Biblia sobre la ansiedad y la depresión?",
+        "intro": "La Biblia no finge que todo está bien. David gritó angustiado. Elías quiso morir. Jesús lloró. Si estás luchando, estás en buena compañía."
+      },
+      {
+        "question": "Tuve un sueño con Jesús",
+        "intro": "Viste a alguien — un hombre de blanco, una figura de luz, irradiando paz. No puedes olvidarlo. Millones en el mundo describen sueños sorprendentemente similares."
+      },
+      {
+        "question": "¿Es demasiado tarde para mí?",
+        "intro": "Un criminal muriendo en una cruz junto a Jesús. En sus últimos momentos, pidió ser recordado. Jesús dijo que sí. Nunca es demasiado tarde."
+      },
+      {
+        "question": "¿El cristianismo es demasiado estrecho?",
+        "intro": "\"¿Un solo camino? Suena arrogante.\" Justo. Pero, ¿es un doctor estrecho por decir que solo un tratamiento te curará? Hablemos honestamente."
+      },
+      {
+        "question": "La iglesia me lastimó",
+        "intro": "Se suponía que era seguro. Y no lo fue. Tu dolor es real. Pero hay una diferencia entre la iglesia y Jesús. Él nunca lastimó a nadie."
+      }
+    ]
+  },
+  "pt": {
+    "name": "Português",
+    "dir": "ltr",
+    "nav": {
+      "home": "Início",
+      "questions": "Perguntas",
+      "how": "Como funciona",
+      "about": "Sobre",
+      "start": "Iniciar conversa"
+    },
+    "hero": {
+      "tag": "Pergunte. Busque a verdade. Encontre esperança.",
+      "title": "Você tem\nperguntas.",
+      "sub": "Deus é real? Por que o sofrimento? Qual o sentido da vida?",
+      "sub2": "Um lugar seguro. Sem julgamento. Sem custo.",
+      "free": "Completamente grátis.",
+      "scroll": "Role"
+    },
+    "prompt": {
+      "ask": "Pergunte...",
+      "mind": "O que pensa?",
+      "tryit": "Experimente...",
+      "type": "Escreva...",
+      "haveQ": "Pergunta?"
+    },
+    "chat": {
+      "new": "Nova conversa",
+      "none": "Nenhuma.",
+      "saved": "Salvo localmente",
+      "newBtn": "+ Nova",
+      "homeBtn": "← Início",
+      "about": "Sobre Deus, vida, fé.",
+      "footer": "Grátis · IA · ",
+      "privacy": "Privacidade",
+      "s1": "Deus é real?",
+      "s2": "Por que o sofrimento?",
+      "s3": "Meu propósito?",
+      "s4": "Deus me ama?",
+      "s5": "Preciso conversar"
+    },
+    "cn": {
+      "title": "Entrar em contato?",
+      "sub": "Rede de mentores.",
+      "name": "Nome (opcional)",
+      "email": "email",
+      "number": "Número",
+      "country": "País",
+      "btn": "Conecte-me",
+      "notNow": "Agora não",
+      "disc": "Só para conectar.",
+      "ok": "Recebemos.",
+      "okSub": "Entraremos em contato.",
+      "wa": "WhatsApp",
+      "em": "Email",
+      "ph": "Telefone",
+      "tg": "Telegram",
+      "n1": "Seguir Jesus",
+      "n2": "Encontrar igreja",
+      "n3": "Preciso de Bíblia",
+      "n4": "Falar com alguém",
+      "n5": "Momento difícil",
+      "n6": "Outra coisa"
+    },
+    "ft": {
+      "desc": "Espaço gratuito.",
+      "pages": "Páginas",
+      "promise": "Promessa",
+      "promiseT": "Grátis sempre.",
+      "verse": "\"De graça recebestes.\" — Mateus 10:8"
+    },
+    "home": {
+      "qTitle": "Perguntas frequentes",
+      "qSub": "Não está sozinho.",
+      "seeAll": "Todas →",
+      "place": "Para o que importa",
+      "p1": "Todos têm perguntas sobre Deus.",
+      "p2": "Talvez se afastou da igreja.",
+      "p3": "Espaço gratuito.",
+      "noCatch": "Grátis.",
+      "noCatchSub": "Sem anúncios.",
+      "seekQ": "\"Busquem e encontrarão.\""
+    },
+    "q": {
+      "title": "Perguntas",
+      "sub": "Clique.",
+      "talk": "Conversar →",
+      "back": "← Todas",
+      "explore": "Explorar?",
+      "fpn": "Grátis.",
+      "notFound": "Não encontrado.",
+      "browse": "Tudo",
+      "also": "As pessoas também perguntam"
+    },
+    "hw": {
+      "t": "Como funciona",
+      "s1t": "Pergunte",
+      "s1b": "Qualquer pergunta.",
+      "s2t": "Converse",
+      "s2b": "Conversa real.",
+      "s3t": "Volte",
+      "s3b": "Quando quiser."
+    },
+    "ab": {
+      "hero": "Toda pessoa merece ouvir o evangelho.",
+      "p1": "Esta plataforma existe por uma convicção simples: a melhor notícia da história não deveria ficar trancada atrás de portas de igrejas, barreiras culturais ou muros linguísticos.",
+      "p2": "Usamos IA para criar conversas pessoais, pacientes e culturalmente sensíveis sobre Jesus. Não sermões. Conversas — como Jesus fazia.",
+      "p3": "E quando alguém está pronto para o próximo passo — seguir Jesus, encontrar uma igreja, ou falar com alguém — nós conectamos. A tecnologia inicia, mas pessoas continuam.",
+      "b1t": "Baseado nas Escrituras e revisado por pastores.",
+      "b1b": "A IA não improvisa teologia. Seu framework é fundamentado na Bíblia e revisado por pastores, missionários e teólogos.",
+      "b2t": "Modelado na abordagem de Jesus.",
+      "b2b": "Jesus fazia perguntas. Contava histórias. Ouvia. Esta IA faz o mesmo.",
+      "b3t": "Não foge de perguntas difíceis.",
+      "b3b": "Sofrimento, sexualidade, outras religiões — tudo é tratado honestamente, sempre com amor.",
+      "b4t": "É um ponto de partida, não o destino.",
+      "b4b": "IA pode iniciar uma conversa, mas não substitui comunidade real. Encorajamos todos a encontrar uma igreja, uma Bíblia e pessoas."
+    },
+    "pv": {
+      "title": "Privacidade",
+      "hero": "Suas conversas são privadas.",
+      "p1": "Armazenadas localmente no seu navegador. Nunca saem do seu dispositivo.",
+      "p2": "Sem conta. Sem cookies de rastreamento. Sem anúncios. Sem dados vendidos.",
+      "p3": "Se você escolher se conectar com alguém, apenas as informações que fornecer são compartilhadas."
+    },
+    "qs": [
+      {
+        "question": "Deus é real?",
+        "intro": "Uma das perguntas mais antigas e honestas que alguém pode fazer. Existe um Deus real, pessoal, envolvido na sua vida? Bilhões disseram sim. Mas você pode descobrir por si mesmo."
+      },
+      {
+        "question": "Quem é Jesus?",
+        "intro": "Um carpinteiro de Nazaré que dividiu a história ao meio. Bilhões o chamam de Deus. Outros dizem que foi apenas um bom professor. Quem ele realmente foi?"
+      },
+      {
+        "question": "Por que Deus permite o sofrimento?",
+        "intro": "Se Deus é bom e poderoso, por que há tanta dor? Não é abstrato quando você é quem sofre. Essa pergunta merece uma conversa de verdade."
+      },
+      {
+        "question": "Qual é o sentido da vida?",
+        "intro": "Você não é o primeiro a ficar acordado às 3h da manhã pensando se isso tudo importa. O trabalho, a rotina — existe algo mais? Algo para o qual você foi criado?"
+      },
+      {
+        "question": "O que acontece quando morremos?",
+        "intro": "É a pergunta que evitamos até não poder mais. Alguém próximo morre, ou temos um susto. O que realmente acontece depois?"
+      },
+      {
+        "question": "Deus me ama?",
+        "intro": "Talvez te disseram que Deus está bravo. Talvez você se sinta quebrado demais. A resposta curta: sim. Mas a resposta longa é melhor."
+      },
+      {
+        "question": "Como orar?",
+        "intro": "Se nunca orou — ou orava e parou — pode parecer estranho. A oração é mais simples do que você pensa. Apenas conversar com Deus como conversaria com alguém que te ama."
+      },
+      {
+        "question": "A Bíblia é verdadeira?",
+        "intro": "O livro mais impresso, traduzido e debatido da história. Escrito ao longo de 1.500 anos por dezenas de autores. Vale a pena olhar as evidências."
+      },
+      {
+        "question": "Por que existe o mal?",
+        "intro": "Você vê nas notícias. Às vezes no espelho. Se Deus fez tudo, de onde veio o mal? São perguntas justas."
+      },
+      {
+        "question": "Posso conhecer Deus pessoalmente?",
+        "intro": "Não apenas saber sobre Deus — conhecê-lo de verdade. Ter um relacionamento real, não religioso. A Bíblia diz que é possível."
+      },
+      {
+        "question": "Deus perdoa todos?",
+        "intro": "Talvez você carregue algo todos os dias. A verdade começa com um homem morrendo numa cruz por pessoas que não mereciam."
+      },
+      {
+        "question": "Como é o céu?",
+        "intro": "Nuvens e harpas? Não exatamente. A Bíblia pinta algo mais surpreendente e bonito. Uma nova terra. Sem mais lágrimas."
+      },
+      {
+        "question": "O inferno é real?",
+        "intro": "Jesus falou sobre isso mais que qualquer outro na Bíblia. Não como ameaça — como aviso, por amor."
+      },
+      {
+        "question": "Por que Deus deixou isso acontecer comigo?",
+        "intro": "Isso não é exercício teológico. Algo aconteceu — doloroso, injusto — e você precisa saber por quê. Ou talvez só precise saber que não está sozinho."
+      },
+      {
+        "question": "Como encontro meu propósito?",
+        "intro": "Acordar, trabalhar, casa, repetir. Na rotina: é só isso? Fui feito para mais? Essa sensação não é um defeito. É uma pista."
+      },
+      {
+        "question": "O que a Bíblia diz sobre ansiedade e depressão?",
+        "intro": "A Bíblia não finge que está tudo bem. Davi gritou em angústia. Elias quis morrer. Jesus chorou. Se você está lutando, está em boa companhia."
+      },
+      {
+        "question": "Tive um sonho com Jesus",
+        "intro": "Você viu alguém — um homem de branco, uma figura de luz, irradiando paz. Não consegue esquecer. Milhões no mundo descrevem sonhos surpreendentemente similares."
+      },
+      {
+        "question": "É tarde demais para mim?",
+        "intro": "Um criminoso morrendo na cruz ao lado de Jesus. Nos últimos momentos, pediu para ser lembrado. Jesus disse sim. Nunca é tarde demais."
+      },
+      {
+        "question": "O cristianismo é estreito demais?",
+        "intro": "\"Um só caminho? Parece arrogante.\" Justo. Mas um médico é estreito por dizer que só um tratamento vai curar? Vamos conversar honestamente."
+      },
+      {
+        "question": "A igreja me machucou",
+        "intro": "Era para ser seguro. E não foi. Sua dor é real. Mas há diferença entre a igreja e Jesus. Ele nunca machucou ninguém."
+      }
+    ]
+  },
+  "fr": {
+    "name": "Français",
+    "dir": "ltr",
+    "nav": {
+      "home": "Accueil",
+      "questions": "Questions",
+      "how": "Comment ça marche",
+      "about": "À propos",
+      "start": "Démarrer"
+    },
+    "hero": {
+      "tag": "Posez vos questions. Cherchez la vérité. Trouvez l'espérance.",
+      "title": "Vous avez\ndes questions.",
+      "sub": "Dieu existe-t-il ? Pourquoi la souffrance ? Quel est le sens de la vie ?",
+      "sub2": "Un espace sûr. Sans jugement. Gratuit.",
+      "free": "Entièrement gratuit.",
+      "scroll": "Défiler"
+    },
+    "prompt": {
+      "ask": "Posez une question...",
+      "mind": "En tête ?",
+      "tryit": "Essayez...",
+      "type": "Écrivez...",
+      "haveQ": "Question ?"
+    },
+    "chat": {
+      "new": "Nouvelle conversation",
+      "none": "Aucune.",
+      "saved": "Sauvegardé",
+      "newBtn": "+ Nouveau",
+      "homeBtn": "← Accueil",
+      "about": "Sur Dieu, la vie, la foi.",
+      "footer": "Gratuit · IA · ",
+      "privacy": "Confidentialité",
+      "s1": "Dieu existe-t-il ?",
+      "s2": "Pourquoi la souffrance ?",
+      "s3": "Mon but ?",
+      "s4": "Dieu m'aime ?",
+      "s5": "Besoin de parler"
+    },
+    "cn": {
+      "title": "Être contacté ?",
+      "sub": "Réseau de mentors.",
+      "name": "Nom (facultatif)",
+      "email": "email",
+      "number": "Numéro",
+      "country": "Pays",
+      "btn": "Connectez-moi",
+      "notNow": "Pas maintenant",
+      "disc": "Pour vous connecter.",
+      "ok": "Reçu.",
+      "okSub": "Nous contacterons.",
+      "wa": "WhatsApp",
+      "em": "Email",
+      "ph": "Téléphone",
+      "tg": "Telegram",
+      "n1": "Suivre Jésus",
+      "n2": "Trouver église",
+      "n3": "Bible",
+      "n4": "Parler à quelqu'un",
+      "n5": "Moment difficile",
+      "n6": "Autre"
+    },
+    "ft": {
+      "desc": "Espace gratuit.",
+      "pages": "Pages",
+      "promise": "Promesse",
+      "promiseT": "Gratuit.",
+      "verse": "\"Gratuitement, donnez.\" — Matthieu 10:8"
+    },
+    "home": {
+      "qTitle": "Questions posées",
+      "qSub": "Pas seul.",
+      "seeAll": "Toutes →",
+      "place": "Pour ce qui compte",
+      "p1": "Questions sur Dieu et la foi.",
+      "p2": "Peut-être quitté l'église.",
+      "p3": "Espace gratuit.",
+      "noCatch": "Gratuit.",
+      "noCatchSub": "Sans pub.",
+      "seekQ": "\"Cherchez, trouverez.\""
+    },
+    "q": {
+      "title": "Questions",
+      "sub": "Cliquez.",
+      "talk": "Parler →",
+      "back": "← Toutes",
+      "explore": "Explorer ?",
+      "fpn": "Gratuit.",
+      "notFound": "Non trouvé.",
+      "browse": "Tout",
+      "also": "Les gens demandent aussi"
+    },
+    "hw": {
+      "t": "Comment ça marche",
+      "s1t": "Demandez",
+      "s1b": "N'importe quelle question.",
+      "s2t": "Conversez",
+      "s2b": "Vraie conversation.",
+      "s3t": "Revenez",
+      "s3b": "Quand vous voulez."
+    },
+    "ab": {
+      "hero": "Chaque personne mérite l'Évangile.",
+      "p1": "Cette plateforme existe par conviction : la meilleure nouvelle de l'histoire ne devrait pas être enfermée derrière les portes des églises ou des barrières culturelles.",
+      "p2": "Nous utilisons l'IA pour créer des conversations personnelles et patientes sur Jésus. Pas des sermons. Des conversations — comme Jésus le faisait.",
+      "p3": "Et quand quelqu'un est prêt — suivre Jésus, trouver une église, ou parler à quelqu'un — nous le connectons. La technologie commence, les gens continuent.",
+      "b1t": "Fondé sur les Écritures et revu par de vrais pasteurs.",
+      "b1b": "L'IA n'improvise pas la théologie. Son cadre est ancré dans la Bible et revu par des pasteurs et théologiens.",
+      "b2t": "Modelé sur l'approche de Jésus.",
+      "b2b": "Jésus posait des questions. Il racontait des histoires. Il écoutait. Cette IA fait de même.",
+      "b3t": "N'évite pas les questions difficiles.",
+      "b3b": "Souffrance, sexualité, autres religions — tout est abordé honnêtement, toujours avec amour.",
+      "b4t": "C'est un point de départ, pas une destination.",
+      "b4b": "L'IA peut commencer une conversation, mais ne remplace pas la vraie communauté."
+    },
+    "pv": {
+      "title": "Confidentialité",
+      "hero": "Vos conversations sont privées.",
+      "p1": "Stockées localement dans votre navigateur. Ne quittent jamais votre appareil.",
+      "p2": "Aucun compte requis. Aucun cookie. Aucune publicité. Aucune donnée vendue.",
+      "p3": "Si vous choisissez de vous connecter, seules les informations fournies sont partagées."
+    },
+    "qs": [
+      {
+        "question": "Dieu existe-t-il ?",
+        "intro": "L'une des questions les plus anciennes et honnêtes. Existe-t-il un Dieu réel, personnel, impliqué dans votre vie ? Des milliards ont dit oui. Mais vous pouvez le découvrir vous-même."
+      },
+      {
+        "question": "Qui est Jésus ?",
+        "intro": "Un charpentier de Nazareth qui a divisé l'histoire en deux. Des milliards l'appellent Dieu. D'autres disent qu'il n'était qu'un bon enseignant. Qui était-il vraiment ?"
+      },
+      {
+        "question": "Pourquoi Dieu permet-il la souffrance ?",
+        "intro": "Si Dieu est bon et puissant, pourquoi tant de douleur ? Ce n'est pas abstrait quand c'est vous qui souffrez. Cette question mérite une vraie conversation."
+      },
+      {
+        "question": "Quel est le sens de la vie ?",
+        "intro": "Vous n'êtes pas le premier à rester éveillé à 3h du matin en vous demandant si tout cela compte. Le travail, la routine — y a-t-il quelque chose de plus ?"
+      },
+      {
+        "question": "Que se passe-t-il après la mort ?",
+        "intro": "C'est la question qu'on évite jusqu'à ne plus pouvoir. Quelqu'un de proche meurt, ou on frôle la mort. Que se passe-t-il vraiment ?"
+      },
+      {
+        "question": "Dieu m'aime-t-il ?",
+        "intro": "Peut-être qu'on vous a dit que Dieu est en colère. Peut-être vous sentez-vous trop brisé. La réponse courte : oui. Mais la longue est meilleure."
+      },
+      {
+        "question": "Comment prier ?",
+        "intro": "Si vous n'avez jamais prié — ou si vous avez arrêté — ça peut sembler étrange. La prière est plus simple qu'on ne le pense. Juste parler à Dieu."
+      },
+      {
+        "question": "La Bible est-elle vraie ?",
+        "intro": "Le livre le plus imprimé, traduit et débattu de l'histoire. Écrit sur 1 500 ans par des dizaines d'auteurs. Les preuves méritent d'être examinées."
+      },
+      {
+        "question": "Pourquoi le mal existe-t-il ?",
+        "intro": "On le voit aux nouvelles. Parfois dans le miroir. Si Dieu a tout créé, d'où vient le mal ? Ce sont des questions légitimes."
+      },
+      {
+        "question": "Puis-je connaître Dieu personnellement ?",
+        "intro": "Pas juste savoir des choses sur Dieu — le connaître vraiment. Avoir une relation réelle, pas religieuse. La Bible dit que c'est possible."
+      },
+      {
+        "question": "Dieu pardonne-t-il tout le monde ?",
+        "intro": "Peut-être portez-vous quelque chose chaque jour. La vérité commence avec un homme mourant sur une croix pour ceux qui ne le méritaient pas."
+      },
+      {
+        "question": "À quoi ressemble le paradis ?",
+        "intro": "Des nuages et des harpes ? Pas exactement. La Bible dépeint quelque chose de plus surprenant et beau. Une nouvelle terre. Plus de larmes."
+      },
+      {
+        "question": "L'enfer est-il réel ?",
+        "intro": "Jésus en a parlé plus que quiconque dans la Bible. Pas comme menace — comme avertissement, par amour."
+      },
+      {
+        "question": "Pourquoi Dieu a-t-il laissé cela m'arriver ?",
+        "intro": "Ce n'est pas un exercice théologique. Quelque chose s'est passé — douloureux, injuste — et vous avez besoin de savoir pourquoi. Ou juste de savoir que vous n'êtes pas seul."
+      },
+      {
+        "question": "Comment trouver mon but ?",
+        "intro": "Se réveiller, travailler, rentrer, répéter. Dans la routine : c'est tout ? Ai-je été fait pour plus ? Ce sentiment est un indice."
+      },
+      {
+        "question": "Que dit la Bible sur l'anxiété et la dépression ?",
+        "intro": "La Bible ne prétend pas que tout va bien. David a crié d'angoisse. Élie voulait mourir. Jésus a pleuré. Si vous luttez, vous êtes en bonne compagnie."
+      },
+      {
+        "question": "J'ai rêvé de Jésus",
+        "intro": "Vous avez vu quelqu'un — un homme en blanc, une figure de lumière. Des millions décrivent des rêves étonnamment similaires. Ils méritent d'être pris au sérieux."
+      },
+      {
+        "question": "Est-il trop tard pour moi ?",
+        "intro": "Un criminel mourant sur la croix à côté de Jésus. Il a demandé à être rappelé. Jésus a dit oui. Il n'est jamais trop tard."
+      },
+      {
+        "question": "Le christianisme est-il trop étroit ?",
+        "intro": "\"Un seul chemin ? Ça semble arrogant.\" D'accord. Mais un médecin est-il étroit en disant qu'un seul traitement guérira ? Parlons-en honnêtement."
+      },
+      {
+        "question": "L'église m'a blessé",
+        "intro": "C'était censé être sûr. Ce ne l'était pas. Votre douleur est réelle. Mais il y a une différence entre l'église et Jésus. Lui n'a jamais blessé personne."
+      }
+    ]
+  },
+  "ar": {
+    "name": "العربية",
+    "dir": "rtl",
+    "nav": {
+      "home": "الرئيسية",
+      "questions": "أسئلة",
+      "how": "كيف يعمل",
+      "about": "عن الموقع",
+      "start": "ابدأ محادثة"
+    },
+    "hero": {
+      "tag": "اسأل أي شيء. ابحث عن الحقيقة. اعثر على الرجاء.",
+      "title": "لديك\nأسئلة.",
+      "sub": "هل الله موجود؟ لماذا المعاناة؟ ما معنى الحياة؟",
+      "sub2": "مكان آمن. بدون حكم. مجاني.",
+      "free": "مجاني تماماً.",
+      "scroll": "انزل"
+    },
+    "prompt": {
+      "ask": "اسأل...",
+      "mind": "ما يشغلك؟",
+      "tryit": "جرّب...",
+      "type": "اكتب...",
+      "haveQ": "سؤال؟"
+    },
+    "chat": {
+      "new": "محادثة جديدة",
+      "none": "لا محادثات.",
+      "saved": "محفوظ",
+      "newBtn": "+ جديد",
+      "homeBtn": "الرئيسية →",
+      "about": "اسأل عن الله.",
+      "footer": "مجاني · ذكاء اصطناعي · ",
+      "privacy": "الخصوصية",
+      "s1": "هل الله موجود؟",
+      "s2": "لماذا المعاناة؟",
+      "s3": "هدفي؟",
+      "s4": "هل الله يحبني؟",
+      "s5": "أحتاج شخصاً"
+    },
+    "cn": {
+      "title": "نتواصل؟",
+      "sub": "شبكة مرشدين.",
+      "name": "اسمك",
+      "email": "بريدك",
+      "number": "رقمك",
+      "country": "البلد",
+      "btn": "تواصل",
+      "notNow": "ليس الآن",
+      "disc": "للتواصل فقط.",
+      "ok": "استلمنا.",
+      "okSub": "سنتواصل.",
+      "wa": "واتساب",
+      "em": "بريد",
+      "ph": "هاتف",
+      "tg": "تلغرام",
+      "n1": "اتباع عيسى",
+      "n2": "إيجاد كنيسة",
+      "n3": "كتاب مقدس",
+      "n4": "شخص حقيقي",
+      "n5": "وقت صعب",
+      "n6": "آخر"
+    },
+    "ft": {
+      "desc": "مكان مجاني.",
+      "pages": "صفحات",
+      "promise": "وعد",
+      "promiseT": "مجاني.",
+      "verse": "\"مجاناً أخذتم.\" — متى ١٠:٨"
+    },
+    "home": {
+      "qTitle": "أسئلة الناس",
+      "qSub": "لست وحدك.",
+      "seeAll": "الكل ←",
+      "place": "للأهم",
+      "p1": "الجميع لديهم أسئلة.",
+      "p2": "ربما ابتعدت.",
+      "p3": "مكان مجاني.",
+      "noCatch": "مجاني.",
+      "noCatchSub": "بدون إعلانات.",
+      "seekQ": "\"اطلبوا تجدوا.\""
+    },
+    "q": {
+      "title": "أسئلة",
+      "sub": "اضغط.",
+      "talk": "تحدث ←",
+      "back": "الكل →",
+      "explore": "استكشف؟",
+      "fpn": "مجاني.",
+      "notFound": "غير موجود.",
+      "browse": "تصفح",
+      "also": "يسأل الناس أيضاً"
+    },
+    "hw": {
+      "t": "كيف يعمل",
+      "s1t": "اسأل",
+      "s1b": "أي سؤال.",
+      "s2t": "تحاور",
+      "s2b": "محادثة حقيقية.",
+      "s3t": "عُد",
+      "s3b": "أي وقت."
+    },
+    "ab": {
+      "hero": "كل إنسان يستحق سماع الإنجيل.",
+      "p1": "هذه المنصة موجودة لقناعة بسيطة: أفضل خبر في تاريخ العالم لا ينبغي أن يكون محبوساً خلف أبواب الكنائس أو حواجز ثقافية.",
+      "p2": "نستخدم الذكاء الاصطناعي لإنشاء محادثات شخصية وصبورة عن يسوع. ليس مواعظ. محادثات — كما فعل يسوع.",
+      "p3": "وعندما يكون شخص مستعداً للخطوة التالية — نوصله. التكنولوجيا تبدأ المحادثة، لكن الناس يكملونها.",
+      "b1t": "مبني على الكتاب المقدس ومراجع من قساوسة.",
+      "b1b": "الذكاء الاصطناعي لا يرتجل اللاهوت. إطاره مبني على الكتاب المقدس ومراجع من قساوسة ولاهوتيين.",
+      "b2t": "على نهج يسوع نفسه.",
+      "b2b": "يسوع سأل أسئلة. روى قصصاً. استمع. هذا الذكاء الاصطناعي مصمم ليفعل نفس الشيء.",
+      "b3t": "لا يتهرب من الأسئلة الصعبة.",
+      "b3b": "المعاناة، الجنس، الأديان الأخرى — كل شيء يُعالج بصدق وبمحبة.",
+      "b4t": "نقطة بداية، لا وجهة نهائية.",
+      "b4b": "الذكاء الاصطناعي يبدأ محادثة، لكنه لا يحل محل المجتمع الحقيقي."
+    },
+    "pv": {
+      "title": "الخصوصية",
+      "hero": "محادثاتك خاصة.",
+      "p1": "محفوظة محلياً في متصفحك. لا تغادر جهازك أبداً.",
+      "p2": "لا حساب مطلوب. لا تتبع. لا إعلانات. لا بيع بيانات.",
+      "p3": "إذا اخترت التواصل مع شخص حقيقي، فقط المعلومات التي تقدمها تُشارك."
+    },
+    "qs": [
+      {
+        "question": "هل الله موجود؟",
+        "intro": "من أقدم الأسئلة وأكثرها صدقاً. هل يوجد إله حقيقي، شخصي، مهتم بحياتك؟ مليارات قالوا نعم. لكنك تستطيع أن تكتشف بنفسك."
+      },
+      {
+        "question": "من هو يسوع؟",
+        "intro": "نجار من الناصرة قسم التاريخ إلى نصفين. مليارات يدعونه الله. آخرون يقولون إنه كان معلماً صالحاً فقط. من كان حقاً؟"
+      },
+      {
+        "question": "لماذا يسمح الله بالمعاناة؟",
+        "intro": "إذا كان الله صالحاً وقادراً، لماذا كل هذا الألم؟ ليس سؤالاً نظرياً عندما تكون أنت من يتألم. يستحق محادثة حقيقية."
+      },
+      {
+        "question": "ما معنى الحياة؟",
+        "intro": "لست أول من يبقى مستيقظاً في الثالثة فجراً متسائلاً: هل لكل هذا معنى؟ العمل، الروتين — هل هناك شيء أكثر؟"
+      },
+      {
+        "question": "ماذا يحدث بعد الموت؟",
+        "intro": "السؤال الذي نتجنبه حتى لا نستطيع. شخص قريب يموت، أو نمر بتجربة قريبة. ماذا يحدث فعلاً؟"
+      },
+      {
+        "question": "هل الله يحبني؟",
+        "intro": "ربما قيل لك أن الله غاضب. ربما تشعر أنك محطم. الجواب القصير: نعم. لكن الجواب الطويل أفضل."
+      },
+      {
+        "question": "كيف أصلي؟",
+        "intro": "إذا لم تصلِّ من قبل — أو كنت تصلي وتوقفت — قد يبدو غريباً. الصلاة أبسط مما تعتقد. مجرد حديث مع الله."
+      },
+      {
+        "question": "هل الكتاب المقدس حقيقي؟",
+        "intro": "أكثر كتاب طُبع وتُرجم ونوقش في التاريخ. كُتب على مدار 1500 سنة. يستحق النظر في الأدلة."
+      },
+      {
+        "question": "لماذا يوجد شر في العالم؟",
+        "intro": "تراه في الأخبار. أحياناً في المرآة. إذا خلق الله كل شيء، من أين جاء الشر؟ أسئلة عادلة."
+      },
+      {
+        "question": "هل أستطيع معرفة الله شخصياً؟",
+        "intro": "ليس مجرد معرفة عن الله — معرفته حقاً. علاقة حقيقية، لا دينية. الكتاب المقدس يقول إنه ممكن."
+      },
+      {
+        "question": "هل يغفر الله للجميع؟",
+        "intro": "ربما تحمل شيئاً كل يوم. الحقيقة تبدأ برجل مات على صليب من أجل أناس لم يستحقوا."
+      },
+      {
+        "question": "كيف تبدو السماء؟",
+        "intro": "غيوم وقيثارات؟ ليس تماماً. الكتاب المقدس يرسم شيئاً أجمل. أرض جديدة. لا دموع بعد الآن."
+      },
+      {
+        "question": "هل جهنم حقيقية؟",
+        "intro": "يسوع تحدث عنها أكثر من أي شخص في الكتاب المقدس. ليس كتهديد — كتحذير من محبة."
+      },
+      {
+        "question": "لماذا سمح الله بهذا لي؟",
+        "intro": "هذا ليس تمريناً لاهوتياً. شيء حدث — مؤلم وغير عادل — وتحتاج أن تعرف لماذا. أو ربما فقط أن تعرف أنك لست وحدك."
+      },
+      {
+        "question": "كيف أجد هدفي؟",
+        "intro": "استيقظ، اعمل، ارجع، كرر. في مكان ما في الروتين: هل هذا كل شيء؟ هل خُلقت لأكثر؟ هذا الشعور ليس عطلاً. إنه دليل."
+      },
+      {
+        "question": "ماذا يقول الكتاب المقدس عن القلق والاكتئاب؟",
+        "intro": "الكتاب المقدس لا يتظاهر أن كل شيء على ما يرام. داود صرخ بألم. إيليا أراد الموت. يسوع بكى. إذا كنت تعاني، أنت في صحبة جيدة."
+      },
+      {
+        "question": "رأيت يسوع في حلم",
+        "intro": "رأيت شخصاً — رجل بالأبيض، نور، سلام. لا تستطيع نسيانه. ملايين حول العالم يصفون أحلاماً مشابهة بشكل مذهل."
+      },
+      {
+        "question": "هل فات الأوان بالنسبة لي؟",
+        "intro": "مجرم يموت على صليب بجانب يسوع. في لحظاته الأخيرة طلب أن يُذكر. يسوع قال نعم. لم يفت الأوان أبداً."
+      },
+      {
+        "question": "هل المسيحية ضيقة جداً؟",
+        "intro": "\"طريق واحد؟ يبدو متغطرساً.\" عادل. لكن هل الطبيب متغطرس حين يقول إن علاجاً واحداً فقط سيشفيك؟"
+      },
+      {
+        "question": "الكنيسة آذتني",
+        "intro": "كان من المفترض أن تكون آمنة. ولم تكن. ألمك حقيقي. لكن هناك فرق بين الكنيسة ويسوع. هو لم يؤذِ أحداً قط."
+      }
+    ]
+  },
+  "hi": {
+    "name": "हिन्दी",
+    "dir": "ltr",
+    "nav": {
+      "home": "होम",
+      "questions": "सवाल",
+      "how": "कैसे काम करता है",
+      "about": "बारे में",
+      "start": "बातचीत शुरू करें"
+    },
+    "hero": {
+      "tag": "कुछ भी पूछें। सत्य खोजें। आशा पाएं।",
+      "title": "आपके\nसवाल हैं।",
+      "sub": "क्या परमेश्वर सच में हैं? दुख क्यों? जीवन का अर्थ?",
+      "sub2": "सुरक्षित जगह। मुफ्त।",
+      "free": "पूरी तरह मुफ्त।",
+      "scroll": "स्क्रॉल करें"
+    },
+    "prompt": {
+      "ask": "कुछ भी पूछें...",
+      "mind": "मन में क्या?",
+      "tryit": "आज़माएं...",
+      "type": "लिखें...",
+      "haveQ": "सवाल?"
+    },
+    "chat": {
+      "new": "नई बातचीत",
+      "none": "कोई नहीं।",
+      "saved": "सेव",
+      "newBtn": "+ नया",
+      "homeBtn": "← होम",
+      "about": "परमेश्वर के बारे में पूछें।",
+      "footer": "मुफ्त · AI · ",
+      "privacy": "गोपनीयता",
+      "s1": "क्या परमेश्वर सच में हैं?",
+      "s2": "दुख क्यों?",
+      "s3": "मेरा उद्देश्य?",
+      "s4": "क्या परमेश्वर प्रेम करते हैं?",
+      "s5": "बस बात करनी है"
+    },
+    "cn": {
+      "title": "संपर्क करें?",
+      "sub": "संरक्षकों का नेटवर्क।",
+      "name": "नाम",
+      "email": "ईमेल",
+      "number": "नंबर",
+      "country": "देश",
+      "btn": "जोड़ें",
+      "notNow": "अभी नहीं",
+      "disc": "जोड़ने के लिए।",
+      "ok": "मिली।",
+      "okSub": "संपर्क करेंगे।",
+      "wa": "WhatsApp",
+      "em": "ईमेल",
+      "ph": "फ़ोन",
+      "tg": "Telegram",
+      "n1": "यीशु का अनुसरण",
+      "n2": "चर्च खोजें",
+      "n3": "बाइबल",
+      "n4": "किसी से बात",
+      "n5": "मुश्किल",
+      "n6": "और"
+    },
+    "ft": {
+      "desc": "मुफ्त जगह।",
+      "pages": "पेज",
+      "promise": "वादा",
+      "promiseT": "मुफ्त।",
+      "verse": "\"सेंतमेंत पाया।\" — मत्ती 10:8"
+    },
+    "home": {
+      "qTitle": "सवाल",
+      "qSub": "अकेले नहीं।",
+      "seeAll": "सब →",
+      "place": "महत्वपूर्ण बातें",
+      "p1": "सबके सवाल हैं।",
+      "p2": "शायद चर्च छोड़ा।",
+      "p3": "मुफ्त जगह।",
+      "noCatch": "मुफ्त।",
+      "noCatchSub": "विज्ञापन नहीं।",
+      "seekQ": "\"खोजो तो पाओगे।\""
+    },
+    "q": {
+      "title": "सवाल",
+      "sub": "क्लिक करें।",
+      "talk": "बात →",
+      "back": "← सब",
+      "explore": "जानना?",
+      "fpn": "मुफ्त।",
+      "notFound": "नहीं मिला।",
+      "browse": "सब",
+      "also": "लोग यह भी पूछते हैं"
+    },
+    "hw": {
+      "t": "कैसे",
+      "s1t": "पूछें",
+      "s1b": "कोई भी।",
+      "s2t": "बातचीत",
+      "s2b": "सच्ची।",
+      "s3t": "वापस",
+      "s3b": "कभी भी।"
+    },
+    "ab": {
+      "hero": "हर व्यक्ति सुसमाचार सुनने का हकदार है।",
+      "p1": "यह प्लेटफ़ॉर्म एक सरल विश्वास से मौजूद है: दुनिया की सबसे अच्छी खबर चर्च के दरवाज़ों या भाषा की दीवारों के पीछे बंद नहीं होनी चाहिए।",
+      "p2": "हम यीशु के बारे में व्यक्तिगत, धैर्यपूर्ण बातचीत बनाने के लिए AI का उपयोग करते हैं। उपदेश नहीं। बातचीत — जैसे यीशु करते थे।",
+      "p3": "और जब कोई अगला कदम उठाने के लिए तैयार हो — हम उन्हें जोड़ते हैं। तकनीक बातचीत शुरू करती है, लेकिन लोग इसे जारी रखते हैं।",
+      "b1t": "पवित्रशास्त्र पर आधारित और पास्टरों द्वारा समीक्षित।",
+      "b1b": "AI धर्मशास्त्र में सुधार नहीं करता। इसका ढांचा बाइबल पर आधारित है।",
+      "b2t": "यीशु के अपने दृष्टिकोण पर आधारित।",
+      "b2b": "यीशु ने सवाल पूछे। कहानियाँ सुनाईं। सुना। यह AI वही करता है।",
+      "b3t": "कठिन सवालों से नहीं बचता।",
+      "b3b": "दुख, कामुकता, अन्य धर्म — सब कुछ ईमानदारी से, हमेशा प्रेम के साथ।",
+      "b4t": "शुरुआती बिंदु है, मंज़िल नहीं।",
+      "b4b": "AI बातचीत शुरू कर सकता है, लेकिन असली समुदाय की जगह नहीं ले सकता।"
+    },
+    "pv": {
+      "title": "गोपनीयता",
+      "hero": "बातचीत निजी है।",
+      "p1": "आपके ब्राउज़र में स्थानीय रूप से संग्रहीत। आपका उपकरण कभी नहीं छोड़ता।",
+      "p2": "कोई खाता नहीं। कोई ट्रैकिंग नहीं। कोई विज्ञापन नहीं। कोई डेटा नहीं बेचा।",
+      "p3": "यदि आप किसी से जुड़ना चुनते हैं, तो केवल आपकी दी गई जानकारी साझा की जाती है।"
+    },
+    "qs": [
+      {
+        "question": "क्या परमेश्वर सच में हैं?",
+        "intro": "सबसे पुराने और ईमानदार सवालों में से एक। क्या एक वास्तविक, व्यक्तिगत परमेश्वर है जो आपकी ज़िंदगी में शामिल है? अरबों लोगों ने हाँ कहा है।"
+      },
+      {
+        "question": "यीशु कौन हैं?",
+        "intro": "नासरत का एक बढ़ई जिसने इतिहास को दो भागों में बाँट दिया। अरबों उन्हें परमेश्वर कहते हैं। वे वास्तव में कौन थे?"
+      },
+      {
+        "question": "परमेश्वर दुख क्यों होने देते हैं?",
+        "intro": "अगर परमेश्वर अच्छे और शक्तिशाली हैं, तो इतना दर्द क्यों? जब आप खुद पीड़ित हों तो यह सैद्धांतिक सवाल नहीं रहता।"
+      },
+      {
+        "question": "जीवन का अर्थ क्या है?",
+        "intro": "आप पहले व्यक्ति नहीं हैं जो रात 3 बजे जागकर सोचता है कि क्या इसका कोई मतलब है। नौकरी, दिनचर्या — क्या कुछ और भी है?"
+      },
+      {
+        "question": "मरने के बाद क्या होता है?",
+        "intro": "वह सवाल जिसे हम तब तक टालते हैं जब तक टाल नहीं सकते। कोई करीबी गुज़र जाता है। वास्तव में क्या होता है?"
+      },
+      {
+        "question": "क्या परमेश्वर मुझसे प्रेम करते हैं?",
+        "intro": "शायद आपको बताया गया कि परमेश्वर नाराज़ हैं। शायद आप खुद को टूटा हुआ महसूस करते हैं। छोटा जवाब: हाँ। लेकिन लंबा जवाब बेहतर है।"
+      },
+      {
+        "question": "प्रार्थना कैसे करें?",
+        "intro": "अगर आपने कभी प्रार्थना नहीं की — या करते थे और छोड़ दिया — यह अजीब लग सकता है। प्रार्थना आपकी सोच से ज़्यादा सरल है।"
+      },
+      {
+        "question": "क्या बाइबल सच है?",
+        "intro": "इतिहास की सबसे ज़्यादा छपी, अनुवादित और बहस वाली किताब। 1,500 साल में दर्जनों लेखकों ने लिखी। प्रमाण देखने योग्य हैं।"
+      },
+      {
+        "question": "दुनिया में बुराई क्यों है?",
+        "intro": "आप इसे खबरों में देखते हैं। कभी-कभी आईने में। अगर परमेश्वर ने सब कुछ बनाया, तो बुराई कहाँ से आई?"
+      },
+      {
+        "question": "क्या मैं परमेश्वर को व्यक्तिगत रूप से जान सकता हूँ?",
+        "intro": "सिर्फ़ परमेश्वर के बारे में जानना नहीं — उन्हें सच में जानना। एक वास्तविक रिश्ता। बाइबल कहती है यह संभव है।"
+      },
+      {
+        "question": "क्या परमेश्वर सबको माफ़ करते हैं?",
+        "intro": "शायद आप हर दिन कुछ ढोते हैं। सच्चाई एक आदमी से शुरू होती है जो क्रूस पर उन लोगों के लिए मरा जो इसके योग्य नहीं थे।"
+      },
+      {
+        "question": "स्वर्ग कैसा है?",
+        "intro": "बादल और वीणा? बिल्कुल नहीं। बाइबल कुछ अधिक सुंदर चित्रित करती है। नई पृथ्वी। कोई आँसू नहीं।"
+      },
+      {
+        "question": "क्या नरक सच है?",
+        "intro": "यीशु ने बाइबल में इसके बारे में सबसे ज़्यादा बात की। धमकी के रूप में नहीं — प्रेम से चेतावनी के रूप में।"
+      },
+      {
+        "question": "परमेश्वर ने मेरे साथ ऐसा क्यों होने दिया?",
+        "intro": "यह धार्मिक अभ्यास नहीं है। कुछ हुआ — दर्दनाक, अन्यायपूर्ण — और आपको जानना है क्यों। या बस यह कि आप अकेले नहीं हैं।"
+      },
+      {
+        "question": "अपना उद्देश्य कैसे खोजूँ?",
+        "intro": "जागो, काम, घर, दोहराओ। दिनचर्या में कहीं: बस इतना ही? क्या मैं और अधिक के लिए बना हूँ? यह एहसास एक संकेत है।"
+      },
+      {
+        "question": "बाइबल चिंता और अवसाद के बारे में क्या कहती है?",
+        "intro": "बाइबल यह नहीं कहती कि सब ठीक है। दाऊद ने पीड़ा में चिल्लाया। एलिय्याह मरना चाहता था। यीशु रोए। अगर आप जूझ रहे हैं, अच्छी संगत में हैं।"
+      },
+      {
+        "question": "मैंने यीशु को सपने में देखा",
+        "intro": "आपने किसी को देखा — सफ़ेद कपड़ों में, रोशनी की आकृति, शांति। दुनिया भर में लाखों लोग ऐसे सपने बताते हैं।"
+      },
+      {
+        "question": "क्या मेरे लिए बहुत देर हो गई?",
+        "intro": "यीशु के बगल में क्रूस पर मर रहा एक अपराधी। आखिरी पलों में उसने याद किए जाने की विनती की। यीशु ने हाँ कहा। कभी देर नहीं होती।"
+      },
+      {
+        "question": "क्या ईसाई धर्म बहुत संकीर्ण है?",
+        "intro": "\"एक ही रास्ता? यह अहंकारी लगता है।\" सही। लेकिन क्या डॉक्टर संकीर्ण है जब वह कहता है कि सिर्फ़ एक इलाज काम करेगा?"
+      },
+      {
+        "question": "चर्च ने मुझे चोट पहुँचाई",
+        "intro": "यह सुरक्षित होना चाहिए था। और नहीं था। आपका दर्द वास्तविक है। लेकिन चर्च और यीशु में फ़र्क है। उन्होंने कभी किसी को चोट नहीं पहुँचाई।"
+      }
+    ]
+  },
+  "zh": {
+    "name": "中文",
+    "dir": "ltr",
+    "nav": {
+      "home": "首页",
+      "questions": "问题",
+      "how": "如何使用",
+      "about": "关于",
+      "start": "开始对话"
+    },
+    "hero": {
+      "tag": "提出任何问题。寻求真理。找到希望。",
+      "title": "你有\n疑问。",
+      "sub": "上帝真实吗？为什么苦难？生命的意义？",
+      "sub2": "安全空间。免费。",
+      "free": "完全免费。",
+      "scroll": "滚动"
+    },
+    "prompt": {
+      "ask": "问任何问题...",
+      "mind": "在想什么？",
+      "tryit": "试试...",
+      "type": "写下想法...",
+      "haveQ": "有问题？"
+    },
+    "chat": {
+      "new": "新对话",
+      "none": "还没有。",
+      "saved": "已保存",
+      "newBtn": "+ 新",
+      "homeBtn": "← 首页",
+      "about": "关于上帝。",
+      "footer": "免费 · AI · ",
+      "privacy": "隐私",
+      "s1": "上帝真实吗？",
+      "s2": "为什么苦难？",
+      "s3": "我的目的？",
+      "s4": "上帝爱我？",
+      "s5": "需要聊聊"
+    },
+    "cn": {
+      "title": "联系你？",
+      "sub": "导师网络。",
+      "name": "名字",
+      "email": "邮箱",
+      "number": "号码",
+      "country": "国家",
+      "btn": "联系我",
+      "notNow": "暂不",
+      "disc": "仅用联系。",
+      "ok": "收到。",
+      "okSub": "会联系。",
+      "wa": "WhatsApp",
+      "em": "邮箱",
+      "ph": "电话",
+      "tg": "Telegram",
+      "n1": "跟随耶稣",
+      "n2": "找教会",
+      "n3": "需要圣经",
+      "n4": "和人交谈",
+      "n5": "困难时期",
+      "n6": "其他"
+    },
+    "ft": {
+      "desc": "免费空间。",
+      "pages": "页面",
+      "promise": "承诺",
+      "promiseT": "免费。",
+      "verse": "\"白白得来。\" — 马太10:8"
+    },
+    "home": {
+      "qTitle": "人们的问题",
+      "qSub": "不孤单。",
+      "seeAll": "全部 →",
+      "place": "重要的事",
+      "p1": "都有问题。",
+      "p2": "也许离开教会。",
+      "p3": "免费空间。",
+      "noCatch": "免费。",
+      "noCatchSub": "无广告。",
+      "seekQ": "\"寻找就寻见。\""
+    },
+    "q": {
+      "title": "问题",
+      "sub": "点击。",
+      "talk": "聊 →",
+      "back": "← 全部",
+      "explore": "探索？",
+      "fpn": "免费。",
+      "notFound": "未找到。",
+      "browse": "全部",
+      "also": "人们还会问"
+    },
+    "hw": {
+      "t": "如何使用",
+      "s1t": "问",
+      "s1b": "任何问题。",
+      "s2t": "对话",
+      "s2b": "真正对话。",
+      "s3t": "回来",
+      "s3b": "随时。"
+    },
+    "ab": {
+      "hero": "每个人都应听到福音。",
+      "p1": "这个平台源于一个简单的信念：世界历史上最好的消息不应该被锁在教堂门后或文化障碍之后。",
+      "p2": "我们使用AI创建关于耶稣的个人化、耐心的对话。不是布道。是对话——像耶稣那样做。",
+      "p3": "当有人准备好迈出下一步时——我们帮助连接。技术开始对话，人们继续对话。",
+      "b1t": "基于圣经，经牧师审核。",
+      "b1b": "AI不会即兴创作神学。框架建立在圣经基础上，由牧师和神学家审核。",
+      "b2t": "以耶稣的方式为模型。",
+      "b2b": "耶稣问问题。讲故事。倾听。这个AI也是如此。",
+      "b3t": "不回避困难的问题。",
+      "b3b": "苦难、性、其他宗教——一切都诚实地处理，始终以爱为先。",
+      "b4t": "这是起点，不是终点。",
+      "b4b": "AI可以开始对话，但不能替代真正的社区。"
+    },
+    "pv": {
+      "title": "隐私",
+      "hero": "对话私密。",
+      "p1": "存储在您的浏览器本地。永远不会离开您的设备。",
+      "p2": "无需账户。无跟踪。无广告。无数据出售。",
+      "p3": "如果您选择与真人联系，只分享您提供的信息。"
+    },
+    "qs": [
+      {
+        "question": "上帝真实吗？",
+        "intro": "这是人类最古老、最诚实的问题之一。是否存在一位真实的、与你的生命相关的上帝？数十亿人说是的。但你可以自己来发现。"
+      },
+      {
+        "question": "耶稣是谁？",
+        "intro": "一个来自拿撒勒的木匠，将历史一分为二。数十亿人称他为上帝。其他人说他只是一位好老师。他到底是谁？"
+      },
+      {
+        "question": "上帝为什么允许苦难？",
+        "intro": "如果上帝是善良和全能的，为什么有这么多痛苦？当你自己在受苦时，这不是抽象的问题。它值得一次真正的对话。"
+      },
+      {
+        "question": "生命的意义是什么？",
+        "intro": "你不是第一个在凌晨3点醒来想这一切是否有意义的人。工作、日常——还有更多吗？你是为更大的事而被创造的吗？"
+      },
+      {
+        "question": "死后会怎样？",
+        "intro": "我们一直回避这个问题，直到无法回避。亲人去世，或我们经历了生死瞬间。究竟会发生什么？"
+      },
+      {
+        "question": "上帝爱我吗？",
+        "intro": "也许有人告诉你上帝很生气。也许你觉得自己太破碎了。简短的答案：是的。但更长的答案更好。"
+      },
+      {
+        "question": "如何祷告？",
+        "intro": "如果你从未祷告过——或者曾经祷告但停止了——可能觉得很奇怪。祷告比你想的简单。只是像和爱你的人说话一样和上帝说话。"
+      },
+      {
+        "question": "圣经是真的吗？",
+        "intro": "历史上印刷、翻译和辩论最多的书。由数十位作者在1500年间写成。证据值得一看。"
+      },
+      {
+        "question": "世界上为什么有邪恶？",
+        "intro": "你在新闻中看到。有时在镜子里。如果上帝创造了一切，邪恶从哪里来？这些是合理的问题。"
+      },
+      {
+        "question": "我能亲自认识上帝吗？",
+        "intro": "不仅仅是知道上帝——真正认识他。与他交谈。拥有真实的关系。圣经说这是可能的。"
+      },
+      {
+        "question": "上帝会原谅所有人吗？",
+        "intro": "也许你每天都在承受什么。真相始于一个人为不配的人死在十字架上。"
+      },
+      {
+        "question": "天堂是什么样的？",
+        "intro": "云彩和竖琴？不完全是。圣经描绘了更令人惊奇和美丽的事物。新的大地。不再有眼泪。"
+      },
+      {
+        "question": "地狱是真实的吗？",
+        "intro": "耶稣在圣经中谈论地狱比任何人都多。不是威胁——是出于爱的警告。"
+      },
+      {
+        "question": "上帝为什么让这件事发生在我身上？",
+        "intro": "这不是神学练习。发生了一些事——痛苦的、不公平的——你需要知道为什么。或者你只需要知道你不孤单。"
+      },
+      {
+        "question": "如何找到我的人生目标？",
+        "intro": "起床、工作、回家、重复。在日常中：就这样了吗？我是为更多而被创造的吗？这种感觉是一个线索。"
+      },
+      {
+        "question": "圣经对焦虑和抑郁怎么说？",
+        "intro": "圣经不假装一切都好。大卫痛苦呼喊。以利亚想死。耶稣哭了。如果你在挣扎，你有很好的同伴。"
+      },
+      {
+        "question": "我梦见了耶稣",
+        "intro": "你看到了某人——白衣人，光的形象，散发平安。你无法忘记。全世界数百万人描述了惊人相似的梦。"
+      },
+      {
+        "question": "对我来说太晚了吗？",
+        "intro": "一个罪犯在耶稣旁边的十字架上死去。在最后时刻，他请求被记住。耶稣说了是。永远不会太晚。"
+      },
+      {
+        "question": "基督教是不是太狭隘了？",
+        "intro": "\"只有一条路？听起来很自大。\"公平。但医生说只有一种治疗能治愈你，他是不是太狭隘了？"
+      },
+      {
+        "question": "教会伤害了我",
+        "intro": "那里应该是安全的。但不是。你的痛苦是真实的。但教会和耶稣之间有区别。他从未伤害过任何人。"
+      }
+    ]
+  },
+  "id": {
+    "name": "Bahasa Indonesia",
+    "dir": "ltr",
+    "nav": {
+      "home": "Beranda",
+      "questions": "Pertanyaan",
+      "how": "Cara kerja",
+      "about": "Tentang",
+      "start": "Mulai"
+    },
+    "hero": {
+      "tag": "Tanyakan apa saja. Cari kebenaran. Temukan harapan.",
+      "title": "Kamu punya\npertanyaan.",
+      "sub": "Apakah Tuhan nyata? Mengapa penderitaan? Apa arti hidup?",
+      "sub2": "Tempat aman. Gratis.",
+      "free": "Gratis.",
+      "scroll": "Gulir"
+    },
+    "prompt": {
+      "ask": "Tanyakan...",
+      "mind": "Pikiranmu?",
+      "tryit": "Coba...",
+      "type": "Tulis...",
+      "haveQ": "Pertanyaan?"
+    },
+    "chat": {
+      "new": "Baru",
+      "none": "Belum ada.",
+      "saved": "Tersimpan",
+      "newBtn": "+ Baru",
+      "homeBtn": "← Beranda",
+      "about": "Tentang Tuhan.",
+      "footer": "Gratis · AI · ",
+      "privacy": "Privasi",
+      "s1": "Apakah Tuhan nyata?",
+      "s2": "Mengapa penderitaan?",
+      "s3": "Tujuan hidupku?",
+      "s4": "Tuhan mengasihi aku?",
+      "s5": "Butuh seseorang"
+    },
+    "cn": {
+      "title": "Hubungi?",
+      "sub": "Jaringan mentor.",
+      "name": "Nama",
+      "email": "email",
+      "number": "nomor",
+      "country": "Negara",
+      "btn": "Hubungkan",
+      "notNow": "Nanti",
+      "disc": "Untuk menghubungkan.",
+      "ok": "Terima.",
+      "okSub": "Akan hubungi.",
+      "wa": "WhatsApp",
+      "em": "Email",
+      "ph": "Telepon",
+      "tg": "Telegram",
+      "n1": "Mengikut Yesus",
+      "n2": "Cari gereja",
+      "n3": "Alkitab",
+      "n4": "Bicara",
+      "n5": "Masa sulit",
+      "n6": "Lain"
+    },
+    "ft": {
+      "desc": "Ruang gratis.",
+      "pages": "Halaman",
+      "promise": "Janji",
+      "promiseT": "Gratis.",
+      "verse": "\"Cuma-cuma.\" — Matius 10:8"
+    },
+    "home": {
+      "qTitle": "Pertanyaan",
+      "qSub": "Tidak sendiri.",
+      "seeAll": "Semua →",
+      "place": "Hal terpenting",
+      "p1": "Semua punya pertanyaan.",
+      "p2": "Mungkin pernah ke gereja.",
+      "p3": "Ruang gratis.",
+      "noCatch": "Gratis.",
+      "noCatchSub": "Tanpa iklan.",
+      "seekQ": "\"Carilah, mendapat.\""
+    },
+    "q": {
+      "title": "Pertanyaan",
+      "sub": "Klik.",
+      "talk": "Bicara →",
+      "back": "← Semua",
+      "explore": "Eksplor?",
+      "fpn": "Gratis.",
+      "notFound": "Tidak ada.",
+      "browse": "Semua",
+      "also": "Orang juga bertanya"
+    },
+    "hw": {
+      "t": "Cara kerja",
+      "s1t": "Tanya",
+      "s1b": "Apa saja.",
+      "s2t": "Bicara",
+      "s2b": "Nyata.",
+      "s3t": "Kembali",
+      "s3b": "Kapan saja."
+    },
+    "ab": {
+      "hero": "Setiap orang berhak mendengar Injil.",
+      "p1": "Platform ini ada karena keyakinan sederhana: kabar baik terbesar tidak seharusnya terkunci di balik pintu gereja atau tembok bahasa.",
+      "p2": "Kami menggunakan AI untuk menciptakan percakapan personal tentang Yesus. Bukan khotbah. Percakapan — seperti yang Yesus lakukan.",
+      "p3": "Dan ketika seseorang siap mengambil langkah — kami menghubungkan. Teknologi memulai, orang melanjutkan.",
+      "b1t": "Berdasarkan Alkitab dan ditinjau pendeta.",
+      "b1b": "AI tidak mengimprovasi teologi. Kerangkanya berdasar Alkitab.",
+      "b2t": "Mengikuti pendekatan Yesus.",
+      "b2b": "Yesus bertanya. Bercerita. Mendengar. AI ini dirancang sama.",
+      "b3t": "Tidak menghindari pertanyaan sulit.",
+      "b3b": "Penderitaan, seksualitas, agama lain — semua dibahas jujur, selalu dengan kasih.",
+      "b4t": "Titik awal, bukan tujuan.",
+      "b4b": "AI bisa memulai percakapan, tapi tidak menggantikan komunitas nyata."
+    },
+    "pv": {
+      "title": "Privasi",
+      "hero": "Percakapanmu privat.",
+      "p1": "Disimpan lokal di browser. Tidak pernah meninggalkan perangkatmu.",
+      "p2": "Tanpa akun. Tanpa pelacakan. Tanpa iklan. Tanpa data dijual.",
+      "p3": "Jika memilih terhubung dengan orang, hanya info yang kamu berikan yang dibagikan."
+    },
+    "qs": [
+      {
+        "question": "Apakah Tuhan nyata?",
+        "intro": "Salah satu pertanyaan tertua dan paling jujur. Apakah ada Tuhan yang nyata dan terlibat dalam hidupmu? Miliaran orang bilang ya. Tapi kamu bisa menemukan sendiri."
+      },
+      {
+        "question": "Siapa Yesus?",
+        "intro": "Seorang tukang kayu dari Nazaret yang membagi sejarah jadi dua. Miliaran menyebutnya Tuhan. Yang lain bilang dia hanya guru baik. Siapa dia sebenarnya?"
+      },
+      {
+        "question": "Mengapa Tuhan mengizinkan penderitaan?",
+        "intro": "Jika Tuhan baik dan berkuasa, mengapa ada begitu banyak rasa sakit? Ini bukan pertanyaan abstrak saat kamu yang menderita."
+      },
+      {
+        "question": "Apa arti hidup?",
+        "intro": "Kamu bukan orang pertama yang terjaga jam 3 pagi bertanya apakah semua ini penting. Pekerjaan, rutinitas — adakah yang lebih?"
+      },
+      {
+        "question": "Apa yang terjadi setelah mati?",
+        "intro": "Pertanyaan yang kita hindari sampai tidak bisa lagi. Seseorang dekat meninggal. Apa yang sebenarnya terjadi?"
+      },
+      {
+        "question": "Apakah Tuhan mengasihi aku?",
+        "intro": "Mungkin kamu diberitahu Tuhan marah. Mungkin kamu merasa terlalu rusak. Jawaban singkat: ya. Tapi jawaban panjangnya lebih baik."
+      },
+      {
+        "question": "Bagaimana cara berdoa?",
+        "intro": "Kalau belum pernah berdoa — atau dulu pernah lalu berhenti — mungkin terasa aneh. Doa lebih sederhana dari yang kamu kira."
+      },
+      {
+        "question": "Apakah Alkitab benar?",
+        "intro": "Buku paling banyak dicetak, diterjemahkan, dan diperdebatkan dalam sejarah. Ditulis selama 1.500 tahun. Buktinya layak dilihat."
+      },
+      {
+        "question": "Mengapa ada kejahatan di dunia?",
+        "intro": "Kamu lihat di berita. Kadang di cermin. Jika Tuhan menciptakan segalanya, dari mana kejahatan berasal?"
+      },
+      {
+        "question": "Bisakah aku mengenal Tuhan secara pribadi?",
+        "intro": "Bukan sekadar tahu tentang Tuhan — benar-benar mengenalnya. Hubungan nyata, bukan religius. Alkitab bilang itu mungkin."
+      },
+      {
+        "question": "Apakah Tuhan mengampuni semua orang?",
+        "intro": "Mungkin kamu membawa sesuatu setiap hari. Kebenaran dimulai dari seseorang yang mati di salib untuk orang yang tak layak."
+      },
+      {
+        "question": "Seperti apa surga?",
+        "intro": "Awan dan harpa? Tidak juga. Alkitab melukiskan sesuatu yang lebih indah. Bumi baru. Tak ada air mata lagi."
+      },
+      {
+        "question": "Apakah neraka nyata?",
+        "intro": "Yesus membicarakannya lebih dari siapa pun di Alkitab. Bukan ancaman — peringatan dari kasih."
+      },
+      {
+        "question": "Mengapa Tuhan membiarkan ini terjadi padaku?",
+        "intro": "Ini bukan latihan teologi. Sesuatu terjadi — menyakitkan, tidak adil — dan kamu perlu tahu kenapa."
+      },
+      {
+        "question": "Bagaimana menemukan tujuan hidupku?",
+        "intro": "Bangun, kerja, pulang, ulangi. Di suatu titik: hanya ini? Apakah aku diciptakan untuk lebih? Perasaan itu adalah petunjuk."
+      },
+      {
+        "question": "Apa kata Alkitab tentang kecemasan dan depresi?",
+        "intro": "Alkitab tidak berpura-pura semuanya baik-baik saja. Daud menangis kesakitan. Elia ingin mati. Yesus menangis. Kamu tidak sendirian."
+      },
+      {
+        "question": "Aku bermimpi tentang Yesus",
+        "intro": "Kamu melihat seseorang — pria berbaju putih, sosok cahaya, memancarkan kedamaian. Jutaan orang menggambarkan mimpi yang sangat mirip."
+      },
+      {
+        "question": "Apakah sudah terlambat untukku?",
+        "intro": "Seorang penjahat sekarat di salib sebelah Yesus. Di saat terakhir, dia minta diingat. Yesus bilang ya. Tidak pernah terlambat."
+      },
+      {
+        "question": "Apakah Kristen terlalu sempit?",
+        "intro": "\"Satu jalan? Kedengarannya sombong.\" Wajar. Tapi apakah dokter sempit karena bilang hanya satu pengobatan yang menyembuhkan?"
+      },
+      {
+        "question": "Gereja menyakitiku",
+        "intro": "Seharusnya aman. Tapi tidak. Sakitmu nyata. Tapi ada perbedaan antara gereja dan Yesus. Dia tidak pernah menyakiti siapa pun."
+      }
+    ]
+  },
+  "fa": {
+    "name": "فارسی",
+    "dir": "rtl",
+    "nav": {
+      "home": "خانه",
+      "questions": "سؤالات",
+      "how": "چگونه",
+      "about": "درباره",
+      "start": "شروع"
+    },
+    "hero": {
+      "tag": "بپرس. حقیقت بجوی. امید بیاب.",
+      "title": "تو\nسؤال داری.",
+      "sub": "خدا واقعی است؟ چرا رنج؟ معنای زندگی؟",
+      "sub2": "جای امن. رایگان.",
+      "free": "رایگان.",
+      "scroll": "اسکرول"
+    },
+    "prompt": {
+      "ask": "بپرس...",
+      "mind": "در ذهنت؟",
+      "tryit": "امتحان...",
+      "type": "بنویس...",
+      "haveQ": "سؤال؟"
+    },
+    "chat": {
+      "new": "گفتگوی جدید",
+      "none": "نیست.",
+      "saved": "ذخیره",
+      "newBtn": "+ جدید",
+      "homeBtn": "خانه →",
+      "about": "درباره خدا.",
+      "footer": "رایگان · هوش مصنوعی · ",
+      "privacy": "حریم خصوصی",
+      "s1": "خدا واقعی است؟",
+      "s2": "چرا رنج؟",
+      "s3": "هدف من؟",
+      "s4": "خدا دوستم دارد؟",
+      "s5": "به کسی نیاز دارم"
+    },
+    "cn": {
+      "title": "تماس؟",
+      "sub": "شبکه راهنماها.",
+      "name": "نام",
+      "email": "ایمیل",
+      "number": "شماره",
+      "country": "کشور",
+      "btn": "وصل",
+      "notNow": "نه",
+      "disc": "برای اتصال.",
+      "ok": "رسید.",
+      "okSub": "تماس.",
+      "wa": "واتس‌اپ",
+      "em": "ایمیل",
+      "ph": "تلفن",
+      "tg": "تلگرام",
+      "n1": "عیسی را دنبال",
+      "n2": "کلیسا",
+      "n3": "کتاب مقدس",
+      "n4": "صحبت",
+      "n5": "سخت",
+      "n6": "دیگر"
+    },
+    "ft": {
+      "desc": "فضای رایگان.",
+      "pages": "صفحات",
+      "promise": "قول",
+      "promiseT": "رایگان.",
+      "verse": "\"رایگان.\" — متی ۱۰:۸"
+    },
+    "home": {
+      "qTitle": "سؤالات",
+      "qSub": "تنها نیستی.",
+      "seeAll": "همه ←",
+      "place": "مهم‌ترین",
+      "p1": "همه سؤال دارند.",
+      "p2": "شاید رفتی.",
+      "p3": "رایگان.",
+      "noCatch": "رایگان.",
+      "noCatchSub": "بدون تبلیغ.",
+      "seekQ": "\"بجویید.\""
+    },
+    "q": {
+      "title": "سؤالات",
+      "sub": "کلیک.",
+      "talk": "صحبت ←",
+      "back": "همه →",
+      "explore": "بررسی؟",
+      "fpn": "رایگان.",
+      "notFound": "نیست.",
+      "browse": "همه",
+      "also": "مردم همچنین می‌پرسند"
+    },
+    "hw": {
+      "t": "چگونه",
+      "s1t": "بپرس",
+      "s1b": "هر سؤالی.",
+      "s2t": "گفتگو",
+      "s2b": "واقعی.",
+      "s3t": "برگرد",
+      "s3b": "هر وقت."
+    },
+    "ab": {
+      "hero": "هر انسان حق شنیدن دارد.",
+      "p1": "این پلتفرم به خاطر باوری ساده وجود دارد: بهترین خبر تاریخ نباید پشت درهای کلیسا قفل بماند.",
+      "p2": "ما از هوش مصنوعی برای گفتگوهای شخصی درباره عیسی استفاده می‌کنیم. نه موعظه. گفتگو — مثل عیسی.",
+      "p3": "وقتی کسی آماده قدم بعدی است — ما وصل می‌کنیم. فناوری شروع می‌کند، مردم ادامه می‌دهند.",
+      "b1t": "بر اساس کتاب مقدس و بازبینی شده.",
+      "b1b": "هوش مصنوعی الهیات را بداهه نمی‌گوید. چارچوبش بر کتاب مقدس استوار است.",
+      "b2t": "الگوبرداری از روش عیسی.",
+      "b2b": "عیسی سؤال می‌پرسید. داستان می‌گفت. گوش می‌داد. این AI همین‌طور.",
+      "b3t": "از سؤالات سخت فرار نمی‌کند.",
+      "b3b": "رنج، جنسیت، ادیان دیگر — همه صادقانه و با محبت.",
+      "b4t": "نقطه شروع، نه مقصد.",
+      "b4b": "AI می‌تواند مکالمه شروع کند، اما جایگزین جامعه واقعی نیست."
+    },
+    "pv": {
+      "title": "حریم خصوصی",
+      "hero": "خصوصی.",
+      "p1": "در مرورگر شما ذخیره می‌شود. هرگز دستگاه شما را ترک نمی‌کند.",
+      "p2": "بدون حساب. بدون ردیابی. بدون تبلیغ. بدون فروش داده.",
+      "p3": "اگر بخواهید با کسی ارتباط برقرار کنید، فقط اطلاعاتی که ارائه دهید به اشتراک گذاشته می‌شود."
+    },
+    "qs": [
+      {
+        "question": "آیا خدا واقعی است؟",
+        "intro": "یکی از قدیمی‌ترین و صادقانه‌ترین سؤالات. آیا خدایی واقعی وجود دارد که در زندگی شما دخیل است؟ میلیاردها نفر بله گفته‌اند."
+      },
+      {
+        "question": "عیسی کیست؟",
+        "intro": "نجاری از ناصره که تاریخ را دو نیم کرد. میلیاردها او را خدا می‌نامند. دیگران می‌گویند فقط معلمی خوب بود. واقعاً کی بود؟"
+      },
+      {
+        "question": "چرا خدا اجازه رنج می‌دهد؟",
+        "intro": "اگر خدا خوب و قدرتمند است، چرا این همه درد؟ وقتی خودت رنج می‌کشی، سؤال نظری نیست."
+      },
+      {
+        "question": "معنای زندگی چیست؟",
+        "intro": "تو اولین کسی نیستی که ساعت ۳ شب بیدار می‌ماند و فکر می‌کند آیا اینها مهم است. آیا چیز بیشتری هست؟"
+      },
+      {
+        "question": "بعد از مرگ چه می‌شود؟",
+        "intro": "سؤالی که از آن فرار می‌کنیم تا نتوانیم. کسی نزدیک می‌میرد. واقعاً چه اتفاقی می‌افتد؟"
+      },
+      {
+        "question": "آیا خدا مرا دوست دارد؟",
+        "intro": "شاید به تو گفته‌اند خدا عصبانی است. شاید احساس می‌کنی خیلی شکسته‌ای. جواب کوتاه: بله. اما جواب بلند بهتر است."
+      },
+      {
+        "question": "چگونه دعا کنم؟",
+        "intro": "اگر هرگز دعا نکرده‌ای — یا قبلاً می‌کردی و متوقف شدی — ممکن است عجیب به نظر برسد. دعا ساده‌تر از آنچه فکر می‌کنی است."
+      },
+      {
+        "question": "آیا کتاب مقدس واقعی است؟",
+        "intro": "پرچاپ‌ترین، پرترجمه‌ترین و بحث‌برانگیزترین کتاب تاریخ. در ۱۵۰۰ سال نوشته شده. شواهد ارزش بررسی دارند."
+      },
+      {
+        "question": "چرا شرارت در جهان وجود دارد؟",
+        "intro": "در اخبار می‌بینید. گاهی در آینه. اگر خدا همه چیز را ساخت، شرارت از کجا آمد؟"
+      },
+      {
+        "question": "آیا می‌توانم خدا را شخصاً بشناسم؟",
+        "intro": "نه فقط دانستن درباره خدا — واقعاً شناختن او. رابطه‌ای واقعی. کتاب مقدس می‌گوید ممکن است."
+      },
+      {
+        "question": "آیا خدا همه را می‌بخشد؟",
+        "intro": "شاید هر روز چیزی حمل می‌کنی. حقیقت با مردی شروع می‌شود که بر صلیب برای کسانی مرد که لایق نبودند."
+      },
+      {
+        "question": "بهشت چگونه است؟",
+        "intro": "ابر و چنگ؟ نه دقیقاً. کتاب مقدس چیز زیباتری ترسیم می‌کند. زمین جدید. بدون اشک."
+      },
+      {
+        "question": "آیا جهنم واقعی است؟",
+        "intro": "عیسی بیش از هر کسی در کتاب مقدس درباره آن صحبت کرد. نه تهدید — هشدار از روی محبت."
+      },
+      {
+        "question": "چرا خدا اجازه داد این اتفاق برایم بیفتد؟",
+        "intro": "این تمرین الهیاتی نیست. اتفاقی افتاد — دردناک، ناعادلانه — و نیاز داری بدانی چرا."
+      },
+      {
+        "question": "چگونه هدفم را پیدا کنم؟",
+        "intro": "بیدار شو، کار کن، خانه، تکرار. جایی در روتین: همین است؟ برای بیشتر ساخته شده‌ام؟ این حس یک سرنخ است."
+      },
+      {
+        "question": "کتاب مقدس درباره اضطراب و افسردگی چه می‌گوید؟",
+        "intro": "کتاب مقدس وانمود نمی‌کند همه چیز خوب است. داوود فریاد زد. الیاس می‌خواست بمیرد. عیسی گریست."
+      },
+      {
+        "question": "عیسی را در خواب دیدم",
+        "intro": "کسی را دیدی — مردی سفیدپوش، نوری، آرامش. نمی‌توانی فراموشش کنی. میلیون‌ها نفر خواب‌های مشابه توصیف می‌کنند."
+      },
+      {
+        "question": "آیا برای من خیلی دیر شده؟",
+        "intro": "جنایتکاری روی صلیب کنار عیسی. در لحظات آخر خواست یادش باشد. عیسی بله گفت. هرگز دیر نیست."
+      },
+      {
+        "question": "آیا مسیحیت خیلی محدود است؟",
+        "intro": "\"یک راه؟ متکبرانه به نظر می‌رسد.\" منصفانه. اما آیا دکتر محدود است وقتی می‌گوید فقط یک درمان جواب می‌دهد؟"
+      },
+      {
+        "question": "کلیسا به من آسیب زد",
+        "intro": "قرار بود امن باشد. نبود. درد تو واقعی است. اما تفاوتی بین کلیسا و عیسی هست. او هرگز به کسی آسیب نزد."
+      }
+    ]
+  },
+  "tg": {
+    "name": "Тоҷикӣ",
+    "dir": "ltr",
+    "nav": {
+      "home": "Асосӣ",
+      "questions": "Саволҳо",
+      "how": "Чӣ тавр кор мекунад",
+      "about": "Дар бора",
+      "start": "Сӯҳбат оғоз кунед"
+    },
+    "hero": {
+      "tag": "Ҳар чизе пурсед. Ҳақиқатро ҷӯед. Умедро ёбед.",
+      "title": "Шумо\nсаволҳо доред.",
+      "sub": "Оё Худо воқеист? Чаро ранҷ? Маънои зиндагӣ?",
+      "sub2": "Ҷои амн. Ройгон.",
+      "free": "Комилан ройгон.",
+      "scroll": "Скрол кунед"
+    },
+    "prompt": {
+      "ask": "Ҳар чизе пурсед...",
+      "mind": "Дар фикратон?",
+      "tryit": "Санҷед...",
+      "type": "Нависед...",
+      "haveQ": "Савол?"
+    },
+    "chat": {
+      "new": "Сӯҳбати нав",
+      "none": "Нест.",
+      "saved": "Захира",
+      "newBtn": "+ Нав",
+      "homeBtn": "← Асосӣ",
+      "about": "Дар бораи Худо пурсед.",
+      "footer": "Ройгон · Зеҳни сунъӣ · ",
+      "privacy": "Ҳифзи маълумот",
+      "s1": "Оё Худо воқеист?",
+      "s2": "Чаро ранҷ?",
+      "s3": "Ҳадафи ман?",
+      "s4": "Оё Худо дӯст медорад?",
+      "s5": "Ба касе ниёз дорам"
+    },
+    "cn": {
+      "title": "Тамос гирем?",
+      "sub": "Шабакаи роҳнамоён.",
+      "name": "Ном",
+      "email": "имейл",
+      "number": "рақам",
+      "country": "Кишвар",
+      "btn": "Пайваст",
+      "notNow": "Ҳоло не",
+      "disc": "Барои пайваст.",
+      "ok": "Расид.",
+      "okSub": "Тамос.",
+      "wa": "WhatsApp",
+      "em": "Имейл",
+      "ph": "Телефон",
+      "tg": "Telegram",
+      "n1": "Исоро пайравӣ",
+      "n2": "Калисо",
+      "n3": "Китоби Муқаддас",
+      "n4": "Бо касе гап",
+      "n5": "Вақти душвор",
+      "n6": "Дигар"
+    },
+    "ft": {
+      "desc": "Фазои ройгон.",
+      "pages": "Саҳифаҳо",
+      "promise": "Ваъда",
+      "promiseT": "Ройгон.",
+      "verse": "\"Ройгон гирифтед.\" — Матто 10:8"
+    },
+    "home": {
+      "qTitle": "Саволҳо",
+      "qSub": "Танҳо нестед.",
+      "seeAll": "Ҳама →",
+      "place": "Муҳимтарин",
+      "p1": "Ҳама савол доранд.",
+      "p2": "Шояд аз калисо рафтед.",
+      "p3": "Ройгон.",
+      "noCatch": "Ройгон.",
+      "noCatchSub": "Бе таблиғот.",
+      "seekQ": "\"Ҷӯед, ёбед.\""
+    },
+    "q": {
+      "title": "Саволҳо",
+      "sub": "Зер кунед.",
+      "talk": "Сӯҳбат →",
+      "back": "← Ҳама",
+      "explore": "Баррасӣ?",
+      "fpn": "Ройгон.",
+      "notFound": "Нест.",
+      "browse": "Ҳама",
+      "also": "Одамон инчунин мепурсанд"
+    },
+    "hw": {
+      "t": "Чӣ тавр",
+      "s1t": "Пурсед",
+      "s1b": "Ҳар савол.",
+      "s2t": "Сӯҳбат",
+      "s2b": "Воқеӣ.",
+      "s3t": "Баргардед",
+      "s3b": "Ҳар вақт."
+    },
+    "ab": {
+      "hero": "Ҳар инсон ҳаққи шунидани Инҷилро дорад.",
+      "p1": "Ин платформа аз як боварии содда вуҷуд дорад: беҳтарин хабари таърих набояд пушти дарҳои калисо қуфл бошад.",
+      "p2": "Мо аз зеҳни сунъӣ барои сӯҳбатҳои шахсӣ дар бораи Исо истифода мебарем. На мавъиза. Сӯҳбат — мисли Исо.",
+      "p3": "Вақте ки касе тайёр аст — мо пайваст мекунем. Технология оғоз мекунад, одамон идома медиҳанд.",
+      "b1t": "Дар асоси Китоби Муқаддас ва аз ҷониби посбонон баррасӣ шуда.",
+      "b1b": "Зеҳни сунъӣ илоҳиётро бадоҳа намегӯяд. Чорчӯбаш дар Китоби Муқаддас асос дорад.",
+      "b2t": "Аз тарзи Исо сарнамуна гирифта.",
+      "b2b": "Исо савол мепурсид. Ҳикоя мегуфт. Гӯш медод. Ин AI ҳамин тавр аст.",
+      "b3t": "Аз саволҳои душвор нагурезад.",
+      "b3b": "Ранҷ, ҷинсият, динҳои дигар — ҳама бо сидқ ва муҳаббат.",
+      "b4t": "Нуқтаи оғоз, на мақсад.",
+      "b4b": "AI метавонад сӯҳбат оғоз кунад, аммо ҷамъияти воқеиро иваз карда наметавонад."
+    },
+    "pv": {
+      "title": "Ҳифзи маълумот",
+      "hero": "Хусусист.",
+      "p1": "Дар браузери шумо маҳаллӣ нигоҳ дошта мешавад. Ҳеҷ гоҳ дастгоҳи шуморо тарк намекунад.",
+      "p2": "Бе ҳисоб. Бе пайгирӣ. Бе таблиғот. Бе фурӯши маълумот.",
+      "p3": "Агар бо касе пайваст шавед, танҳо маълумоти додаатон мубодила мешавад."
+    },
+    "qs": [
+      {
+        "question": "Оё Худо воқеист?",
+        "intro": "Яке аз қадимтарин ва содиқтарин саволҳо. Оё Худои воқеӣ ҳаст, ки дар зиндагии шумо иштирок дорад? Миллиардҳо нафар бале гуфтаанд."
+      },
+      {
+        "question": "Исо кист?",
+        "intro": "Дурудгаре аз Носира, ки таърихро ба ду қисм тақсим кард. Миллиардҳо Ӯро Худо меноманд. Ӯ воқеан кӣ буд?"
+      },
+      {
+        "question": "Чаро Худо ранҷро иҷозат медиҳад?",
+        "intro": "Агар Худо некӯ ва қудратманд аст, чаро ин қадар дард? Вақте ки худат азият мекашӣ, ин савол назариявӣ нест."
+      },
+      {
+        "question": "Маънои зиндагӣ чист?",
+        "intro": "Шумо аввалин касе нестед, ки соати 3-и шаб бедор мемонед ва фикр мекунед: оё ин муҳим аст? Оё чизи бештар ҳаст?"
+      },
+      {
+        "question": "Пас аз марг чӣ мешавад?",
+        "intro": "Саволе, ки то даме ки натавонем аз он гурезем. Касе наздик мемирад. Воқеан чӣ мешавад?"
+      },
+      {
+        "question": "Оё Худо маро дӯст медорад?",
+        "intro": "Шояд ба шумо гуфтаанд Худо хашмгин аст. Шояд шумо худро шикаста ҳис мекунед. Ҷавоби кӯтоҳ: бале."
+      },
+      {
+        "question": "Чӣ тавр дуо кунам?",
+        "intro": "Агар ҳеҷ гоҳ дуо накардаед — ё қаблан мекардед ва монданд — ғалатӣ менамояд. Дуо соддатар аст аз он ки фикр мекунед."
+      },
+      {
+        "question": "Оё Китоби Муқаддас ростин аст?",
+        "intro": "Китоби пурчопшуда, пуртарҷумашуда ва пурбаҳстарини таърих. Дар 1500 сол навишта шудааст. Далелҳо арзиши баррасӣ доранд."
+      },
+      {
+        "question": "Чаро дар ҷаҳон бадӣ ҳаст?",
+        "intro": "Дар ахбор мебинед. Баъзан дар оина. Агар Худо ҳамаро офарид, бадӣ аз куҷо омад?"
+      },
+      {
+        "question": "Оё ман метавонам Худоро шахсан бишносам?",
+        "intro": "На танҳо дар бораи Худо донистан — воқеан Ӯро шинохтан. Муносибати воқеӣ. Китоби Муқаддас мегӯяд имконпазир аст."
+      },
+      {
+        "question": "Оё Худо ҳамаро мебахшад?",
+        "intro": "Шояд шумо ҳар рӯз чизе бардоштаед. Ҳақиқат бо марде оғоз мешавад, ки дар салиб барои одамоне ноарзанда мурд."
+      },
+      {
+        "question": "Биҳишт чӣ гуна аст?",
+        "intro": "Абр ва чанг? Не дақиқан. Китоби Муқаддас чизи зеботарро тасвир мекунад. Замини нав. Бе ашк."
+      },
+      {
+        "question": "Оё ҷаҳаннам воқеист?",
+        "intro": "Исо дар бораи он бештар аз ҳама дар Китоби Муқаддас гуфт. На таҳдид — огоҳӣ аз рӯи муҳаббат."
+      },
+      {
+        "question": "Чаро Худо иҷозат дод ин ба ман бишавад?",
+        "intro": "Ин тамрини илоҳиётӣ нест. Чизе рух дод — дардовар, ноодилона — ва шумо бояд бидонед чаро."
+      },
+      {
+        "question": "Чӣ тавр ҳадафамро ёбам?",
+        "intro": "Бедор шав, кор кун, хона, такрор. Дар ягон ҷо: ҳамин аст? Оё барои бештар сохта шудаам? Ин ҳис як нишона аст."
+      },
+      {
+        "question": "Китоби Муқаддас дар бораи изтироб ва афсурдагӣ чӣ мегӯяд?",
+        "intro": "Китоби Муқаддас вонамуд намекунад, ки ҳама чиз хуб аст. Довуд дар азоб фарёд зад. Илёс мехост бимирад. Исо гирист."
+      },
+      {
+        "question": "Ман Исоро дар хоб дидам",
+        "intro": "Шумо касеро дидед — марде сафедпӯш, нур, оромиш. Наметавонед фаромӯш кунед. Миллионҳо хобҳои монандро тасвир мекунанд."
+      },
+      {
+        "question": "Оё барои ман хеле дер шуд?",
+        "intro": "Ҷинояткоре дар салиби паҳлӯи Исо. Дар лаҳзаҳои охирин хоҳиш кард, ки ёдаш бошад. Исо бале гуфт. Ҳеҷ гоҳ дер нест."
+      },
+      {
+        "question": "Оё масеҳият хеле маҳдуд аст?",
+        "intro": "\"Як роҳ? Мағрурона менамояд.\" Одилона. Аммо оё духтур маҳдуд аст, вақте мегӯяд фақат як табобат шифо медиҳад?"
+      },
+      {
+        "question": "Калисо ба ман осеб расонд",
+        "intro": "Бояд амн мебуд. Набуд. Дарди шумо воқеист. Аммо байни калисо ва Исо фарқ ҳаст. Ӯ ҳеҷ гоҳ ба касе осеб нарасонд."
+      }
+    ]
+  },
+  "tr": {
+    "name": "Türkçe",
+    "dir": "ltr",
+    "nav": {
+      "home": "Ana Sayfa",
+      "questions": "Sorular",
+      "how": "Nasıl çalışır",
+      "about": "Hakkında",
+      "start": "Sohbet başlat"
+    },
+    "hero": {
+      "tag": "Sor. Gerçeği ara. Umudu bul.",
+      "title": "Soruların\nvar.",
+      "sub": "Tanrı gerçek mi? Neden acı? Hayatın anlamı?",
+      "sub2": "Güvenli yer. Ücretsiz.",
+      "free": "Ücretsiz.",
+      "scroll": "Kaydır"
+    },
+    "prompt": {
+      "ask": "Sor...",
+      "mind": "Aklında ne?",
+      "tryit": "Dene...",
+      "type": "Yaz...",
+      "haveQ": "Sorun?"
+    },
+    "chat": {
+      "new": "Yeni",
+      "none": "Yok.",
+      "saved": "Kayıtlı",
+      "newBtn": "+ Yeni",
+      "homeBtn": "← Ana Sayfa",
+      "about": "Tanrı hakkında.",
+      "footer": "Ücretsiz · YZ · ",
+      "privacy": "Gizlilik",
+      "s1": "Tanrı gerçek mi?",
+      "s2": "Neden acı?",
+      "s3": "Amacım?",
+      "s4": "Tanrı seviyor mu?",
+      "s5": "Biriyle konuşmalıyım"
+    },
+    "cn": {
+      "title": "İletişim?",
+      "sub": "Mentor ağı.",
+      "name": "Ad",
+      "email": "e-posta",
+      "number": "numara",
+      "country": "Ülke",
+      "btn": "Bağla",
+      "notNow": "Değil",
+      "disc": "Bağlantı için.",
+      "ok": "Aldık.",
+      "okSub": "İletişim.",
+      "wa": "WhatsApp",
+      "em": "E-posta",
+      "ph": "Telefon",
+      "tg": "Telegram",
+      "n1": "İsa'yı takip",
+      "n2": "Kilise bul",
+      "n3": "Kutsal Kitap",
+      "n4": "Biriyle konuş",
+      "n5": "Zor dönem",
+      "n6": "Başka"
+    },
+    "ft": {
+      "desc": "Ücretsiz alan.",
+      "pages": "Sayfalar",
+      "promise": "Söz",
+      "promiseT": "Ücretsiz.",
+      "verse": "\"Karşılıksız aldınız.\" — Matta 10:8"
+    },
+    "home": {
+      "qTitle": "Sorular",
+      "qSub": "Yalnız değilsin.",
+      "seeAll": "Tümü →",
+      "place": "Önemli",
+      "p1": "Herkesin soruları var.",
+      "p2": "Kiliseden ayrıldın belki.",
+      "p3": "Ücretsiz alan.",
+      "noCatch": "Ücretsiz.",
+      "noCatchSub": "Reklamsız.",
+      "seekQ": "\"Arayın, bulacaksınız.\""
+    },
+    "q": {
+      "title": "Sorular",
+      "sub": "Tıkla.",
+      "talk": "Konuş →",
+      "back": "← Tümü",
+      "explore": "Keşfet?",
+      "fpn": "Ücretsiz.",
+      "notFound": "Yok.",
+      "browse": "Tümü",
+      "also": "İnsanlar ayrıca soruyor"
+    },
+    "hw": {
+      "t": "Nasıl çalışır",
+      "s1t": "Sor",
+      "s1b": "Ne olursa.",
+      "s2t": "Konuş",
+      "s2b": "Gerçek.",
+      "s3t": "Gel",
+      "s3b": "İstediğin zaman."
+    },
+    "ab": {
+      "hero": "Herkes İncil'i duymayı hak eder.",
+      "p1": "Bu platform basit bir inançtan doğdu: dünyanın en iyi haberi kilise kapılarının ardında kilitli kalmamalı.",
+      "p2": "İsa hakkında kişisel, sabırlı sohbetler için AI kullanıyoruz. Vaaz değil. Sohbet — İsa'nın yaptığı gibi.",
+      "p3": "Biri hazır olduğunda — bağlıyoruz. Teknoloji başlatır, insanlar sürdürür.",
+      "b1t": "Kutsal Yazılara dayalı, papazlar tarafından incelenmiş.",
+      "b1b": "AI teoloji uydurmaz. Çerçevesi Kutsal Kitap'a dayanır.",
+      "b2t": "İsa'nın yaklaşımına göre.",
+      "b2b": "İsa sorular sordu. Hikayeler anlattı. Dinledi. Bu AI aynısını yapar.",
+      "b3t": "Zor sorulardan kaçmaz.",
+      "b3b": "Acı, cinsellik, diğer dinler — her şey dürüstçe, sevgiyle.",
+      "b4t": "Başlangıç noktası, varış değil.",
+      "b4b": "AI sohbet başlatabilir ama gerçek topluluğun yerini alamaz."
+    },
+    "pv": {
+      "title": "Gizlilik",
+      "hero": "Sohbetlerin özel.",
+      "p1": "Tarayıcınızda yerel olarak saklanır. Cihazınızı asla terk etmez.",
+      "p2": "Hesap gerekmez. İzleme yok. Reklam yok. Veri satılmaz.",
+      "p3": "Gerçek biriyle bağlantı kurmayı seçerseniz, yalnızca verdiğiniz bilgiler paylaşılır."
+    },
+    "qs": [
+      {
+        "question": "Tanrı gerçek mi?",
+        "intro": "En eski ve en dürüst sorulardan biri. Hayatınla ilgilenen gerçek bir Tanrı var mı? Milyarlarca insan evet dedi."
+      },
+      {
+        "question": "İsa kimdir?",
+        "intro": "Tarihi ikiye bölen Nasıralı bir marangoz. Milyarlarca onu Tanrı olarak adlandırır. Gerçekte kimdi?"
+      },
+      {
+        "question": "Tanrı neden acıya izin veriyor?",
+        "intro": "Tanrı iyi ve güçlüyse neden bu kadar acı var? Acı çeken senken soyut bir soru değil."
+      },
+      {
+        "question": "Hayatın anlamı nedir?",
+        "intro": "Gece 3'te uyanıp bunun bir anlamı var mı diye düşünen ilk kişi değilsin. İş, rutin — daha fazlası var mı?"
+      },
+      {
+        "question": "Öldüğünde ne olur?",
+        "intro": "Kaçınamayacağımız ana kadar ertelediğimiz soru. Yakın biri ölür. Gerçekte ne olur?"
+      },
+      {
+        "question": "Tanrı beni seviyor mu?",
+        "intro": "Belki Tanrı'nın kızgın olduğu söylendi. Belki çok kırık hissediyorsun. Kısa cevap: evet."
+      },
+      {
+        "question": "Nasıl dua ederim?",
+        "intro": "Hiç dua etmediysen — ya da bıraktıysan — garip gelebilir. Dua düşündüğünden daha basit."
+      },
+      {
+        "question": "Kutsal Kitap doğru mu?",
+        "intro": "Tarihin en çok basılan, çevrilen ve tartışılan kitabı. 1.500 yıl boyunca yazılmış. Kanıtlara bakmaya değer."
+      },
+      {
+        "question": "Dünyada neden kötülük var?",
+        "intro": "Haberlerde görürsün. Bazen aynada. Tanrı her şeyi yarattıysa kötülük nereden geldi?"
+      },
+      {
+        "question": "Tanrı'yı kişisel olarak tanıyabilir miyim?",
+        "intro": "Sadece Tanrı hakkında bilmek değil — gerçekten tanımak. Gerçek bir ilişki. Kutsal Kitap bunun mümkün olduğunu söylüyor."
+      },
+      {
+        "question": "Tanrı herkesi affeder mi?",
+        "intro": "Belki her gün bir şey taşıyorsun. Gerçek, hak etmeyenler için çarmıhta ölen bir adamla başlar."
+      },
+      {
+        "question": "Cennet nasıl?",
+        "intro": "Bulutlar ve arp mı? Tam olarak değil. Kutsal Kitap daha güzel bir şey çiziyor. Yeni bir dünya. Gözyaşı yok."
+      },
+      {
+        "question": "Cehennem gerçek mi?",
+        "intro": "İsa, Kutsal Kitap'ta bundan herkesten çok bahsetti. Tehdit olarak değil — sevgiden gelen bir uyarı."
+      },
+      {
+        "question": "Tanrı buna neden izin verdi?",
+        "intro": "Bu teolojik alıştırma değil. Bir şey oldu — acı verici, adaletsiz — ve nedenini bilmen gerekiyor."
+      },
+      {
+        "question": "Amacımı nasıl bulurum?",
+        "intro": "Uyan, çalış, eve git, tekrarla. Rutinde: bu kadar mı? Daha fazlası için mi yaratıldım? Bu his bir ipucu."
+      },
+      {
+        "question": "Kutsal Kitap kaygı ve depresyon hakkında ne diyor?",
+        "intro": "Kutsal Kitap her şeyin iyi olduğunu iddia etmez. Davut acı içinde bağırdı. İlyas ölmek istedi. İsa ağladı."
+      },
+      {
+        "question": "İsa'yı rüyamda gördüm",
+        "intro": "Birini gördün — beyazlı bir adam, ışık, huzur. Unutamıyorsun. Dünya genelinde milyonlarca insan benzer rüyalar anlatıyor."
+      },
+      {
+        "question": "Benim için çok mu geç?",
+        "intro": "İsa'nın yanındaki çarmıhta ölen bir suçlu. Son anlarında hatırlanmak istedi. İsa evet dedi. Asla geç değil."
+      },
+      {
+        "question": "Hristiyanlık çok mu dar?",
+        "intro": "\"Tek yol mu? Kibirli geliyor.\" Haklı. Ama doktor sadece bir tedavinin işe yarayacağını söylediğinde dar mı?"
+      },
+      {
+        "question": "Kilise beni incitti",
+        "intro": "Güvenli olması gerekiyordu. Olmadı. Acın gerçek. Ama kilise ile İsa arasında fark var. O kimseyi incitmedi."
+      }
+    ]
+  },
+  "sw": {
+    "name": "Kiswahili",
+    "dir": "ltr",
+    "nav": {
+      "home": "Nyumbani",
+      "questions": "Maswali",
+      "how": "Jinsi",
+      "about": "Kuhusu",
+      "start": "Anza"
+    },
+    "hero": {
+      "tag": "Uliza. Tafuta ukweli. Pata tumaini.",
+      "title": "Una\nmaswali.",
+      "sub": "Mungu yupo? Kwa nini mateso? Maana ya maisha?",
+      "sub2": "Salama. Bure.",
+      "free": "Bure.",
+      "scroll": "Sogeza"
+    },
+    "prompt": {
+      "ask": "Uliza...",
+      "mind": "Nini akilini?",
+      "tryit": "Jaribu...",
+      "type": "Andika...",
+      "haveQ": "Swali?"
+    },
+    "chat": {
+      "new": "Mapya",
+      "none": "Hakuna.",
+      "saved": "Imehifadhiwa",
+      "newBtn": "+ Mpya",
+      "homeBtn": "← Nyumbani",
+      "about": "Kuhusu Mungu.",
+      "footer": "Bure · AI · ",
+      "privacy": "Faragha",
+      "s1": "Mungu yupo?",
+      "s2": "Kwa nini mateso?",
+      "s3": "Kusudi langu?",
+      "s4": "Mungu ananipenda?",
+      "s5": "Nahitaji mtu"
+    },
+    "cn": {
+      "title": "Tuwasiliane?",
+      "sub": "Mtandao wa washauri.",
+      "name": "Jina",
+      "email": "barua pepe",
+      "number": "nambari",
+      "country": "Nchi",
+      "btn": "Niunganishe",
+      "notNow": "Hapana",
+      "disc": "Kwa kuunganisha.",
+      "ok": "Tumepata.",
+      "okSub": "Tutawasiliana.",
+      "wa": "WhatsApp",
+      "em": "Barua pepe",
+      "ph": "Simu",
+      "tg": "Telegram",
+      "n1": "Kumfuata Yesu",
+      "n2": "Kanisa",
+      "n3": "Biblia",
+      "n4": "Kuzungumza",
+      "n5": "Wakati mgumu",
+      "n6": "Kingine"
+    },
+    "ft": {
+      "desc": "Nafasi ya bure.",
+      "pages": "Kurasa",
+      "promise": "Ahadi",
+      "promiseT": "Bure.",
+      "verse": "\"Bure mlipata.\" — Mathayo 10:8"
+    },
+    "home": {
+      "qTitle": "Maswali",
+      "qSub": "Si peke yako.",
+      "seeAll": "Yote →",
+      "place": "Muhimu",
+      "p1": "Kila mtu ana maswali.",
+      "p2": "Labda uliondoka.",
+      "p3": "Bure.",
+      "noCatch": "Bure.",
+      "noCatchSub": "Bila matangazo.",
+      "seekQ": "\"Tafuteni, mtapata.\""
+    },
+    "q": {
+      "title": "Maswali",
+      "sub": "Bofya.",
+      "talk": "Zungumza →",
+      "back": "← Yote",
+      "explore": "Chunguza?",
+      "fpn": "Bure.",
+      "notFound": "Hakuna.",
+      "browse": "Yote",
+      "also": "Watu pia wanauliza"
+    },
+    "hw": {
+      "t": "Jinsi",
+      "s1t": "Uliza",
+      "s1b": "Swali lolote.",
+      "s2t": "Zungumza",
+      "s2b": "Halisi.",
+      "s3t": "Rudi",
+      "s3b": "Wakati wowote."
+    },
+    "ab": {
+      "hero": "Kila mtu anastahili Injili.",
+      "p1": "Jukwaa hili lipo kwa sababu ya imani rahisi: habari njema zaidi haipaswi kufungwa nyuma ya milango ya kanisa.",
+      "p2": "Tunatumia AI kuunda mazungumzo ya kibinafsi kuhusu Yesu. Si mahubiri. Mazungumzo — kama Yesu alivyofanya.",
+      "p3": "Na mtu anapokuwa tayari — tunamunganisha. Teknolojia inaanza, watu wanaendelea.",
+      "b1t": "Imeandikwa kutoka Maandiko na kukaguliwa na wachungaji.",
+      "b1b": "AI haibuni theolojia. Mfumo wake unategemea Biblia.",
+      "b2t": "Imeundwa kufuata njia ya Yesu.",
+      "b2b": "Yesu aliuliza maswali. Alisimulia hadithi. Alisikiliza. AI hii inafanya vivyo hivyo.",
+      "b3t": "Haiepuki maswali magumu.",
+      "b3b": "Mateso, ujinsia, dini nyingine — yote yanashughulikiwa kwa uaminifu na upendo.",
+      "b4t": "Ni mwanzo, si mwisho.",
+      "b4b": "AI inaweza kuanza mazungumzo, lakini haiwezi kuchukua nafasi ya jamii halisi."
+    },
+    "pv": {
+      "title": "Faragha",
+      "hero": "Mazungumzo yako ni faragha.",
+      "p1": "Yamehifadhiwa ndani ya kivinjari chako. Hayaondoki kwenye kifaa chako kamwe.",
+      "p2": "Hakuna akaunti. Hakuna ufuatiliaji. Hakuna matangazo. Hakuna data inayouzwa.",
+      "p3": "Ukichagua kuunganishwa na mtu, taarifa unazotoa peke yake zinashirikiwa."
+    },
+    "qs": [
+      {
+        "question": "Mungu yupo?",
+        "intro": "Mojawapo ya maswali ya zamani na ya kweli zaidi. Je, kuna Mungu wa kweli anayehusika na maisha yako? Mabilioni wamesema ndiyo."
+      },
+      {
+        "question": "Yesu ni nani?",
+        "intro": "Seremala kutoka Nazareti aliyegawa historia vipande viwili. Mabilioni wanamwita Mungu. Kweli alikuwa nani?"
+      },
+      {
+        "question": "Kwa nini Mungu anaruhusu mateso?",
+        "intro": "Ikiwa Mungu ni mwema na mwenye nguvu, kwa nini kuna maumivu mengi? Sio swali la kinadharia unapoteseka wewe."
+      },
+      {
+        "question": "Maana ya maisha ni nini?",
+        "intro": "Si wewe wa kwanza kukesha saa 9 usiku ukijiuliza kama haya yote yana maana. Kazi, utaratibu — kuna zaidi?"
+      },
+      {
+        "question": "Nini kinatokea ukifa?",
+        "intro": "Swali tunaloliepuka hadi hatuwezi tena. Mtu wa karibu anafariki. Nini kinatokea kweli?"
+      },
+      {
+        "question": "Mungu ananipenda?",
+        "intro": "Labda uliambiwa Mungu ana hasira. Labda unajisikia umevunjika sana. Jibu fupi: ndiyo."
+      },
+      {
+        "question": "Ninasalije?",
+        "intro": "Kama hujawahi kusali — au uliacha — inaweza kuonekana ajabu. Sala ni rahisi kuliko unavyofikiri."
+      },
+      {
+        "question": "Biblia ni kweli?",
+        "intro": "Kitabu kilichochapishwa, kutafsiriwa na kujadiliwa zaidi katika historia. Kimeandikwa kwa miaka 1,500. Ushahidi unastahili kuangaliwa."
+      },
+      {
+        "question": "Kwa nini kuna uovu duniani?",
+        "intro": "Unaona kwenye habari. Wakati mwingine kwenye kioo. Ikiwa Mungu aliumba kila kitu, uovu ulitoka wapi?"
+      },
+      {
+        "question": "Naweza kumjua Mungu kibinafsi?",
+        "intro": "Si kujua tu kuhusu Mungu — kumjua kweli. Uhusiano wa kweli. Biblia inasema inawezekana."
+      },
+      {
+        "question": "Mungu anasamehe kila mtu?",
+        "intro": "Labda unabeba kitu kila siku. Ukweli huanza na mtu aliyekufa msalabani kwa watu wasiostahili."
+      },
+      {
+        "question": "Mbinguni ni kama nini?",
+        "intro": "Mawingu na vinubi? Si hasa. Biblia inachora kitu kizuri zaidi. Dunia mpya. Hakuna machozi tena."
+      },
+      {
+        "question": "Jehanamu ni kweli?",
+        "intro": "Yesu alizungumza kuhusu zaidi ya mtu yeyote katika Biblia. Si tishio — onyo kutoka upendoni."
+      },
+      {
+        "question": "Kwa nini Mungu aliacha hili linitokee?",
+        "intro": "Hii si zoezi la kitheolojia. Kitu kilitokea — chenye uchungu — na unahitaji kujua kwa nini."
+      },
+      {
+        "question": "Ninajuaje kusudi langu?",
+        "intro": "Amka, fanya kazi, nyumbani, rudia. Katika utaratibu: hii ndiyo tu? Niliumbwa kwa zaidi? Hisia hiyo ni dalili."
+      },
+      {
+        "question": "Biblia inasema nini kuhusu wasiwasi na msongo?",
+        "intro": "Biblia haijifanyi kila kitu ni sawa. Daudi alilia kwa uchungu. Eliya alitaka kufa. Yesu alilia."
+      },
+      {
+        "question": "Niliota kuhusu Yesu",
+        "intro": "Ulimwona mtu — mtu mwenye nguo nyeupe, nuru, amani. Huwezi kusahau. Mamilioni ulimwenguni wanaeleza ndoto zinazofanana."
+      },
+      {
+        "question": "Je, ni kuchelewa sana kwangu?",
+        "intro": "Mhalifu anayekufa msalabani kando ya Yesu. Dakika za mwisho, aliomba akumbukwe. Yesu alisema ndiyo. Kamwe si kuchelewa."
+      },
+      {
+        "question": "Je, Ukristo ni finyu sana?",
+        "intro": "\"Njia moja? Inaonekana kiburi.\" Sawa. Lakini daktari ni finyu kwa kusema dawa moja tu itakuponya?"
+      },
+      {
+        "question": "Kanisa liliniumiza",
+        "intro": "Ilipaswa kuwa salama. Haikuwa. Maumivu yako ni ya kweli. Lakini kuna tofauti kati ya kanisa na Yesu."
+      }
+    ]
+  },
+  "ru": {
+    "name": "Русский",
+    "dir": "ltr",
+    "nav": {
+      "home": "Главная",
+      "questions": "Вопросы",
+      "how": "Как работает",
+      "about": "О нас",
+      "start": "Начать"
+    },
+    "hero": {
+      "tag": "Спрашивай. Ищи истину. Найди надежду.",
+      "title": "У тебя\nвопросы.",
+      "sub": "Бог реален? Почему страдания? Смысл жизни?",
+      "sub2": "Безопасно. Бесплатно.",
+      "free": "Бесплатно.",
+      "scroll": "Прокрутите"
+    },
+    "prompt": {
+      "ask": "Спрашивай...",
+      "mind": "Что на уме?",
+      "tryit": "Попробуй...",
+      "type": "Напиши...",
+      "haveQ": "Вопрос?"
+    },
+    "chat": {
+      "new": "Новый",
+      "none": "Пока нет.",
+      "saved": "Сохранено",
+      "newBtn": "+ Новый",
+      "homeBtn": "← Главная",
+      "about": "О Боге.",
+      "footer": "Бесплатно · ИИ · ",
+      "privacy": "Конфиденциальность",
+      "s1": "Бог реален?",
+      "s2": "Почему страдания?",
+      "s3": "Мой смысл?",
+      "s4": "Бог любит?",
+      "s5": "Нужно поговорить"
+    },
+    "cn": {
+      "title": "Связаться?",
+      "sub": "Сеть наставников.",
+      "name": "Имя",
+      "email": "email",
+      "number": "номер",
+      "country": "Страна",
+      "btn": "Свяжитесь",
+      "notNow": "Не сейчас",
+      "disc": "Для связи.",
+      "ok": "Получили.",
+      "okSub": "Свяжемся.",
+      "wa": "WhatsApp",
+      "em": "Email",
+      "ph": "Телефон",
+      "tg": "Telegram",
+      "n1": "Следовать за Иисусом",
+      "n2": "Найти церковь",
+      "n3": "Библия",
+      "n4": "Поговорить",
+      "n5": "Трудно",
+      "n6": "Другое"
+    },
+    "ft": {
+      "desc": "Бесплатно.",
+      "pages": "Страницы",
+      "promise": "Обещание",
+      "promiseT": "Бесплатно.",
+      "verse": "\"Даром получили.\" — Матфея 10:8"
+    },
+    "home": {
+      "qTitle": "Вопросы",
+      "qSub": "Не одинок.",
+      "seeAll": "Все →",
+      "place": "Важное",
+      "p1": "У каждого вопросы.",
+      "p2": "Может ушёл.",
+      "p3": "Бесплатно.",
+      "noCatch": "Бесплатно.",
+      "noCatchSub": "Без рекламы.",
+      "seekQ": "\"Ищите, найдёте.\""
+    },
+    "q": {
+      "title": "Вопросы",
+      "sub": "Нажми.",
+      "talk": "Обсудить →",
+      "back": "← Все",
+      "explore": "Узнать?",
+      "fpn": "Бесплатно.",
+      "notFound": "Нет.",
+      "browse": "Все",
+      "also": "Люди также спрашивают"
+    },
+    "hw": {
+      "t": "Как работает",
+      "s1t": "Спроси",
+      "s1b": "Любой.",
+      "s2t": "Поговори",
+      "s2b": "Настоящий.",
+      "s3t": "Вернись",
+      "s3b": "Когда угодно."
+    },
+    "ab": {
+      "hero": "Каждый заслуживает Евангелие.",
+      "p1": "Эта платформа существует из простого убеждения: лучшая новость в истории не должна быть заперта за дверями церквей.",
+      "p2": "Мы используем ИИ для личных, терпеливых бесед об Иисусе. Не проповеди. Беседы — как делал Иисус.",
+      "p3": "Когда кто-то готов к следующему шагу — мы соединяем. Технология начинает, люди продолжают.",
+      "b1t": "Основано на Писании, проверено пасторами.",
+      "b1b": "ИИ не импровизирует богословие. Его основа — Библия.",
+      "b2t": "По примеру подхода Иисуса.",
+      "b2b": "Иисус задавал вопросы. Рассказывал истории. Слушал. Этот ИИ делает то же.",
+      "b3t": "Не избегает трудных вопросов.",
+      "b3b": "Страдание, сексуальность, другие религии — всё обсуждается честно, с любовью.",
+      "b4t": "Начальная точка, не конечная.",
+      "b4b": "ИИ может начать разговор, но не заменит настоящее сообщество."
+    },
+    "pv": {
+      "title": "Конфиденциальность",
+      "hero": "Приватно.",
+      "p1": "Хранятся локально в вашем браузере. Никогда не покидают ваше устройство.",
+      "p2": "Без аккаунта. Без отслеживания. Без рекламы. Данные не продаются.",
+      "p3": "Если вы решите связаться с кем-то, передаётся только предоставленная вами информация."
+    },
+    "qs": [
+      {
+        "question": "Бог реален?",
+        "intro": "Один из самых древних и честных вопросов. Существует ли реальный Бог, который участвует в вашей жизни? Миллиарды сказали да."
+      },
+      {
+        "question": "Кто такой Иисус?",
+        "intro": "Плотник из Назарета, разделивший историю надвое. Миллиарды называют его Богом. Другие говорят — просто учитель. Кем он был на самом деле?"
+      },
+      {
+        "question": "Почему Бог допускает страдания?",
+        "intro": "Если Бог добр и всемогущ, почему столько боли? Когда страдаете вы — это не абстрактный вопрос."
+      },
+      {
+        "question": "В чём смысл жизни?",
+        "intro": "Вы не первый, кто не спит в 3 ночи, думая: имеет ли всё это значение? Работа, рутина — есть ли что-то больше?"
+      },
+      {
+        "question": "Что происходит после смерти?",
+        "intro": "Вопрос, который мы избегаем, пока не можем больше. Кто-то близкий умирает. Что происходит на самом деле?"
+      },
+      {
+        "question": "Бог любит меня?",
+        "intro": "Возможно, вам говорили, что Бог гневается. Возможно, вы чувствуете себя сломленным. Короткий ответ: да."
+      },
+      {
+        "question": "Как молиться?",
+        "intro": "Если никогда не молились — или раньше молились и перестали — может казаться странным. Молитва проще, чем вы думаете."
+      },
+      {
+        "question": "Библия — правда?",
+        "intro": "Самая печатаемая, переводимая и обсуждаемая книга в истории. Написана за 1500 лет. Стоит посмотреть на доказательства."
+      },
+      {
+        "question": "Почему в мире зло?",
+        "intro": "Мы видим его в новостях. Иногда в зеркале. Если Бог создал всё, откуда зло? Справедливые вопросы."
+      },
+      {
+        "question": "Могу ли я лично знать Бога?",
+        "intro": "Не просто знать о Боге — по-настоящему знать его. Реальные отношения. Библия говорит, что это возможно."
+      },
+      {
+        "question": "Бог прощает всех?",
+        "intro": "Может, вы несёте что-то каждый день. Правда начинается с человека, умершего на кресте за тех, кто не заслуживал."
+      },
+      {
+        "question": "Каково на небесах?",
+        "intro": "Облака и арфы? Не совсем. Библия рисует нечто более удивительное. Новая земля. Нет больше слёз."
+      },
+      {
+        "question": "Ад реален?",
+        "intro": "Иисус говорил об этом больше всех в Библии. Не как угроза — как предупреждение из любви."
+      },
+      {
+        "question": "Почему Бог допустил это со мной?",
+        "intro": "Это не богословское упражнение. Что-то случилось — больное, несправедливое — и вам нужно знать почему."
+      },
+      {
+        "question": "Как найти своё предназначение?",
+        "intro": "Проснуться, работа, дом, повторить. Где-то в рутине: это всё? Я создан для большего? Это чувство — подсказка."
+      },
+      {
+        "question": "Что Библия говорит о тревоге и депрессии?",
+        "intro": "Библия не притворяется, что всё хорошо. Давид кричал в муках. Илия хотел умереть. Иисус плакал."
+      },
+      {
+        "question": "Мне приснился Иисус",
+        "intro": "Вы увидели кого-то — человека в белом, свет, покой. Не можете забыть. Миллионы по миру описывают похожие сны."
+      },
+      {
+        "question": "Для меня уже поздно?",
+        "intro": "Преступник, умирающий на кресте рядом с Иисусом. В последние минуты попросил быть помянутым. Иисус сказал да. Никогда не поздно."
+      },
+      {
+        "question": "Христианство слишком узкое?",
+        "intro": "\"Один путь? Звучит высокомерно.\" Справедливо. Но врач узок, когда говорит, что только одно лечение поможет?"
+      },
+      {
+        "question": "Церковь причинила мне боль",
+        "intro": "Должно было быть безопасно. Но не было. Ваша боль реальна. Но есть разница между церковью и Иисусом."
+      }
+    ]
+  },
+  "ur": {
+    "name": "اردو",
+    "dir": "rtl",
+    "nav": {
+      "home": "ہوم",
+      "questions": "سوالات",
+      "how": "کیسے",
+      "about": "بارے میں",
+      "start": "شروع"
+    },
+    "hero": {
+      "tag": "پوچھیں۔ سچائی تلاش کریں۔ امید پائیں۔",
+      "title": "آپ کے\nسوالات ہیں۔",
+      "sub": "خدا حقیقی ہے؟ تکلیف کیوں؟ زندگی کا مقصد؟",
+      "sub2": "محفوظ۔ مفت۔",
+      "free": "مفت۔",
+      "scroll": "نیچے"
+    },
+    "prompt": {
+      "ask": "پوچھیں...",
+      "mind": "ذہن میں؟",
+      "tryit": "آزمائیں...",
+      "type": "لکھیں...",
+      "haveQ": "سوال؟"
+    },
+    "chat": {
+      "new": "نئی",
+      "none": "نہیں۔",
+      "saved": "محفوظ",
+      "newBtn": "+ نیا",
+      "homeBtn": "ہوم →",
+      "about": "خدا کے بارے میں۔",
+      "footer": "مفت · AI · ",
+      "privacy": "رازداری",
+      "s1": "خدا حقیقی؟",
+      "s2": "تکلیف کیوں؟",
+      "s3": "مقصد؟",
+      "s4": "خدا محبت؟",
+      "s5": "بات کرنی ہے"
+    },
+    "cn": {
+      "title": "رابطہ؟",
+      "sub": "رہنماؤں کا نیٹ ورک۔",
+      "name": "نام",
+      "email": "ای میل",
+      "number": "نمبر",
+      "country": "ملک",
+      "btn": "جوڑیں",
+      "notNow": "نہیں",
+      "disc": "جوڑنے کے لیے۔",
+      "ok": "مل گئی۔",
+      "okSub": "رابطہ۔",
+      "wa": "WhatsApp",
+      "em": "ای میل",
+      "ph": "فون",
+      "tg": "Telegram",
+      "n1": "یسوع کی پیروی",
+      "n2": "کلیسا",
+      "n3": "بائبل",
+      "n4": "بات",
+      "n5": "مشکل",
+      "n6": "اور"
+    },
+    "ft": {
+      "desc": "مفت۔",
+      "pages": "صفحات",
+      "promise": "وعدہ",
+      "promiseT": "مفت۔",
+      "verse": "\"مفت پایا۔\" — متی 10:8"
+    },
+    "home": {
+      "qTitle": "سوالات",
+      "qSub": "اکیلے نہیں۔",
+      "seeAll": "تمام ←",
+      "place": "اہم",
+      "p1": "سب کے سوالات۔",
+      "p2": "شاید چھوڑا۔",
+      "p3": "مفت۔",
+      "noCatch": "مفت۔",
+      "noCatchSub": "اشتہار نہیں۔",
+      "seekQ": "\"ڈھونڈو، پاؤ۔\""
+    },
+    "q": {
+      "title": "سوالات",
+      "sub": "کلک۔",
+      "talk": "بات ←",
+      "back": "سوالات →",
+      "explore": "جانیں؟",
+      "fpn": "مفت۔",
+      "notFound": "نہیں۔",
+      "browse": "سب",
+      "also": "لوگ یہ بھی پوچھتے ہیں"
+    },
+    "hw": {
+      "t": "کیسے",
+      "s1t": "پوچھیں",
+      "s1b": "کوئی بھی۔",
+      "s2t": "بات",
+      "s2b": "حقیقی۔",
+      "s3t": "واپس",
+      "s3b": "کبھی۔"
+    },
+    "ab": {
+      "hero": "ہر شخص انجیل کا حقدار۔",
+      "p1": "یہ پلیٹ فارم ایک سادہ یقین سے موجود ہے: دنیا کی بہترین خبر کلیسا کے دروازوں کے پیچھے بند نہیں رہنی چاہیے۔",
+      "p2": "ہم یسوع کے بارے میں ذاتی بات چیت کے لیے AI استعمال کرتے ہیں۔ واعظ نہیں۔ بات چیت — جیسے یسوع نے کی۔",
+      "p3": "جب کوئی تیار ہو — ہم جوڑتے ہیں۔ ٹیکنالوجی شروع کرتی ہے، لوگ جاری رکھتے ہیں۔",
+      "b1t": "کلام پر مبنی، پادریوں نے جائزہ لیا۔",
+      "b1b": "AI الہیات میں بہتری نہیں کرتا۔ اس کی بنیاد بائبل ہے۔",
+      "b2t": "یسوع کے انداز پر مبنی۔",
+      "b2b": "یسوع نے سوال پوچھے۔ کہانیاں سنائیں۔ سنا۔ یہ AI بھی ایسا ہی کرتا ہے۔",
+      "b3t": "مشکل سوالوں سے نہیں بھاگتا۔",
+      "b3b": "تکلیف، جنسیت، دوسرے مذاہب — سب ایمانداری اور محبت سے۔",
+      "b4t": "شروعات کا مقام، منزل نہیں۔",
+      "b4b": "AI بات چیت شروع کر سکتا ہے لیکن حقیقی برادری کی جگہ نہیں لے سکتا۔"
+    },
+    "pv": {
+      "title": "رازداری",
+      "hero": "نجی۔",
+      "p1": "آپ کے براؤزر میں مقامی طور پر محفوظ۔ آپ کا آلہ کبھی نہیں چھوڑتا۔",
+      "p2": "کوئی اکاؤنٹ نہیں۔ کوئی ٹریکنگ نہیں۔ کوئی اشتہار نہیں۔ ڈیٹا نہیں بیچا۔",
+      "p3": "اگر کسی سے جڑنا چاہیں تو صرف آپ کی دی گئی معلومات شیئر ہوتی ہیں۔"
+    },
+    "qs": [
+      {
+        "question": "کیا خدا حقیقی ہے؟",
+        "intro": "قدیم ترین اور سب سے ایمانداران سوالات میں سے ایک۔ کیا ایک حقیقی خدا ہے جو آپ کی زندگی میں شامل ہے؟ اربوں لوگوں نے ہاں کہا ہے۔"
+      },
+      {
+        "question": "یسوع کون ہیں؟",
+        "intro": "ناصرت کا ایک بڑھئی جس نے تاریخ کو دو حصوں میں تقسیم کر دیا۔ اربوں لوگ انہیں خدا کہتے ہیں۔ وہ واقعی کون تھے؟"
+      },
+      {
+        "question": "خدا تکلیف کیوں ہونے دیتا ہے؟",
+        "intro": "اگر خدا اچھا اور طاقتور ہے تو اتنا درد کیوں؟ جب آپ خود تکلیف میں ہوں تو یہ نظریاتی سوال نہیں رہتا۔"
+      },
+      {
+        "question": "زندگی کا مقصد کیا ہے؟",
+        "intro": "آپ پہلے شخص نہیں ہیں جو رات 3 بجے جاگ کر سوچتے ہیں کیا اس سب کا کوئی مطلب ہے۔ کیا کچھ اور بھی ہے؟"
+      },
+      {
+        "question": "مرنے کے بعد کیا ہوتا ہے؟",
+        "intro": "وہ سوال جس سے ہم اس وقت تک بچتے ہیں جب تک بچ نہ سکیں۔ کوئی قریبی گزر جاتا ہے۔ واقعی کیا ہوتا ہے؟"
+      },
+      {
+        "question": "کیا خدا مجھ سے محبت کرتا ہے؟",
+        "intro": "شاید آپ کو بتایا گیا ہے خدا ناراض ہے۔ شاید آپ خود کو ٹوٹا ہوا محسوس کرتے ہیں۔ مختصر جواب: ہاں۔"
+      },
+      {
+        "question": "دعا کیسے کریں؟",
+        "intro": "اگر کبھی دعا نہیں کی — یا پہلے کرتے تھے اور چھوڑ دی — عجیب لگ سکتا ہے۔ دعا آپ کی سوچ سے زیادہ آسان ہے۔"
+      },
+      {
+        "question": "کیا بائبل سچی ہے؟",
+        "intro": "تاریخ کی سب سے زیادہ چھپی، ترجمہ شدہ اور زیرِ بحث کتاب۔ 1,500 سال میں لکھی گئی۔ ثبوت دیکھنے کے قابل ہیں۔"
+      },
+      {
+        "question": "دنیا میں برائی کیوں ہے؟",
+        "intro": "آپ خبروں میں دیکھتے ہیں۔ کبھی آئینے میں۔ اگر خدا نے سب کچھ بنایا تو برائی کہاں سے آئی؟"
+      },
+      {
+        "question": "کیا میں خدا کو ذاتی طور پر جان سکتا ہوں؟",
+        "intro": "صرف خدا کے بارے میں جاننا نہیں — واقعی اسے جاننا۔ حقیقی رشتہ۔ بائبل کہتی ہے ممکن ہے۔"
+      },
+      {
+        "question": "کیا خدا سب کو معاف کرتا ہے؟",
+        "intro": "شاید آپ ہر روز کچھ اٹھائے ہوئے ہیں۔ سچائی ایک شخص سے شروع ہوتی ہے جو صلیب پر نالائقوں کے لیے مرا۔"
+      },
+      {
+        "question": "جنت کیسی ہے؟",
+        "intro": "بادل اور بربط؟ بالکل نہیں۔ بائبل کچھ زیادہ خوبصورت بیان کرتی ہے۔ نئی زمین۔ آنسو نہیں۔"
+      },
+      {
+        "question": "کیا جہنم حقیقی ہے؟",
+        "intro": "یسوع نے بائبل میں اس کے بارے میں سب سے زیادہ بات کی۔ دھمکی نہیں — محبت سے خبردار کیا۔"
+      },
+      {
+        "question": "خدا نے یہ میرے ساتھ کیوں ہونے دیا؟",
+        "intro": "یہ مذہبی مشق نہیں۔ کچھ ہوا — تکلیف دہ، ناانصاف — اور آپ کو جاننا ہے کیوں۔"
+      },
+      {
+        "question": "اپنا مقصد کیسے پاؤں؟",
+        "intro": "جاگو، کام، گھر، دہرائو۔ کسی مقام پر: بس اتنا ہی؟ کیا میں اس سے زیادہ کے لیے بنایا گیا ہوں؟ یہ احساس ایک اشارہ ہے۔"
+      },
+      {
+        "question": "بائبل پریشانی اور ڈپریشن کے بارے میں کیا کہتی ہے؟",
+        "intro": "بائبل یہ نہیں کہتی کہ سب ٹھیک ہے۔ داؤد نے تکلیف میں چلایا۔ ایلیاہ مرنا چاہتا تھا۔ یسوع روئے۔"
+      },
+      {
+        "question": "میں نے یسوع کو خواب میں دیکھا",
+        "intro": "آپ نے کسی کو دیکھا — سفید لباس، روشنی، سکون۔ بھول نہیں سکتے۔ دنیا بھر میں لاکھوں ایسے ہی خواب بیان کرتے ہیں۔"
+      },
+      {
+        "question": "کیا میرے لیے بہت دیر ہو گئی؟",
+        "intro": "یسوع کے ساتھ صلیب پر مرنے والا مجرم۔ آخری لمحوں میں یاد رکھنے کی درخواست۔ یسوع نے ہاں کہا۔ کبھی دیر نہیں۔"
+      },
+      {
+        "question": "کیا عیسائیت بہت تنگ ہے؟",
+        "intro": "\"ایک ہی راستہ؟ مغرور لگتا ہے۔\" ٹھیک ہے۔ لیکن کیا ڈاکٹر تنگ ہے جب کہتا ہے صرف ایک علاج کام کرے گا؟"
+      },
+      {
+        "question": "کلیسا نے مجھے تکلیف دی",
+        "intro": "محفوظ ہونا چاہیے تھا۔ نہیں تھا۔ آپ کا درد حقیقی ہے۔ لیکن کلیسا اور یسوع میں فرق ہے۔"
+      }
+    ]
+  },
+  "bn": {
+    "name": "বাংলা",
+    "dir": "ltr",
+    "nav": {
+      "home": "হোম",
+      "questions": "প্রশ্ন",
+      "how": "কিভাবে",
+      "about": "সম্পর্কে",
+      "start": "শুরু"
+    },
+    "hero": {
+      "tag": "জিজ্ঞাসা করুন। সত্য খুঁজুন। আশা পান।",
+      "title": "আপনার\nপ্রশ্ন আছে।",
+      "sub": "ঈশ্বর সত্যি? কেন কষ্ট? জীবনের অর্থ?",
+      "sub2": "নিরাপদ। বিনামূল্যে।",
+      "free": "বিনামূল্যে।",
+      "scroll": "স্ক্রল"
+    },
+    "prompt": {
+      "ask": "জিজ্ঞাসা...",
+      "mind": "মনে কী?",
+      "tryit": "চেষ্টা...",
+      "type": "লিখুন...",
+      "haveQ": "প্রশ্ন?"
+    },
+    "chat": {
+      "new": "নতুন",
+      "none": "নেই।",
+      "saved": "সংরক্ষিত",
+      "newBtn": "+ নতুন",
+      "homeBtn": "← হোম",
+      "about": "ঈশ্বর সম্পর্কে।",
+      "footer": "বিনামূল্যে · AI · ",
+      "privacy": "গোপনীয়তা",
+      "s1": "ঈশ্বর সত্যি?",
+      "s2": "কেন কষ্ট?",
+      "s3": "উদ্দেশ্য?",
+      "s4": "ঈশ্বর ভালোবাসেন?",
+      "s5": "কথা বলতে চাই"
+    },
+    "cn": {
+      "title": "যোগাযোগ?",
+      "sub": "পরামর্শদাতা নেটওয়ার্ক।",
+      "name": "নাম",
+      "email": "ইমেল",
+      "number": "নম্বর",
+      "country": "দেশ",
+      "btn": "সংযুক্ত",
+      "notNow": "না",
+      "disc": "সংযোগের জন্য।",
+      "ok": "পেয়েছি।",
+      "okSub": "যোগাযোগ।",
+      "wa": "WhatsApp",
+      "em": "ইমেল",
+      "ph": "ফোন",
+      "tg": "Telegram",
+      "n1": "যীশুকে অনুসরণ",
+      "n2": "গির্জা",
+      "n3": "বাইবেল",
+      "n4": "কথা বলা",
+      "n5": "কঠিন",
+      "n6": "অন্য"
+    },
+    "ft": {
+      "desc": "বিনামূল্যে।",
+      "pages": "পৃষ্ঠা",
+      "promise": "প্রতিশ্রুতি",
+      "promiseT": "বিনামূল্যে।",
+      "verse": "\"বিনামূল্যে পেয়েছ।\" — মথি ১০:৮"
+    },
+    "home": {
+      "qTitle": "প্রশ্ন",
+      "qSub": "একা নন।",
+      "seeAll": "সব →",
+      "place": "গুরুত্বপূর্ণ",
+      "p1": "সবার প্রশ্ন।",
+      "p2": "হয়তো ছেড়ে গেছেন।",
+      "p3": "বিনামূল্যে।",
+      "noCatch": "বিনামূল্যে।",
+      "noCatchSub": "বিজ্ঞাপন নেই।",
+      "seekQ": "\"খোঁজো, পাবে।\""
+    },
+    "q": {
+      "title": "প্রশ্ন",
+      "sub": "ক্লিক।",
+      "talk": "কথা →",
+      "back": "← সব",
+      "explore": "জানতে?",
+      "fpn": "বিনামূল্যে।",
+      "notFound": "নেই।",
+      "browse": "সব",
+      "also": "মানুষ এটাও জিজ্ঞাসা করে"
+    },
+    "hw": {
+      "t": "কিভাবে",
+      "s1t": "জিজ্ঞাসা",
+      "s1b": "যেকোনো।",
+      "s2t": "কথোপকথন",
+      "s2b": "সত্যিকারের।",
+      "s3t": "ফিরুন",
+      "s3b": "যখন খুশি।"
+    },
+    "ab": {
+      "hero": "প্রত্যেকে সুসমাচার শোনার যোগ্য।",
+      "p1": "এই প্ল্যাটফর্ম একটি সরল বিশ্বাস থেকে: পৃথিবীর সেরা খবর গির্জার দরজার পেছনে বন্ধ থাকা উচিত নয়।",
+      "p2": "আমরা যীশু সম্পর্কে ব্যক্তিগত কথোপকথনের জন্য AI ব্যবহার করি। উপদেশ নয়। কথোপকথন — যেমন যীশু করতেন।",
+      "p3": "কেউ প্রস্তুত হলে — আমরা সংযুক্ত করি। প্রযুক্তি শুরু করে, মানুষ চালিয়ে যায়।",
+      "b1t": "শাস্ত্র ভিত্তিক এবং যাজকদের দ্বারা পর্যালোচিত।",
+      "b1b": "AI ধর্মতত্ত্ব উদ্ভাবন করে না। এর কাঠামো বাইবেলে ভিত্তি করে।",
+      "b2t": "যীশুর পদ্ধতি অনুসরণে।",
+      "b2b": "যীশু প্রশ্ন করতেন। গল্প বলতেন। শুনতেন। এই AI একই কাজ করে।",
+      "b3t": "কঠিন প্রশ্ন এড়ায় না।",
+      "b3b": "কষ্ট, যৌনতা, অন্য ধর্ম — সব সততার সাথে, সর্বদা ভালোবাসায়।",
+      "b4t": "শুরুর বিন্দু, গন্তব্য নয়।",
+      "b4b": "AI কথোপকথন শুরু করতে পারে, কিন্তু প্রকৃত সম্প্রদায়ের বিকল্প নয়।"
+    },
+    "pv": {
+      "title": "গোপনীয়তা",
+      "hero": "ব্যক্তিগত।",
+      "p1": "আপনার ব্রাউজারে স্থানীয়ভাবে সংরক্ষিত। আপনার ডিভাইস কখনো ছাড়ে না।",
+      "p2": "কোনো অ্যাকাউন্ট নেই। কোনো ট্র্যাকিং নেই। কোনো বিজ্ঞাপন নেই। ডেটা বিক্রি হয় না।",
+      "p3": "কারো সাথে সংযুক্ত হতে চাইলে, শুধু আপনার দেওয়া তথ্য শেয়ার হয়।"
+    },
+    "qs": [
+      {
+        "question": "ঈশ্বর কি সত্যি?",
+        "intro": "সবচেয়ে পুরনো এবং সৎ প্রশ্নগুলোর একটি। আপনার জীবনে জড়িত একজন সত্যিকারের ঈশ্বর আছেন কি? কোটি কোটি মানুষ হ্যাঁ বলেছে।"
+      },
+      {
+        "question": "যীশু কে?",
+        "intro": "নাজারেথের একজন কাঠমিস্ত্রি যিনি ইতিহাসকে দুভাগে ভাগ করেছিলেন। কোটি কোটি তাঁকে ঈশ্বর বলে। তিনি আসলে কে ছিলেন?"
+      },
+      {
+        "question": "ঈশ্বর কেন কষ্ট হতে দেন?",
+        "intro": "ঈশ্বর যদি ভালো এবং শক্তিশালী হন, তাহলে এত কষ্ট কেন? আপনি যখন কষ্ট পাচ্ছেন তখন এটা তাত্ত্বিক নয়।"
+      },
+      {
+        "question": "জীবনের অর্থ কী?",
+        "intro": "আপনি প্রথম নন যে রাত ৩টায় জেগে ভাবছেন এসবের কোনো মানে আছে কি। কাজ, রুটিন — আরো কিছু আছে?"
+      },
+      {
+        "question": "মৃত্যুর পর কী হয়?",
+        "intro": "যে প্রশ্ন আমরা এড়িয়ে যাই যতক্ষণ না পারি। কেউ কাছের চলে যায়। আসলে কী হয়?"
+      },
+      {
+        "question": "ঈশ্বর কি আমাকে ভালোবাসেন?",
+        "intro": "হয়তো আপনাকে বলা হয়েছে ঈশ্বর রাগান্বিত। হয়তো আপনি ভেঙে পড়েছেন মনে করেন। সংক্ষিপ্ত উত্তর: হ্যাঁ।"
+      },
+      {
+        "question": "কিভাবে প্রার্থনা করব?",
+        "intro": "কখনো প্রার্থনা না করলে — বা করতেন আর থামিয়ে দিয়েছেন — অদ্ভুত মনে হতে পারে। প্রার্থনা আপনার ধারণার চেয়ে সহজ।"
+      },
+      {
+        "question": "বাইবেল কি সত্য?",
+        "intro": "ইতিহাসের সবচেয়ে বেশি মুদ্রিত, অনূদিত এবং বিতর্কিত বই। ১,৫০০ বছরে লেখা। প্রমাণ দেখার যোগ্য।"
+      },
+      {
+        "question": "পৃথিবীতে মন্দ কেন?",
+        "intro": "সংবাদে দেখেন। কখনো আয়নায়। ঈশ্বর সব সৃষ্টি করলে মন্দ কোথা থেকে এলো?"
+      },
+      {
+        "question": "আমি কি ব্যক্তিগতভাবে ঈশ্বরকে জানতে পারি?",
+        "intro": "শুধু ঈশ্বর সম্পর্কে জানা নয় — সত্যিই তাঁকে জানা। বাস্তব সম্পর্ক। বাইবেল বলে এটা সম্ভব।"
+      },
+      {
+        "question": "ঈশ্বর কি সবাইকে ক্ষমা করেন?",
+        "intro": "হয়তো আপনি প্রতিদিন কিছু বহন করেন। সত্য শুরু হয় একজন মানুষ দিয়ে যিনি অযোগ্যদের জন্য ক্রুশে মরেছিলেন।"
+      },
+      {
+        "question": "স্বর্গ কেমন?",
+        "intro": "মেঘ আর বীণা? ঠিক না। বাইবেল আরো সুন্দর কিছু চিত্রিত করে। নতুন পৃথিবী। আর কান্না নেই।"
+      },
+      {
+        "question": "নরক কি সত্য?",
+        "intro": "যীশু বাইবেলে সবচেয়ে বেশি এ বিষয়ে বলেছেন। হুমকি নয় — ভালোবাসা থেকে সতর্কতা।"
+      },
+      {
+        "question": "ঈশ্বর আমার সাথে এটা কেন হতে দিলেন?",
+        "intro": "এটা ধর্মতাত্ত্বিক অনুশীলন নয়। কিছু ঘটেছে — কষ্টদায়ক, অন্যায় — আর আপনাকে জানতে হবে কেন।"
+      },
+      {
+        "question": "আমার উদ্দেশ্য কিভাবে খুঁজব?",
+        "intro": "ঘুম থেকে উঠুন, কাজ, বাড়ি, পুনরাবৃত্তি। রুটিনে কোথাও: এটাই কি? আমি কি আরো বেশির জন্য তৈরি? এই অনুভূতি একটি সূত্র।"
+      },
+      {
+        "question": "বাইবেল উদ্বেগ ও বিষণ্নতা সম্পর্কে কী বলে?",
+        "intro": "বাইবেল ভান করে না সব ঠিক আছে। দায়ূদ যন্ত্রণায় চিৎকার করেছিলেন। এলিয় মরতে চেয়েছিলেন। যীশু কেঁদেছিলেন।"
+      },
+      {
+        "question": "আমি যীশুকে স্বপ্নে দেখেছি",
+        "intro": "আপনি কাউকে দেখেছেন — সাদা পোশাকে, আলো, শান্তি। ভুলতে পারছেন না। বিশ্বজুড়ে লক্ষ লক্ষ মানুষ একই রকম স্বপ্ন বর্ণনা করেন।"
+      },
+      {
+        "question": "আমার জন্য কি অনেক দেরি হয়ে গেছে?",
+        "intro": "যীশুর পাশে ক্রুশে মৃত্যুবরণকারী অপরাধী। শেষ মুহূর্তে মনে রাখতে বলেছিল। যীশু হ্যাঁ বলেছিলেন। কখনো দেরি হয় না।"
+      },
+      {
+        "question": "খ্রিস্টধর্ম কি অনেক সংকীর্ণ?",
+        "intro": "\"একটাই পথ? অহংকারী মনে হয়।\" ঠিক আছে। কিন্তু ডাক্তার কি সংকীর্ণ যখন বলেন একটাই চিকিৎসা কাজ করবে?"
+      },
+      {
+        "question": "গির্জা আমাকে আঘাত করেছে",
+        "intro": "নিরাপদ হওয়ার কথা ছিল। ছিল না। আপনার কষ্ট সত্যি। কিন্তু গির্জা আর যীশুর মধ্যে পার্থক্য আছে।"
+      }
+    ]
+  },
+  "ko": {
+    "name": "한국어",
+    "dir": "ltr",
+    "nav": {
+      "home": "홈",
+      "questions": "질문",
+      "how": "사용법",
+      "about": "소개",
+      "start": "시작"
+    },
+    "hero": {
+      "tag": "물어보세요. 진리를 찾으세요. 희망을 발견하세요.",
+      "title": "당신에게\n질문이 있습니다.",
+      "sub": "하나님은? 왜 고통? 삶의 의미?",
+      "sub2": "안전. 무료.",
+      "free": "무료.",
+      "scroll": "스크롤"
+    },
+    "prompt": {
+      "ask": "물어보세요...",
+      "mind": "무슨 생각?",
+      "tryit": "시도...",
+      "type": "적어보세요...",
+      "haveQ": "질문?"
+    },
+    "chat": {
+      "new": "새 대화",
+      "none": "없음.",
+      "saved": "저장됨",
+      "newBtn": "+ 새로",
+      "homeBtn": "← 홈",
+      "about": "하나님에 대해.",
+      "footer": "무료 · AI · ",
+      "privacy": "개인정보",
+      "s1": "하나님은?",
+      "s2": "왜 고통?",
+      "s3": "나의 목적?",
+      "s4": "사랑하시나?",
+      "s5": "이야기하고 싶어요"
+    },
+    "cn": {
+      "title": "연락?",
+      "sub": "멘토 네트워크.",
+      "name": "이름",
+      "email": "이메일",
+      "number": "번호",
+      "country": "국가",
+      "btn": "연결",
+      "notNow": "아니요",
+      "disc": "연결에만.",
+      "ok": "받았습니다.",
+      "okSub": "연락.",
+      "wa": "WhatsApp",
+      "em": "이메일",
+      "ph": "전화",
+      "tg": "Telegram",
+      "n1": "예수님 따르기",
+      "n2": "교회",
+      "n3": "성경",
+      "n4": "대화",
+      "n5": "힘든",
+      "n6": "기타"
+    },
+    "ft": {
+      "desc": "무료 공간.",
+      "pages": "페이지",
+      "promise": "약속",
+      "promiseT": "무료.",
+      "verse": "\"거저 받았으니.\" — 마태 10:8"
+    },
+    "home": {
+      "qTitle": "질문",
+      "qSub": "혼자가 아닙니다.",
+      "seeAll": "모두 →",
+      "place": "중요한",
+      "p1": "모두 질문이.",
+      "p2": "교회를 떠났을 수도.",
+      "p3": "무료.",
+      "noCatch": "무료.",
+      "noCatchSub": "광고 없음.",
+      "seekQ": "\"구하라 얻으리니.\""
+    },
+    "q": {
+      "title": "질문",
+      "sub": "클릭.",
+      "talk": "이야기 →",
+      "back": "← 모두",
+      "explore": "탐구?",
+      "fpn": "무료.",
+      "notFound": "없음.",
+      "browse": "전체",
+      "also": "사람들이 또 묻는 질문"
+    },
+    "hw": {
+      "t": "사용법",
+      "s1t": "물어보세요",
+      "s1b": "아무거나.",
+      "s2t": "대화",
+      "s2b": "진짜.",
+      "s3t": "돌아오세요",
+      "s3b": "언제든."
+    },
+    "ab": {
+      "hero": "모두 복음을 들을 자격이.",
+      "p1": "이 플랫폼은 단순한 확신에서 존재합니다: 역사상 최고의 소식이 교회 문 뒤에 갇혀서는 안 됩니다.",
+      "p2": "우리는 예수님에 대한 개인적이고 인내심 있는 대화를 만들기 위해 AI를 사용합니다. 설교가 아닙니다. 대화 — 예수님처럼.",
+      "p3": "누군가 준비되면 — 연결합니다. 기술이 시작하고, 사람들이 이어갑니다.",
+      "b1t": "성경에 기반하고 목사들이 검토.",
+      "b1b": "AI는 신학을 즉흥하지 않습니다. 프레임워크는 성경에 기반합니다.",
+      "b2t": "예수님의 접근 방식을 모델로.",
+      "b2b": "예수님은 질문했습니다. 이야기했습니다. 들었습니다. 이 AI도 마찬가지입니다.",
+      "b3t": "어려운 질문을 피하지 않습니다.",
+      "b3b": "고통, 성, 다른 종교 — 모두 정직하게, 항상 사랑으로.",
+      "b4t": "시작점이지 목적지가 아닙니다.",
+      "b4b": "AI는 대화를 시작할 수 있지만 진정한 공동체를 대체할 수 없습니다."
+    },
+    "pv": {
+      "title": "개인정보",
+      "hero": "비공개.",
+      "p1": "브라우저에 로컬로 저장됩니다. 장치를 떠나지 않습니다.",
+      "p2": "계정 불필요. 추적 없음. 광고 없음. 데이터 판매 없음.",
+      "p3": "실제 사람과 연결하기로 선택하면, 제공한 정보만 공유됩니다."
+    },
+    "qs": [
+      {
+        "question": "하나님은 실재하시나요?",
+        "intro": "가장 오래되고 솔직한 질문 중 하나입니다. 당신의 삶에 관여하시는 실재하는 하나님이 계실까요? 수십억 명이 그렇다고 말했습니다."
+      },
+      {
+        "question": "예수님은 누구인가요?",
+        "intro": "역사를 둘로 나눈 나사렛의 목수. 수십억이 그를 하나님이라 부릅니다. 그는 정말 누구였을까요?"
+      },
+      {
+        "question": "하나님은 왜 고통을 허락하시나요?",
+        "intro": "하나님이 선하시고 전능하시다면, 왜 이렇게 많은 고통이 있을까요? 당신이 아플 때 이것은 추상적 질문이 아닙니다."
+      },
+      {
+        "question": "삶의 의미는 무엇인가요?",
+        "intro": "새벽 3시에 깨어 이 모든 것이 의미 있는지 궁금해하는 첫 번째 사람은 아닙니다. 일, 일상 — 더 있을까요?"
+      },
+      {
+        "question": "죽으면 어떻게 되나요?",
+        "intro": "더 이상 피할 수 없을 때까지 피하는 질문입니다. 가까운 사람이 세상을 떠납니다. 실제로 무슨 일이 일어날까요?"
+      },
+      {
+        "question": "하나님은 나를 사랑하시나요?",
+        "intro": "하나님이 화나셨다고 들었을 수 있습니다. 너무 망가졌다고 느낄 수 있습니다. 짧은 답: 네."
+      },
+      {
+        "question": "어떻게 기도하나요?",
+        "intro": "기도해 본 적이 없다면 — 또는 하다가 멈췄다면 — 이상하게 느껴질 수 있습니다. 기도는 생각보다 간단합니다."
+      },
+      {
+        "question": "성경은 사실인가요?",
+        "intro": "역사상 가장 많이 인쇄되고, 번역되고, 논쟁된 책. 1,500년에 걸쳐 쓰였습니다. 증거를 살펴볼 가치가 있습니다."
+      },
+      {
+        "question": "세상에 왜 악이 있나요?",
+        "intro": "뉴스에서 봅니다. 때로는 거울에서. 하나님이 모든 것을 만드셨다면 악은 어디서 왔을까요?"
+      },
+      {
+        "question": "하나님을 개인적으로 알 수 있나요?",
+        "intro": "하나님에 대해 아는 것이 아니라 — 진짜로 아는 것. 진짜 관계. 성경은 가능하다고 말합니다."
+      },
+      {
+        "question": "하나님은 모두를 용서하시나요?",
+        "intro": "매일 무언가를 짊어지고 있을 수 있습니다. 진실은 자격 없는 사람들을 위해 십자가에서 죽은 한 사람에서 시작됩니다."
+      },
+      {
+        "question": "천국은 어떤 곳인가요?",
+        "intro": "구름과 하프? 정확히는 아닙니다. 성경은 더 놀랍고 아름다운 것을 그립니다. 새 땅. 눈물 없음."
+      },
+      {
+        "question": "지옥은 실재하나요?",
+        "intro": "예수님은 성경에서 누구보다 많이 지옥에 대해 말씀하셨습니다. 위협이 아니라 — 사랑의 경고로."
+      },
+      {
+        "question": "하나님은 왜 이 일이 나에게 일어나게 하셨나요?",
+        "intro": "신학적 연습이 아닙니다. 무슨 일이 일어났습니다 — 고통스럽고, 불공평한 — 왜인지 알아야 합니다."
+      },
+      {
+        "question": "내 목적을 어떻게 찾나요?",
+        "intro": "일어나고, 일하고, 집, 반복. 어딘가에서: 이게 다인가? 나는 더 큰 것을 위해 만들어졌나? 그 느낌은 단서입니다."
+      },
+      {
+        "question": "성경은 불안과 우울증에 대해 뭐라고 하나요?",
+        "intro": "성경은 모든 것이 괜찮은 척하지 않습니다. 다윗은 고통 속에 부르짖었습니다. 엘리야는 죽고 싶었습니다. 예수님은 우셨습니다."
+      },
+      {
+        "question": "예수님을 꿈에서 봤어요",
+        "intro": "누군가를 보았습니다 — 흰옷의 사람, 빛, 평화. 잊을 수 없습니다. 전 세계 수백만 명이 놀랍도록 비슷한 꿈을 묘사합니다."
+      },
+      {
+        "question": "저에게 너무 늦은 건가요?",
+        "intro": "예수님 옆 십자가에서 죽어가는 범죄자. 마지막 순간, 기억해달라고 했습니다. 예수님은 그렇다고 하셨습니다. 결코 늦지 않습니다."
+      },
+      {
+        "question": "기독교는 너무 좁은가요?",
+        "intro": "\"한 길만? 오만하게 들린다.\" 맞습니다. 하지만 의사가 한 가지 치료만 효과 있다고 할 때 좁은 건가요?"
+      },
+      {
+        "question": "교회가 저를 아프게 했어요",
+        "intro": "안전해야 했습니다. 그렇지 않았습니다. 당신의 아픔은 실재합니다. 하지만 교회와 예수님은 다릅니다."
+      }
+    ]
+  },
+  "ja": {
+    "name": "日本語",
+    "dir": "ltr",
+    "nav": {
+      "home": "ホーム",
+      "questions": "質問",
+      "how": "使い方",
+      "about": "について",
+      "start": "始める"
+    },
+    "hero": {
+      "tag": "何でも聞いてください。真理を。希望を。",
+      "title": "あなたには\n疑問があります。",
+      "sub": "神は？なぜ苦しみ？人生の意味？",
+      "sub2": "安全。無料。",
+      "free": "無料。",
+      "scroll": "スクロール"
+    },
+    "prompt": {
+      "ask": "何でも...",
+      "mind": "何を?",
+      "tryit": "試す...",
+      "type": "書いて...",
+      "haveQ": "質問?"
+    },
+    "chat": {
+      "new": "新しい",
+      "none": "まだ。",
+      "saved": "保存済",
+      "newBtn": "+ 新規",
+      "homeBtn": "← ホーム",
+      "about": "神について。",
+      "footer": "無料 · AI · ",
+      "privacy": "プライバシー",
+      "s1": "神は?",
+      "s2": "なぜ苦しみ?",
+      "s3": "目的?",
+      "s4": "愛して?",
+      "s5": "話したい"
+    },
+    "cn": {
+      "title": "連絡?",
+      "sub": "メンター.",
+      "name": "名前",
+      "email": "メール",
+      "number": "番号",
+      "country": "国",
+      "btn": "つないで",
+      "notNow": "今はいい",
+      "disc": "連絡に.",
+      "ok": "受取.",
+      "okSub": "連絡.",
+      "wa": "WhatsApp",
+      "em": "メール",
+      "ph": "電話",
+      "tg": "Telegram",
+      "n1": "イエスに従う",
+      "n2": "教会",
+      "n3": "聖書",
+      "n4": "話したい",
+      "n5": "困難",
+      "n6": "他"
+    },
+    "ft": {
+      "desc": "無料.",
+      "pages": "ページ",
+      "promise": "約束",
+      "promiseT": "無料.",
+      "verse": "\"ただで受けた。\" — マタイ10:8"
+    },
+    "home": {
+      "qTitle": "質問",
+      "qSub": "一人じゃない.",
+      "seeAll": "全て →",
+      "place": "大切なこと",
+      "p1": "誰もが疑問.",
+      "p2": "教会から離れたかも.",
+      "p3": "無料.",
+      "noCatch": "無料.",
+      "noCatchSub": "広告なし.",
+      "seekQ": "\"求めなさい。\""
+    },
+    "q": {
+      "title": "質問",
+      "sub": "クリック.",
+      "talk": "話す →",
+      "back": "← 全て",
+      "explore": "探求?",
+      "fpn": "無料.",
+      "notFound": "なし.",
+      "browse": "全て",
+      "also": "よくある質問"
+    },
+    "hw": {
+      "t": "使い方",
+      "s1t": "聞く",
+      "s1b": "何でも.",
+      "s2t": "対話",
+      "s2b": "本当の.",
+      "s3t": "戻る",
+      "s3b": "いつでも."
+    },
+    "ab": {
+      "hero": "全ての人に福音を。",
+      "p1": "このプラットフォームはシンプルな確信から存在します：世界史上最高のニュースは教会の扉の後ろに閉じ込められるべきではありません。",
+      "p2": "私たちはイエスについての個人的で忍耐強い会話を作るためにAIを使います。説教ではなく会話 — イエスがそうしたように。",
+      "p3": "誰かが準備ができたとき — つなげます。テクノロジーが始め、人が続けます。",
+      "b1t": "聖書に基づき、牧師が審査。",
+      "b1b": "AIは神学を即興しません。フレームワークは聖書に基づいています。",
+      "b2t": "イエスのアプローチをモデルに。",
+      "b2b": "イエスは質問しました。物語を語りました。聞きました。このAIも同じです。",
+      "b3t": "難しい質問から逃げません。",
+      "b3b": "苦しみ、性、他の宗教 — すべて正直に、常に愛をもって。",
+      "b4t": "出発点であり、目的地ではない。",
+      "b4b": "AIは会話を始められますが、本当のコミュニティの代わりにはなりません。"
+    },
+    "pv": {
+      "title": "プライバシー",
+      "hero": "非公開。",
+      "p1": "ブラウザにローカル保存。デバイスから出ません。",
+      "p2": "アカウント不要。追跡なし。広告なし。データ販売なし。",
+      "p3": "実際の人とつながることを選んだ場合、提供した情報のみ共有されます。"
+    },
+    "qs": [
+      {
+        "question": "神は実在しますか？",
+        "intro": "最も古く正直な質問の一つです。あなたの人生に関わる本当の神はいますか？数十億人がイエスと答えました。"
+      },
+      {
+        "question": "イエスは誰ですか？",
+        "intro": "歴史を二分したナザレの大工。数十億人が神と呼びます。彼は本当に誰だったのでしょうか？"
+      },
+      {
+        "question": "なぜ神は苦しみを許すのですか？",
+        "intro": "神が善で全能なら、なぜこれほどの痛みがあるのですか？あなた自身が苦しんでいるとき、抽象的な質問ではありません。"
+      },
+      {
+        "question": "人生の意味は何ですか？",
+        "intro": "午前3時に目が覚めて、これに意味があるのかと思う最初の人ではありません。仕事、日常 —もっと何かありますか？"
+      },
+      {
+        "question": "死んだらどうなりますか？",
+        "intro": "避けられなくなるまで避ける質問です。身近な人が亡くなります。本当に何が起こるのですか？"
+      },
+      {
+        "question": "神は私を愛していますか？",
+        "intro": "神は怒っていると言われたかもしれません。壊れすぎていると感じるかもしれません。短い答え：はい。"
+      },
+      {
+        "question": "どうやって祈りますか？",
+        "intro": "祈ったことがない場合 — あるいは以前はしていたけど止めた場合 — 奇妙に感じるかもしれません。祈りは思っているより簡単です。"
+      },
+      {
+        "question": "聖書は本当ですか？",
+        "intro": "歴史上最も印刷され、翻訳され、議論された本。1,500年にわたって書かれました。証拠を見る価値があります。"
+      },
+      {
+        "question": "世界になぜ悪があるのですか？",
+        "intro": "ニュースで見ます。時には鏡の中に。神がすべてを造ったなら、悪はどこから来たのですか？"
+      },
+      {
+        "question": "神を個人的に知ることができますか？",
+        "intro": "神について知るだけでなく — 本当に知ること。本物の関係。聖書は可能だと言っています。"
+      },
+      {
+        "question": "神は全員を赦しますか？",
+        "intro": "毎日何かを背負っているかもしれません。真実は、資格のない人のために十字架で死んだ一人の男から始まります。"
+      },
+      {
+        "question": "天国はどんなところですか？",
+        "intro": "雲とハープ？正確にはそうではありません。聖書はもっと驚くべき美しいものを描いています。新しい地。涙はもうありません。"
+      },
+      {
+        "question": "地獄は実在しますか？",
+        "intro": "イエスは聖書の中で誰よりも多く地獄について語りました。脅威としてではなく — 愛からの警告として。"
+      },
+      {
+        "question": "なぜ神はこれを私に起こさせたのですか？",
+        "intro": "これは神学的な演習ではありません。何かが起きました — 痛ましく、不公平な — なぜか知る必要があります。"
+      },
+      {
+        "question": "目的をどう見つけますか？",
+        "intro": "起きて、仕事、帰宅、繰り返し。日常のどこかで：これだけ？もっと大きなことのために造られた？その感覚はヒントです。"
+      },
+      {
+        "question": "聖書は不安とうつについて何と言っていますか？",
+        "intro": "聖書はすべてが大丈夫だとは偽りません。ダビデは苦悶の中で叫びました。エリヤは死にたかった。イエスは泣きました。"
+      },
+      {
+        "question": "イエスの夢を見ました",
+        "intro": "誰かを見ました — 白い服の人、光、平和。忘れられません。世界中で何百万人もが驚くほど似た夢を語っています。"
+      },
+      {
+        "question": "私にはもう遅いですか？",
+        "intro": "イエスの隣の十字架で死んでいく犯罪者。最後の瞬間、覚えてほしいと頼みました。イエスはイエスと答えました。決して遅くありません。"
+      },
+      {
+        "question": "キリスト教は狭すぎますか？",
+        "intro": "「一つの道？傲慢に聞こえる。」確かに。でも医者が一つの治療だけが治すと言うとき、狭いですか？"
+      },
+      {
+        "question": "教会に傷つけられました",
+        "intro": "安全なはずでした。そうではありませんでした。あなたの痛みは本物です。でも教会とイエスには違いがあります。"
+      }
+    ]
+  }
 }
