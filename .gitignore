@@ -30,6 +30,9 @@ lerna-debug.log*
 *.sln
 *.sw?
 
+# server data (connects, analytics)
+data/
+
 # OS
 .DS_Store
 Thumbs.db

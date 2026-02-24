@@ -23,30 +23,22 @@ function detectLanguage() {
 // System prompt is now server-side (docs/the-billion-system-prompt-v1.md)
 
 // ============================================================
-// QUESTIONS DATA
+// QUESTION SLUGS (URL routing — same across all languages)
 // ============================================================
-const QUESTIONS = [
-  { slug: "is-god-real", question: "Is God real?", intro: "It's one of the oldest and most honest questions a person can ask. Not \"is there some vague higher power\" — but is there a God who is real, personal, and actually involved in your life? Billions throughout history have said yes. But you don't have to take their word for it." },
-  { slug: "who-is-jesus", question: "Who is Jesus?", intro: "A carpenter from Nazareth who split history in half. Billions call him God. Others say he was just a good teacher. But almost no serious historian denies he existed. So who was he, really? And why does it matter 2,000 years later?" },
-  { slug: "why-does-god-allow-suffering", question: "Why does God allow suffering?", intro: "If God is good and powerful, why is there so much pain? It's not an abstract question when you're the one hurting. When the diagnosis comes. When someone you love dies. This question deserves more than a quick answer — it deserves a conversation." },
-  { slug: "what-is-the-meaning-of-life", question: "What is the meaning of life?", intro: "You're not the first person to lie awake at 3am wondering if any of this matters. The job, the routine, the scrolling — is there something more? Something you were actually made for? It's the question underneath every other question." },
-  { slug: "what-happens-when-you-die", question: "What happens when you die?", intro: "It's the question we avoid until we can't anymore. Someone close dies, or we have a close call, or it's 3am and the thought won't leave. What actually happens? Is there anything after this?" },
-  { slug: "does-god-love-me", question: "Does God love me?", intro: "Maybe you've been told God is angry. Maybe you feel too broken, too far gone. Maybe you did something you can't take back. Here's the short answer: yes. But the longer answer is better." },
-  { slug: "how-do-i-pray", question: "How do I pray?", intro: "If you've never prayed — or you used to and stopped — it can feel strange. Who are you talking to? Does God actually hear? Prayer is simpler than you think. Just talking to God the way you'd talk to someone who loves you." },
-  { slug: "is-the-bible-true", question: "Is the Bible true?", intro: "The most printed, most translated, most debated book in history. Written across 1,500 years by dozens of authors. Some call it God's word. Others call it mythology. It's worth looking at the evidence." },
-  { slug: "why-is-there-evil", question: "Why is there evil in the world?", intro: "You see it in the news. Sometimes in the mirror. If God made everything, where did evil come from? And if he's powerful enough to stop it, why doesn't he? These are fair questions." },
-  { slug: "can-i-know-god-personally", question: "Can I know God personally?", intro: "Not just know about God — actually know him. Talk to him. Have a relationship that's real, not religious. Most people assume God is distant. The Bible says the opposite." },
-  { slug: "does-god-forgive-everyone", question: "Does God forgive everyone?", intro: "Maybe you carry something every day. Maybe you wonder if you've gone too far. The truth starts with a man dying on a cross for people who didn't deserve it." },
-  { slug: "what-is-heaven-like", question: "What is heaven like?", intro: "Clouds and harps? Not exactly. The Bible paints something more surprising and more beautiful. A new earth. No more tears. Everything made right." },
-  { slug: "is-hell-real", question: "Is hell real?", intro: "Jesus talked about it more than anyone else in the Bible. Not as a threat — as a warning, from love. You deserve to hear what the Bible actually says." },
-  { slug: "why-did-god-let-this-happen", question: "Why did God let this happen to me?", intro: "This isn't theological exercise. Something happened — painful, unfair, devastating — and you need to know why. Or maybe you just need to know you're not alone." },
-  { slug: "how-to-find-my-purpose", question: "How do I find my purpose?", intro: "Wake up, work, home, repeat. Somewhere in the routine: is this it? Was I made for more? That feeling isn't a glitch in your wiring. It's a clue." },
-  { slug: "what-about-anxiety-and-depression", question: "What does the Bible say about anxiety and depression?", intro: "The Bible doesn't pretend everything is fine. David cried out in anguish. Elijah wanted to die. Jesus wept. If you're struggling, you're in good company." },
-  { slug: "i-had-a-dream-about-jesus", question: "I had a dream about Jesus", intro: "You saw someone — a man in white, a figure of light, radiating peace. You can't shake it. Across the world, millions describe dreams strikingly similar. They deserve to be taken seriously." },
-  { slug: "is-it-too-late-for-me", question: "Is it too late for me?", intro: "A criminal dying on a cross next to Jesus. His final moments, he asked to be remembered. Jesus said yes. It's never too late." },
-  { slug: "is-christianity-too-narrow", question: "Is Christianity too narrow?", intro: "\"One way? That sounds arrogant.\" Fair. But is a doctor narrow for saying only one treatment will cure you? Let's talk about it honestly." },
-  { slug: "church-hurt-me", question: "The church hurt me", intro: "It was supposed to be safe. And it wasn't. Your pain is real. But there's a difference between the church and Jesus. He never hurt anyone." },
+const SLUGS = [
+  "is-god-real", "who-is-jesus", "why-does-god-allow-suffering",
+  "what-is-the-meaning-of-life", "what-happens-when-you-die",
+  "does-god-love-me", "how-do-i-pray", "is-the-bible-true",
+  "why-is-there-evil", "can-i-know-god-personally",
+  "does-god-forgive-everyone", "what-is-heaven-like", "is-hell-real",
+  "why-did-god-let-this-happen", "how-to-find-my-purpose",
+  "what-about-anxiety-and-depression", "i-had-a-dream-about-jesus",
+  "is-it-too-late-for-me", "is-christianity-too-narrow", "church-hurt-me",
 ];
+
+function getQuestions(t) {
+  return SLUGS.map((slug, i) => ({ slug, question: t.qs?.[i]?.question || slug, intro: t.qs?.[i]?.intro || "" }));
+}
 
 // ============================================================
 // HELPERS
@@ -103,7 +95,12 @@ function ConnectForm({ onClose, t }) {
     { v: "struggling", l: t.cn.n5 },
     { v: "other", l: t.cn.n6 },
   ];
-  const submit = () => { if (!form.contact.trim()) return; const c = load(CONNECTS_KEY, []); c.push({ ...form, ts: Date.now() }); save(CONNECTS_KEY, c); setSubmitted(true); };
+  const submit = async () => {
+    if (!form.contact.trim()) return;
+    try { await fetch("/api/connect", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) }); } catch {}
+    const c = load(CONNECTS_KEY, []); c.push({ ...form, ts: Date.now() }); save(CONNECTS_KEY, c);
+    setSubmitted(true);
+  };
 
   if (submitted) return (
     <div className="bg-amber-400/5 border border-amber-400/20 rounded-2xl p-5 my-3 max-w-sm">
@@ -193,6 +190,7 @@ function PromptBox({onSubmit,placeholder="Ask anything...",className=""}) {
 // PAGES
 // ============================================================
 function HomePage({navigate,startChat,t}) {
+  const questions = getQuestions(t);
   const [vis,setVis]=useState(false);
   useEffect(()=>{setTimeout(()=>setVis(true),100);},[]);
   return (
@@ -212,7 +210,7 @@ function HomePage({navigate,startChat,t}) {
         <h2 className="text-2xl md:text-3xl font-light mb-4 text-stone-300" style={{fontFamily:"'Georgia',serif"}}>{t.home.qTitle}</h2>
         <p className="text-stone-500 text-sm mb-10">{t.home.qSub}</p>
         <div className="grid gap-x-8 gap-y-3 md:grid-cols-2">
-          {QUESTIONS.slice(0,8).map(q=><button key={q.slug} onClick={()=>startChat(q.question)} className="text-left text-stone-500 hover:text-amber-300 text-sm py-2.5 border-b border-stone-900/50 hover:border-amber-400/20 transition-colors" style={{fontFamily:"'Georgia',serif"}}>{q.question}</button>)}
+          {questions.slice(0,8).map(q=><button key={q.slug} onClick={()=>startChat(q.question)} className="text-left text-stone-500 hover:text-amber-300 text-sm py-2.5 border-b border-stone-900/50 hover:border-amber-400/20 transition-colors" style={{fontFamily:"'Georgia',serif"}}>{q.question}</button>)}
         </div>
         <button onClick={()=>navigate("/questions")} className="mt-8 text-amber-400/60 hover:text-amber-300 text-sm transition-colors" style={{fontFamily:"'Georgia',serif"}}>{t.home.seeAll}</button>
       </div>
@@ -235,15 +233,17 @@ function HomePage({navigate,startChat,t}) {
 }
 
 function QuestionsPage({navigate,startChat,t}) {
+  const questions = getQuestions(t);
   return (<div className="pt-14"><div className="px-6 py-24 max-w-3xl mx-auto">
     <h1 className="text-3xl md:text-5xl font-light mb-4 text-stone-200" style={{fontFamily:"'Georgia',serif"}}>{t.q.title}</h1>
     <p className="text-stone-500 text-base mb-12" style={{fontFamily:"'Georgia',serif"}}>{t.q.sub}</p>
-    <div className="space-y-3">{QUESTIONS.map(q=>(<div key={q.slug} className="flex items-center justify-between border-b border-stone-900/50 py-4 group"><button onClick={()=>navigate(`/questions/${q.slug}`)} className="text-left text-stone-400 group-hover:text-stone-200 text-base transition-colors flex-1" style={{fontFamily:"'Georgia',serif"}}>{q.question}</button><button onClick={()=>startChat(q.question)} className="text-xs text-amber-400/50 hover:text-amber-300 ml-4 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all">{t.q.talk}</button></div>))}</div>
+    <div className="space-y-3">{questions.map(q=>(<div key={q.slug} className="flex items-center justify-between border-b border-stone-900/50 py-4 group"><button onClick={()=>navigate(`/questions/${q.slug}`)} className="text-left text-stone-400 group-hover:text-stone-200 text-base transition-colors flex-1" style={{fontFamily:"'Georgia',serif"}}>{q.question}</button><button onClick={()=>startChat(q.question)} className="text-xs text-amber-400/50 hover:text-amber-300 ml-4 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all">{t.q.talk}</button></div>))}</div>
   </div><Footer navigate={navigate} t={t}/></div>);
 }
 
 function QuestionPage({slug,navigate,startChat,t}) {
-  const q=QUESTIONS.find(q=>q.slug===slug);
+  const questions = getQuestions(t);
+  const q=questions.find(q=>q.slug===slug);
   if(!q)return <div className="pt-20 text-center text-stone-500">{t.q.notFound} <button onClick={()=>navigate("/questions")} className="underline">{t.q.browse}</button></div>;
   return (<div className="pt-14"><div className="px-6 py-24 max-w-2xl mx-auto">
     <button onClick={()=>navigate("/questions")} className="text-stone-600 hover:text-stone-400 text-xs mb-8 block">{t.q.back}</button>
@@ -251,7 +251,7 @@ function QuestionPage({slug,navigate,startChat,t}) {
     <p className="text-stone-400 leading-relaxed text-lg mb-12" style={{fontFamily:"'Georgia',serif"}}>{q.intro}</p>
     <div className="max-w-lg"><p className="text-stone-500 text-sm mb-3" style={{fontFamily:"'Georgia',serif"}}>{t.q.explore}</p><PromptBox onSubmit={msg=>startChat(msg||q.question)} placeholder={t.prompt.type}/><p className="mt-3 text-stone-700 text-xs">{t.q.fpn}</p></div>
   </div>
-  <div className="px-6 py-16 border-t border-stone-900 max-w-2xl mx-auto"><h3 className="text-stone-500 text-sm mb-6">People also ask</h3>{QUESTIONS.filter(r=>r.slug!==slug).slice(0,4).map(r=><button key={r.slug} onClick={()=>{navigate(`/questions/${r.slug}`);window.scrollTo(0,0);}} className="block text-stone-500 hover:text-amber-300 text-sm py-2 transition-colors" style={{fontFamily:"'Georgia',serif"}}>{r.question}</button>)}</div>
+  <div className="px-6 py-16 border-t border-stone-900 max-w-2xl mx-auto"><h3 className="text-stone-500 text-sm mb-6">{t.q.also}</h3>{questions.filter(r=>r.slug!==slug).slice(0,4).map(r=><button key={r.slug} onClick={()=>{navigate(`/questions/${r.slug}`);window.scrollTo(0,0);}} className="block text-stone-500 hover:text-amber-300 text-sm py-2 transition-colors" style={{fontFamily:"'Georgia',serif"}}>{r.question}</button>)}</div>
   <Footer navigate={navigate} t={t}/></div>);
 }
 
@@ -269,15 +269,15 @@ function AboutPage({navigate,startChat,t}) {
     <h1 className="text-3xl md:text-5xl font-light mb-8 text-stone-200" style={{fontFamily:"'Georgia',serif"}}>{t.nav.about}</h1>
     <div className="space-y-6 text-stone-400 leading-relaxed" style={{fontFamily:"'Georgia',serif"}}>
       <p className="text-stone-300 text-xl">{t.ab.hero}</p>
-      <p>This platform exists because of a simple conviction: the best news in the history of the world shouldn't be locked behind church doors, cultural barriers, or language walls. It should meet people where they already are — on their phones, in their homes, at 3am when they can't sleep and the questions won't stop.</p>
-      <p>We use AI to create personal, patient, culturally sensitive conversations about Jesus. Not sermons. Not tracts. Conversations — the way Jesus did it. One person at a time. At the well. On the road. Over dinner. Meeting people exactly where they are.</p>
-      <p>And when someone is ready to take a next step — whether that's following Jesus, finding a church, or just talking to a real person — we connect them. Because technology starts the conversation, but people continue it.</p>
+      <p>{t.ab.p1}</p>
+      <p>{t.ab.p2}</p>
+      <p>{t.ab.p3}</p>
 
       <div className="bg-stone-900/50 border border-stone-800/30 rounded-2xl p-6 my-8 space-y-4">
-        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">It's built on scripture and reviewed by real pastors.</p><p className="text-stone-500 text-xs mt-1">The AI doesn't improvise theology. Its framework is grounded in the Bible and regularly reviewed by pastors, missionaries, and theologians from diverse backgrounds.</p></div></div>
-        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">It's modeled after Jesus' own approach.</p><p className="text-stone-500 text-xs mt-1">Jesus asked questions. He told stories. He listened. He never lectured. This AI is designed to do the same.</p></div></div>
-        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">It doesn't dodge hard questions.</p><p className="text-stone-500 text-xs mt-1">Suffering, sexuality, other religions, the reliability of the Bible — everything is addressed honestly, always leading with love.</p></div></div>
-        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">This is a starting point, not a destination.</p><p className="text-stone-500 text-xs mt-1">AI can start a conversation, but it can't replace real community. We encourage everyone to find a local church, a Bible, and people who can walk with them.</p></div></div>
+        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">{t.ab.b1t}</p><p className="text-stone-500 text-xs mt-1">{t.ab.b1b}</p></div></div>
+        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">{t.ab.b2t}</p><p className="text-stone-500 text-xs mt-1">{t.ab.b2b}</p></div></div>
+        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">{t.ab.b3t}</p><p className="text-stone-500 text-xs mt-1">{t.ab.b3b}</p></div></div>
+        <div className="flex gap-3"><span className="text-amber-400/60 mt-0.5 flex-shrink-0">&#10022;</span><div><p className="text-stone-300 text-sm font-medium">{t.ab.b4t}</p><p className="text-stone-500 text-xs mt-1">{t.ab.b4b}</p></div></div>
       </div>
     </div>
     <div className="mt-16 max-w-lg"><PromptBox onSubmit={msg=>startChat(msg)} placeholder={t.prompt.haveQ}/></div>
@@ -289,9 +289,9 @@ function PrivacyPage({navigate,t}) {
     <h1 className="text-3xl md:text-5xl font-light mb-8 text-stone-200" style={{fontFamily:"'Georgia',serif"}}>{t.pv.title}</h1>
     <div className="space-y-6 text-stone-400 leading-relaxed" style={{fontFamily:"'Georgia',serif"}}>
       <p className="text-stone-300 text-xl">{t.pv.hero}</p>
-      <p>Stored locally in your browser. Never leaves your device. We don't have access to it.</p>
-      <p>No account required. No tracking cookies. No ads. No data sold.</p>
-      <p>If you choose to connect with a real person, only the information you provide is shared — only for that purpose.</p>
+      <p>{t.pv.p1}</p>
+      <p>{t.pv.p2}</p>
+      <p>{t.pv.p3}</p>
     </div>
   </div><Footer navigate={navigate} t={t}/></div>);
 }
