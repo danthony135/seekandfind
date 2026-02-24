@@ -131,6 +131,7 @@ app.post("/api/chat", async (req, res) => {
   const { messages, lang, langName } = req.body;
 
   // Track analytics
+  if (messages?.length === 1) analytics.totalChats++;
   trackChat(lang);
 
   // Build system prompt with language instruction
