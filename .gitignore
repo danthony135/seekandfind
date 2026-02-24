@@ -33,6 +33,10 @@ lerna-debug.log*
 # server data (connects, analytics)
 data/
 
+# one-off scripts
+inject-i18n*.mjs
+run-inject.mjs
+
 # OS
 .DS_Store
 Thumbs.db
