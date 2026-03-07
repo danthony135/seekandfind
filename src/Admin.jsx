@@ -162,6 +162,321 @@ function OverviewTab({ stats, connects }) {
 }
 
 // ============================================================
+// SIMPLE WORLD MAP — equirectangular projection with dots
+// ============================================================
+const WORLD_OUTLINE = "M2,74 L5,68 L8,64 L12,60 L18,56 L22,54 L28,50 L34,48 L38,46 L44,44 L50,42 L56,40 L62,38 L68,36 L74,34 L80,32 L86,30 L92,28 L98,26 L104,24 L110,22 L116,20 L122,18 L128,16 L134,14 L140,12 L146,10 L152,10 L158,12 L164,14 L170,16 L176,18 L182,20 L188,22 L194,24 L200,26";
+
+function WorldMap({ chatlog }) {
+  const width = 800;
+  const height = 400;
+
+  // Group by location (round to nearest degree for clustering)
+  const locationCounts = {};
+  const countryCount = {};
+
+  for (const chat of chatlog) {
+    if (!chat.geo) continue;
+    const key = `${Math.round(chat.geo.lat)},${Math.round(chat.geo.lon)}`;
+    if (!locationCounts[key]) {
+      locationCounts[key] = { lat: chat.geo.lat, lon: chat.geo.lon, city: chat.geo.city, country: chat.geo.country, countryCode: chat.geo.countryCode, count: 0 };
+    }
+    locationCounts[key].count++;
+    countryCount[chat.geo.country] = (countryCount[chat.geo.country] || 0) + 1;
+  }
+
+  const dots = Object.values(locationCounts);
+  const maxCount = Math.max(...dots.map(d => d.count), 1);
+
+  // Equirectangular projection
+  const project = (lat, lon) => {
+    const x = ((lon + 180) / 360) * width;
+    const y = ((90 - lat) / 180) * height;
+    return [x, y];
+  };
+
+  const sortedCountries = Object.entries(countryCount).sort((a, b) => b[1] - a[1]);
+  const maxCountry = sortedCountries[0]?.[1] || 1;
+  const totalWithGeo = chatlog.filter(c => c.geo).length;
+
+  return (
+    <div className="space-y-6">
+      {/* Map */}
+      <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5 overflow-hidden">
+        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Conversations Around the World</p>
+        <div className="relative w-full" style={{ aspectRatio: "2/1" }}>
+          <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full">
+            {/* Background */}
+            <rect width={width} height={height} fill="#1c1917" rx="8" />
+
+            {/* Grid lines */}
+            {[...Array(7)].map((_, i) => (
+              <line key={`h${i}`} x1="0" y1={(i * height) / 6} x2={width} y2={(i * height) / 6} stroke="#292524" strokeWidth="0.5" />
+            ))}
+            {[...Array(13)].map((_, i) => (
+              <line key={`v${i}`} x1={(i * width) / 12} y1="0" x2={(i * width) / 12} y2={height} stroke="#292524" strokeWidth="0.5" />
+            ))}
+
+            {/* Equator */}
+            <line x1="0" y1={height / 2} x2={width} y2={height / 2} stroke="#44403c" strokeWidth="0.5" strokeDasharray="4,4" />
+            {/* Prime meridian */}
+            <line x1={width / 2} y1="0" x2={width / 2} y2={height} stroke="#44403c" strokeWidth="0.5" strokeDasharray="4,4" />
+
+            {/* Dots */}
+            {dots.map((d, i) => {
+              const [x, y] = project(d.lat, d.lon);
+              const r = 3 + (d.count / maxCount) * 12;
+              return (
+                <g key={i}>
+                  {/* Glow */}
+                  <circle cx={x} cy={y} r={r * 2} fill="#f59e0b" opacity={0.08} />
+                  {/* Dot */}
+                  <circle cx={x} cy={y} r={r} fill="#f59e0b" opacity={0.6} stroke="#f59e0b" strokeWidth="1" />
+                  <circle cx={x} cy={y} r={Math.max(2, r * 0.4)} fill="#fbbf24" opacity={0.9} />
+                  {/* Tooltip text for larger dots */}
+                  {d.count >= 2 && (
+                    <text x={x} y={y - r - 4} textAnchor="middle" fill="#a8a29e" fontSize="9" fontFamily="sans-serif">
+                      {d.city || d.country} ({d.count})
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+
+            {/* Label */}
+            {dots.length === 0 && (
+              <text x={width / 2} y={height / 2} textAnchor="middle" fill="#57534e" fontSize="14" fontFamily="Georgia, serif">
+                No location data yet — chats will appear as dots
+              </text>
+            )}
+          </svg>
+        </div>
+        <p className="text-stone-600 text-xs mt-2">{totalWithGeo} chat{totalWithGeo !== 1 ? "s" : ""} with location data</p>
+      </div>
+
+      {/* Country breakdown */}
+      {sortedCountries.length > 0 && (
+        <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+          <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Countries</p>
+          <div className="space-y-3">
+            {sortedCountries.map(([country, count]) => (
+              <div key={country} className="flex items-center gap-3">
+                <span className="text-stone-400 text-sm flex-shrink-0 w-40 truncate">{country}</span>
+                <div className="flex-1 bg-stone-800 rounded-full h-2 overflow-hidden">
+                  <div className="h-full rounded-full bg-amber-400/60 transition-all duration-500" style={{ width: `${(count / maxCountry) * 100}%` }} />
+                </div>
+                <span className="text-stone-500 text-xs w-12 text-right">{count}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ============================================================
+// ACTIVITY TAB — world map + recent chat timeline
+// ============================================================
+function ActivityTab({ chatlog, stats }) {
+  const [timeFilter, setTimeFilter] = useState("all");
+
+  const now = Date.now();
+  const filtered = chatlog.filter(c => {
+    if (timeFilter === "24h") return now - c.ts < 24 * 60 * 60 * 1000;
+    if (timeFilter === "7d") return now - c.ts < 7 * 24 * 60 * 60 * 1000;
+    if (timeFilter === "30d") return now - c.ts < 30 * 24 * 60 * 60 * 1000;
+    return true;
+  });
+
+  // Hourly heatmap data (from chatlog only — needs per-chat data)
+  const hourCounts = Array(24).fill(0);
+  const dayCounts = Array(7).fill(0);
+  for (const c of filtered) {
+    const d = new Date(c.ts);
+    hourCounts[d.getHours()]++;
+    dayCounts[d.getDay()]++;
+  }
+  const maxHour = Math.max(...hourCounts, 1);
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const maxDay = Math.max(...dayCounts, 1);
+
+  // Historical daily messages from analytics (server-side aggregate data, pre-chatlog)
+  const { dailyMessages, totalChats: serverTotalChats, totalMessages: serverTotalMessages, languages } = stats;
+  const dailyEntries = Object.entries(dailyMessages || {}).sort((a, b) => a[0].localeCompare(b[0]));
+  const maxDailyHist = Math.max(...dailyEntries.map(([, c]) => c), 1);
+
+  // Use server totals if chatlog is smaller (chatlog only has new data, server has all history)
+  const displayTotalChats = Math.max(filtered.length, timeFilter === "all" ? (serverTotalChats || 0) : filtered.length);
+  const displayTotalMessages = Math.max(
+    filtered.reduce((s, c) => s + (c.messages || 1), 0),
+    timeFilter === "all" ? (serverTotalMessages || 0) : filtered.reduce((s, c) => s + (c.messages || 1), 0)
+  );
+
+  // Connects with country data — show on map alongside chatlog geo
+  // (connects are passed via stats.connectsList if available)
+
+  return (
+    <div className="space-y-8">
+      {/* Filter buttons */}
+      <div className="flex gap-2">
+        {[
+          { id: "all", label: "All Time" },
+          { id: "30d", label: "30 Days" },
+          { id: "7d", label: "7 Days" },
+          { id: "24h", label: "24 Hours" },
+        ].map(f => (
+          <button key={f.id} onClick={() => setTimeFilter(f.id)}
+            className={`text-xs px-3 py-1.5 rounded-lg transition-colors ${timeFilter === f.id ? "bg-amber-400/10 border border-amber-400/30 text-amber-200" : "text-stone-500 hover:text-stone-300 border border-stone-800"}`}>
+            {f.label}
+          </button>
+        ))}
+        <span className="text-stone-600 text-xs self-center ml-2">{filtered.length} tracked chats{timeFilter === "all" && serverTotalChats > filtered.length ? ` (${serverTotalChats} total including pre-tracking)` : ""}</span>
+      </div>
+
+      {/* Stat cards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <StatCard label="Total Chats" value={displayTotalChats} color="#f59e0b" />
+        <StatCard label="Total Messages" value={displayTotalMessages} />
+        <StatCard label="Countries" value={new Set(filtered.filter(c => c.geo).map(c => c.geo.country)).size} color="#3b82f6" />
+        <StatCard label="Cities" value={new Set(filtered.filter(c => c.geo).map(c => `${c.geo.city},${c.geo.country}`)).size} color="#8b5cf6" />
+      </div>
+
+      {/* Historical daily messages chart (from server analytics — shows ALL history) */}
+      {dailyEntries.length > 0 && timeFilter === "all" && (
+        <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+          <p className="text-stone-400 text-sm mb-1" style={{ fontFamily: "'Georgia', serif" }}>Daily Messages — Full History</p>
+          <p className="text-stone-600 text-xs mb-4">From server analytics (includes activity before location tracking was added)</p>
+          <div className="flex items-end gap-px h-28">
+            {dailyEntries.map(([date, count], i) => {
+              const height = Math.max(2, (count / maxDailyHist) * 100);
+              return (
+                <div key={i} className="flex-1 flex flex-col items-center group relative" style={{ minWidth: "2px" }}>
+                  <div className="w-full bg-amber-400/30 hover:bg-amber-400/50 rounded-sm transition-colors cursor-default" style={{ height: `${height}%` }} />
+                  <div className="absolute -top-8 bg-stone-800 text-stone-300 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                    {new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}: {count} msgs
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex justify-between mt-1">
+            <span className="text-stone-700 text-xs">{dailyEntries[0]?.[0]}</span>
+            <span className="text-stone-700 text-xs">{dailyEntries[dailyEntries.length - 1]?.[0]}</span>
+          </div>
+        </div>
+      )}
+
+      {/* Language breakdown from server analytics (full history) */}
+      {Object.keys(languages || {}).length > 0 && timeFilter === "all" && (
+        <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+          <p className="text-stone-400 text-sm mb-1" style={{ fontFamily: "'Georgia', serif" }}>Languages — Full History</p>
+          <p className="text-stone-600 text-xs mb-4">From server analytics</p>
+          <div className="space-y-3">
+            {Object.entries(languages).sort((a, b) => b[1] - a[1]).map(([lang, count]) => {
+              const maxLang = Object.values(languages).reduce((a, b) => Math.max(a, b), 1);
+              return (
+                <div key={lang} className="flex items-center gap-3">
+                  <span className="text-stone-400 text-sm flex-shrink-0 w-16 uppercase">{lang}</span>
+                  <div className="flex-1 bg-stone-800 rounded-full h-2 overflow-hidden">
+                    <div className="h-full rounded-full bg-amber-400/60 transition-all duration-500" style={{ width: `${(count / maxLang) * 100}%` }} />
+                  </div>
+                  <span className="text-stone-500 text-xs w-12 text-right">{count}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* World map */}
+      <WorldMap chatlog={filtered} />
+
+      {/* Hour of day heatmap */}
+      <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Activity by Hour (Server Time)</p>
+        <div className="flex items-end gap-1 h-24">
+          {hourCounts.map((count, h) => {
+            const height = Math.max(2, (count / maxHour) * 100);
+            return (
+              <div key={h} className="flex-1 flex flex-col items-center gap-1 group relative">
+                <div className="w-full bg-amber-400/30 hover:bg-amber-400/50 rounded-sm transition-colors cursor-default" style={{ height: `${height}%` }} />
+                <div className="absolute -top-8 bg-stone-800 text-stone-300 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                  {h}:00 — {count} chat{count !== 1 ? "s" : ""}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-between mt-1">
+          <span className="text-stone-700 text-xs">12am</span>
+          <span className="text-stone-700 text-xs">6am</span>
+          <span className="text-stone-700 text-xs">12pm</span>
+          <span className="text-stone-700 text-xs">6pm</span>
+          <span className="text-stone-700 text-xs">12am</span>
+        </div>
+      </div>
+
+      {/* Day of week */}
+      <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Activity by Day of Week</p>
+        <div className="flex items-end gap-2 h-20">
+          {dayCounts.map((count, d) => {
+            const height = Math.max(4, (count / maxDay) * 100);
+            return (
+              <div key={d} className="flex-1 flex flex-col items-center gap-1">
+                <div className="w-full bg-amber-400/40 hover:bg-amber-400/60 rounded-sm transition-colors cursor-default" style={{ height: `${height}%` }} />
+                <span className="text-stone-600 text-xs">{dayNames[d]}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Recent chats timeline */}
+      <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+        <p className="text-stone-400 text-sm mb-4" style={{ fontFamily: "'Georgia', serif" }}>Recent Chats</p>
+        {filtered.length === 0 && <p className="text-stone-600 text-sm">No chats in this time period.</p>}
+        <div className="space-y-2 max-h-96 overflow-y-auto">
+          {[...filtered].sort((a, b) => b.ts - a.ts).slice(0, 100).map(c => {
+            const d = new Date(c.ts);
+            const dateStr = d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+            const timeStr = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+            const isConnect = c.type === "connect";
+            return (
+              <div key={c.id} className="flex items-center gap-3 py-2 border-b border-stone-800/20 last:border-0">
+                <div className={`flex-shrink-0 w-2 h-2 rounded-full ${isConnect ? "bg-green-400/60" : "bg-amber-400/60"}`} />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-stone-300 text-sm">{dateStr}</span>
+                    <span className="text-stone-600 text-xs">{timeStr}</span>
+                    {isConnect && <span className="text-green-500 text-xs">Connect Request</span>}
+                  </div>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    {c.geo?.country ? (
+                      <span className="text-stone-500 text-xs">{c.geo.city}{c.geo.city && c.geo.country ? ", " : ""}{c.geo.country}</span>
+                    ) : (
+                      <span className="text-stone-700 text-xs">Unknown location</span>
+                    )}
+                    {!isConnect && (
+                      <>
+                        <span className="text-stone-700 text-xs">&middot;</span>
+                        <span className="text-stone-600 text-xs">{c.messages || 1} msg{(c.messages || 1) !== 1 ? "s" : ""}</span>
+                        <span className="text-stone-700 text-xs">&middot;</span>
+                        <span className="text-stone-600 text-xs uppercase">{c.lang}</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
 // CONVERSATIONS TAB — keeps localStorage (private by design)
 // ============================================================
 function ConversationsTab() {
@@ -732,6 +1047,7 @@ export default function AdminDashboard() {
   const [tab, setTab] = useState("overview");
   const [stats, setStats] = useState({ totalChats: 0, totalMessages: 0, decisionsTriggered: 0, connects: 0, languages: {}, dailyMessages: {} });
   const [connects, setConnects] = useState([]);
+  const [chatlog, setChatlog] = useState([]);
   const [suggestionCount, setSuggestionCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -740,16 +1056,21 @@ export default function AdminDashboard() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const [statsRes, sugRes] = await Promise.all([
+      const [statsRes, sugRes, chatlogRes] = await Promise.all([
         fetch("/api/admin/stats"),
         fetch("/api/admin/suggestions"),
+        fetch("/api/admin/chatlog"),
       ]);
       const statsData = await statsRes.json();
       const sugData = await sugRes.json();
+      const chatlogData = await chatlogRes.json();
 
       const { connectsList, ...serverStats } = statsData;
       setStats(serverStats);
       setConnects(connectsList || []);
+      // Merge chatlog with connect markers (connects that had country info)
+      const allActivity = [...(chatlogData.chatlog || []), ...(chatlogData.connectMarkers || [])];
+      setChatlog(allActivity);
       setSuggestionCount((sugData.suggestions || []).filter(s => s.status === "pending").length);
     } catch (e) {
       console.error("Failed to load admin data:", e);
@@ -789,6 +1110,7 @@ export default function AdminDashboard() {
 
   const tabs = [
     { id: "overview", label: "Overview" },
+    { id: "activity", label: "Activity" },
     { id: "conversations", label: "Conversations" },
     { id: "connects", label: "Connects", badge: connects.filter(c => !c.followedUp).length },
     { id: "analysis", label: "AI Analysis" },
@@ -828,11 +1150,12 @@ export default function AdminDashboard() {
       {/* Content */}
       <div className="px-6 py-8">
         <div className="max-w-6xl mx-auto">
-          {loading && tab !== "conversations" && tab !== "prompt-review" ? (
+          {loading && !["conversations", "prompt-review"].includes(tab) ? (
             <div className="text-center py-20 text-stone-600">Loading data...</div>
           ) : (
             <>
               {tab === "overview" && <OverviewTab stats={stats} connects={connects} />}
+              {tab === "activity" && <ActivityTab chatlog={chatlog} stats={stats} />}
               {tab === "conversations" && <ConversationsTab />}
               {tab === "connects" && <ConnectsTab connects={connects} onFollowUp={handleFollowUp} />}
               {tab === "analysis" && <AnalysisTab />}

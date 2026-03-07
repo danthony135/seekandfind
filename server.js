@@ -16,6 +16,7 @@ if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR);
 const CONNECTS_FILE = join(DATA_DIR, "connects.json");
 const ANALYTICS_FILE = join(DATA_DIR, "analytics.json");
 const SUGGESTIONS_FILE = join(DATA_DIR, "suggestions.json");
+const CHATLOG_FILE = join(DATA_DIR, "chatlog.json");
 
 function loadJSON(file, fallback) {
   try {
@@ -68,6 +69,33 @@ setInterval(() => {
     if (now - entry.windowStart > RATE_WINDOW_MS * 2) rateLimits.delete(ip);
   }
 }, 5 * 60 * 1000);
+
+// ============================================================
+// GEO LOOKUP — free IP geolocation via ip-api.com
+// ============================================================
+const geoCache = new Map();
+
+async function geoLookup(ip) {
+  // Skip local/private IPs
+  if (!ip || ip === "127.0.0.1" || ip === "::1" || ip === "::ffff:127.0.0.1") return null;
+  const cleanIp = ip.replace(/^::ffff:/, "");
+  if (geoCache.has(cleanIp)) return geoCache.get(cleanIp);
+  try {
+    const res = await fetch(`http://ip-api.com/json/${cleanIp}?fields=status,country,countryCode,city,regionName,lat,lon`);
+    const data = await res.json();
+    if (data.status === "success") {
+      const geo = { country: data.country, countryCode: data.countryCode, city: data.city, region: data.regionName, lat: data.lat, lon: data.lon };
+      geoCache.set(cleanIp, geo);
+      return geo;
+    }
+  } catch (err) {
+    console.error("Geo lookup failed:", err.message);
+  }
+  return null;
+}
+
+// Clean geo cache every 30 minutes
+setInterval(() => geoCache.clear(), 30 * 60 * 1000);
 
 // ============================================================
 // ANALYTICS — lightweight in-memory + periodic flush
@@ -131,7 +159,33 @@ app.post("/api/chat", async (req, res) => {
   const { messages, lang, langName } = req.body;
 
   // Track analytics
-  if (messages?.length === 1) analytics.totalChats++;
+  if (messages?.length === 1) {
+    analytics.totalChats++;
+    // Log new chat session with geolocation
+    geoLookup(ip).then(geo => {
+      const chatlog = loadJSON(CHATLOG_FILE, []);
+      chatlog.push({
+        id: Date.now().toString(36) + Math.random().toString(36).slice(2, 8),
+        ts: Date.now(),
+        lang: lang || "en",
+        messages: 1,
+        geo: geo || null,
+      });
+      // Keep last 1000 entries
+      while (chatlog.length > 1000) chatlog.shift();
+      saveJSON(CHATLOG_FILE, chatlog);
+    }).catch(() => {});
+  } else if (messages?.length > 1) {
+    // Update message count on the most recent chat from this IP
+    try {
+      const chatlog = loadJSON(CHATLOG_FILE, []);
+      // Find the most recent entry (last one added)
+      if (chatlog.length > 0) {
+        chatlog[chatlog.length - 1].messages = messages.length;
+        saveJSON(CHATLOG_FILE, chatlog);
+      }
+    } catch {}
+  }
   trackChat(lang);
 
   // Build system prompt with language instruction
@@ -211,6 +265,24 @@ app.get("/api/admin/stats", (req, res) => {
     ...analytics,
     connectsList: connects,
   });
+});
+
+// --- Admin: chat log with geo data + backfill from connects ---
+app.get("/api/admin/chatlog", (req, res) => {
+  const chatlog = loadJSON(CHATLOG_FILE, []);
+  // Include connects that have country data as historical location markers
+  const connects = loadJSON(CONNECTS_FILE, []);
+  const connectMarkers = connects
+    .filter((c) => c.country && c.ts)
+    .map((c) => ({
+      id: "connect_" + (c.id || c.ts),
+      ts: c.ts,
+      lang: "",
+      messages: 0,
+      type: "connect",
+      geo: { country: c.country, countryCode: "", city: "", region: "", lat: null, lon: null },
+    }));
+  res.json({ chatlog, connectMarkers });
 });
 
 // --- Admin: mark connect as followed up ---
