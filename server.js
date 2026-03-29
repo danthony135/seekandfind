@@ -170,6 +170,7 @@ app.post("/api/chat", async (req, res) => {
         lang: lang || "en",
         messages: 1,
         geo: geo || null,
+        conversation: [messages[0]],
       });
       // Keep last 1000 entries
       while (chatlog.length > 1000) chatlog.shift();
@@ -182,6 +183,7 @@ app.post("/api/chat", async (req, res) => {
       // Find the most recent entry (last one added)
       if (chatlog.length > 0) {
         chatlog[chatlog.length - 1].messages = messages.length;
+        chatlog[chatlog.length - 1].conversation = messages;
         saveJSON(CHATLOG_FILE, chatlog);
       }
     } catch {}

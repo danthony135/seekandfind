@@ -279,6 +279,7 @@ function WorldMap({ chatlog }) {
 // ============================================================
 function ActivityTab({ chatlog, stats }) {
   const [timeFilter, setTimeFilter] = useState("all");
+  const [selectedChat, setSelectedChat] = useState(null);
 
   const now = Date.now();
   const filtered = chatlog.filter(c => {
@@ -491,30 +492,50 @@ function ActivityTab({ chatlog, stats }) {
             const timeStr = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
             const isConnect = c.type === "connect";
             return (
-              <div key={c.id} className="flex items-center gap-3 py-2 border-b border-stone-800/20 last:border-0">
-                <div className={`flex-shrink-0 w-2 h-2 rounded-full ${isConnect ? "bg-green-400/60" : "bg-amber-400/60"}`} />
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="text-stone-300 text-sm">{dateStr}</span>
-                    <span className="text-stone-600 text-xs">{timeStr}</span>
-                    {isConnect && <span className="text-green-500 text-xs">Connect Request</span>}
+              <div key={c.id}>
+                <div
+                  className="flex items-center gap-3 py-2 border-b border-stone-800/20 cursor-pointer hover:bg-stone-800/20 rounded px-1 -mx-1 transition-colors"
+                  onClick={() => setSelectedChat(selectedChat === c.id ? null : c.id)}
+                >
+                  <div className={`flex-shrink-0 w-2 h-2 rounded-full ${isConnect ? "bg-green-400/60" : "bg-amber-400/60"}`} />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-stone-300 text-sm">{dateStr}</span>
+                      <span className="text-stone-600 text-xs">{timeStr}</span>
+                      {isConnect && <span className="text-green-500 text-xs">Connect Request</span>}
+                    </div>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      {c.geo?.country ? (
+                        <span className="text-stone-300 text-xs font-medium">{c.geo.city ? `${c.geo.city}, ` : ""}{c.geo.country}</span>
+                      ) : (
+                        <span className="text-stone-600 text-xs">Unknown location</span>
+                      )}
+                      {!isConnect && (
+                        <>
+                          <span className="text-stone-700 text-xs">&middot;</span>
+                          <span className="text-stone-600 text-xs">{c.messages || 1} msg{(c.messages || 1) !== 1 ? "s" : ""}</span>
+                          <span className="text-stone-700 text-xs">&middot;</span>
+                          <span className="text-stone-600 text-xs uppercase">{c.lang}</span>
+                        </>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 mt-0.5">
-                    {c.geo?.country ? (
-                      <span className="text-stone-500 text-xs">{c.geo.city}{c.geo.city && c.geo.country ? ", " : ""}{c.geo.country}</span>
-                    ) : (
-                      <span className="text-stone-700 text-xs">Unknown location</span>
-                    )}
-                    {!isConnect && (
-                      <>
-                        <span className="text-stone-700 text-xs">&middot;</span>
-                        <span className="text-stone-600 text-xs">{c.messages || 1} msg{(c.messages || 1) !== 1 ? "s" : ""}</span>
-                        <span className="text-stone-700 text-xs">&middot;</span>
-                        <span className="text-stone-600 text-xs uppercase">{c.lang}</span>
-                      </>
-                    )}
-                  </div>
+                  {c.conversation && (
+                    <span className="text-stone-700 text-xs flex-shrink-0 ml-auto">{selectedChat === c.id ? "▲" : "▼"}</span>
+                  )}
                 </div>
+                {selectedChat === c.id && c.conversation && c.conversation.length > 0 && (
+                  <div className="ml-5 mb-3 mt-1 space-y-2 max-h-80 overflow-y-auto bg-stone-900/40 rounded-lg p-3 border border-stone-800/30">
+                    {c.conversation.map((m, i) => (
+                      <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+                        <div className={`max-w-xs rounded-xl px-3 py-2 text-xs leading-relaxed ${m.role === "user" ? "bg-stone-700 text-stone-200" : "bg-stone-800 text-stone-400"}`}
+                          style={{ whiteSpace: "pre-wrap" }}>
+                          {m.content}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             );
           })}
