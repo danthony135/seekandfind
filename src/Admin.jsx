@@ -334,12 +334,60 @@ function ActivityTab({ chatlog, stats }) {
       </div>
 
       {/* Stat cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <StatCard label="Total Chats" value={displayTotalChats} color="#f59e0b" />
-        <StatCard label="Total Messages" value={displayTotalMessages} />
-        <StatCard label="Countries" value={new Set(filtered.filter(c => c.geo).map(c => c.geo.country)).size} color="#3b82f6" />
-        <StatCard label="Cities" value={new Set(filtered.filter(c => c.geo).map(c => `${c.geo.city},${c.geo.country}`)).size} color="#8b5cf6" />
-      </div>
+      {(() => {
+        const geoChats = filtered.filter(c => c.geo);
+        const countryCounts = {};
+        const cityCounts = {};
+        for (const c of geoChats) {
+          if (c.geo.country) countryCounts[c.geo.country] = (countryCounts[c.geo.country] || 0) + 1;
+          if (c.geo.city) {
+            const key = `${c.geo.city}, ${c.geo.country}`;
+            cityCounts[key] = (cityCounts[key] || 0) + 1;
+          }
+        }
+        const topCountries = Object.entries(countryCounts).sort((a, b) => b[1] - a[1]);
+        const topCities = Object.entries(cityCounts).sort((a, b) => b[1] - a[1]);
+        return (
+          <>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <StatCard label="Total Chats" value={displayTotalChats} color="#f59e0b" />
+              <StatCard label="Total Messages" value={displayTotalMessages} />
+              <StatCard label="Countries" value={topCountries.length} color="#3b82f6" sub={topCountries[0]?.[0] || ""} />
+              <StatCard label="Cities" value={topCities.length} color="#8b5cf6" sub={topCities[0]?.[0] || ""} />
+            </div>
+            {(topCountries.length > 0 || topCities.length > 0) && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {topCountries.length > 0 && (
+                  <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+                    <p className="text-stone-400 text-sm mb-3" style={{ fontFamily: "'Georgia', serif" }}>Countries</p>
+                    <div className="space-y-2 max-h-48 overflow-y-auto">
+                      {topCountries.map(([country, count]) => (
+                        <div key={country} className="flex items-center justify-between">
+                          <span className="text-stone-300 text-sm">{country}</span>
+                          <span className="text-stone-500 text-xs">{count} chat{count !== 1 ? "s" : ""}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {topCities.length > 0 && (
+                  <div className="bg-stone-900/50 border border-stone-800/50 rounded-xl p-5">
+                    <p className="text-stone-400 text-sm mb-3" style={{ fontFamily: "'Georgia', serif" }}>Cities</p>
+                    <div className="space-y-2 max-h-48 overflow-y-auto">
+                      {topCities.map(([city, count]) => (
+                        <div key={city} className="flex items-center justify-between">
+                          <span className="text-stone-300 text-sm">{city}</span>
+                          <span className="text-stone-500 text-xs">{count} chat{count !== 1 ? "s" : ""}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </>
+        );
+      })()}
 
       {/* Historical daily messages chart (from server analytics — shows ALL history) */}
       {dailyEntries.length > 0 && timeFilter === "all" && (
